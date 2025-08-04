@@ -1,4 +1,4 @@
-# 🎯 TD2 Motion Visualizer
+# 🎯 TD2 Giróscopo
 
 Proyecto final de la materia **Técnicas Digitales II**  
 Visualización en tiempo real de sensores inerciales MPU-9250 a través de un flujo completo: **sensor físico + firmware + backend + frontend 3D**.
@@ -12,8 +12,10 @@ Visualización en tiempo real de sensores inerciales MPU-9250 a través de un fl
 - **C++** con `httplib` para exponer los datos como API HTTP local
 - **Doxygen** para documentar todo el backend
 - **React + Three.js (`@react-three/fiber`)** para visualización 3D en tiempo real
-
+- 
 ---
+
+<img width="1246" height="353" alt="image" src="https://github.com/user-attachments/assets/b278c9da-cabf-44e8-9b27-2626dd8f3230" />
 
 ## ⚙️ Flujo del sistema
 
@@ -141,7 +143,7 @@ Abrir [http://localhost:8080](http://localhost:8080)
 
 - Hernán Ariel Pérez  
 - Franco Guarnieri  
-- Mauricio Casasl  
+- Mauricio Casals  
 - Año: 2025
 
 ---
@@ -149,4 +151,3 @@ Abrir [http://localhost:8080](http://localhost:8080)
 ## 📜 Licencia
 
 MIT — Usalo, modificalo y compartilo libremente.
-# final_TecnicasDigitales2-PEREZ-GUARNIERI-CASALS
