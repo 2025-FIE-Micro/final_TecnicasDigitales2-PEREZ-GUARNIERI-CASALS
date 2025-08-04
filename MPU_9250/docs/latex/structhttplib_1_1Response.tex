@@ -1,0 +1,322 @@
+\hypertarget{structhttplib_1_1Response}{}\doxysection{httplib\+::Response Struct Reference}
+\label{structhttplib_1_1Response}\index{httplib::Response@{httplib::Response}}
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structhttplib_1_1Response_a6e55e134fff94fb7b2cedad09eec652c}{has\+\_\+header}} (const std\+::string \&key) const
+\item 
+std\+::string \mbox{\hyperlink{structhttplib_1_1Response_a72deccfd1778945eecaf301534bca49c}{get\+\_\+header\+\_\+value}} (const std\+::string \&key, const char $\ast$def=\char`\"{}\char`\"{}, size\+\_\+t id=0) const
+\item 
+size\+\_\+t \mbox{\hyperlink{structhttplib_1_1Response_a39fc06c4274696f42565ea2f96f3a9d7}{get\+\_\+header\+\_\+value\+\_\+u64}} (const std\+::string \&key, size\+\_\+t def=0, size\+\_\+t id=0) const
+\item 
+size\+\_\+t \mbox{\hyperlink{structhttplib_1_1Response_af65006cc0a2a8e78fc4dd97ad4073c3b}{get\+\_\+header\+\_\+value\+\_\+count}} (const std\+::string \&key) const
+\item 
+void \mbox{\hyperlink{structhttplib_1_1Response_aed852614ede4a90a18decdda35d74a96}{set\+\_\+header}} (const std\+::string \&key, const std\+::string \&val)
+\item 
+bool \mbox{\hyperlink{structhttplib_1_1Response_ad6887d47093217882a3bb9be13b38bf9}{has\+\_\+trailer}} (const std\+::string \&key) const
+\item 
+std\+::string \mbox{\hyperlink{structhttplib_1_1Response_a925fc610ce88abe9a3277c42b60e26f9}{get\+\_\+trailer\+\_\+value}} (const std\+::string \&key, size\+\_\+t id=0) const
+\item 
+size\+\_\+t \mbox{\hyperlink{structhttplib_1_1Response_aa1da30603acdf57b0fceec6c9db73ab1}{get\+\_\+trailer\+\_\+value\+\_\+count}} (const std\+::string \&key) const
+\item 
+void \mbox{\hyperlink{structhttplib_1_1Response_a24f9445757ec0b429bde78c1b58700ea}{set\+\_\+redirect}} (const std\+::string \&url, int \mbox{\hyperlink{structhttplib_1_1Response_a8b717024fa31c5146e9e7a46761a0653}{status}}=Status\+Code\+::\+Found\+\_\+302)
+\item 
+void \mbox{\hyperlink{structhttplib_1_1Response_a67c804875a512e2d028cc73432839802}{set\+\_\+content}} (const char $\ast$s, size\+\_\+t n, const std\+::string \&content\+\_\+type)
+\item 
+void \mbox{\hyperlink{structhttplib_1_1Response_a2e2084169ceb3c4b92fbf3a5c3c666f2}{set\+\_\+content}} (const std\+::string \&s, const std\+::string \&content\+\_\+type)
+\item 
+void \mbox{\hyperlink{structhttplib_1_1Response_a0e6bf2223de44957436cf7ba40a9b223}{set\+\_\+content}} (std\+::string \&\&s, const std\+::string \&content\+\_\+type)
+\item 
+void \mbox{\hyperlink{structhttplib_1_1Response_a55570b0bb6d192d7553340061dcd88bd}{set\+\_\+content\+\_\+provider}} (size\+\_\+t length, const std\+::string \&content\+\_\+type, \mbox{\hyperlink{namespacehttplib_aa14ad56981e64fa7d4972a812866fa22}{Content\+Provider}} provider, \mbox{\hyperlink{namespacehttplib_af5575b356ed07d8897ddac1297ef999a}{Content\+Provider\+Resource\+Releaser}} resource\+\_\+releaser=nullptr)
+\item 
+void \mbox{\hyperlink{structhttplib_1_1Response_af3bf752e347007b358d7e5431620de78}{set\+\_\+content\+\_\+provider}} (const std\+::string \&content\+\_\+type, \mbox{\hyperlink{namespacehttplib_a42a80bc400ea2d522021461ca6df2fb6}{Content\+Provider\+Without\+Length}} provider, \mbox{\hyperlink{namespacehttplib_af5575b356ed07d8897ddac1297ef999a}{Content\+Provider\+Resource\+Releaser}} resource\+\_\+releaser=nullptr)
+\item 
+void \mbox{\hyperlink{structhttplib_1_1Response_a89c1f3ce8bd8421f01a67300f23a6063}{set\+\_\+chunked\+\_\+content\+\_\+provider}} (const std\+::string \&content\+\_\+type, \mbox{\hyperlink{namespacehttplib_a42a80bc400ea2d522021461ca6df2fb6}{Content\+Provider\+Without\+Length}} provider, \mbox{\hyperlink{namespacehttplib_af5575b356ed07d8897ddac1297ef999a}{Content\+Provider\+Resource\+Releaser}} resource\+\_\+releaser=nullptr)
+\item 
+void \mbox{\hyperlink{structhttplib_1_1Response_acc3575061d25e59c7afe647209a4bdb3}{set\+\_\+file\+\_\+content}} (const std\+::string \&path, const std\+::string \&content\+\_\+type)
+\item 
+void \mbox{\hyperlink{structhttplib_1_1Response_a4943621212cf47b9555bb1c6b94f6033}{set\+\_\+file\+\_\+content}} (const std\+::string \&path)
+\item 
+\mbox{\hyperlink{structhttplib_1_1Response_a42df6b67dcf32c2cd4bc732c52d49b3e}{Response}} ()=default
+\item 
+\mbox{\hyperlink{structhttplib_1_1Response_ae5f48d4c40fe15b19032e77a3da32de7}{Response}} (const \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&)=default
+\item 
+\mbox{\hyperlink{structhttplib_1_1Response}{Response}} \& \mbox{\hyperlink{structhttplib_1_1Response_aa18ceca6216faeaff44fcf558cab8fb0}{operator=}} (const \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&)=default
+\item 
+\mbox{\hyperlink{structhttplib_1_1Response_aed3a526fe753e1c86ca3a848ccb26564}{Response}} (\mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&\&)=default
+\item 
+\mbox{\hyperlink{structhttplib_1_1Response}{Response}} \& \mbox{\hyperlink{structhttplib_1_1Response_a48811773410cc4884f59d395ab8aeed8}{operator=}} (\mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&\&)=default
+\item 
+\mbox{\hyperlink{structhttplib_1_1Response_ae607f8cc0a96ac25358f22a2fc7e9fd7}{$\sim$\+Response}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structhttplib_1_1Response_a56b71785ec6f10347a30eee0dc23d96c}{version}}
+\item 
+int \mbox{\hyperlink{structhttplib_1_1Response_a8b717024fa31c5146e9e7a46761a0653}{status}} = -\/1
+\item 
+std\+::string \mbox{\hyperlink{structhttplib_1_1Response_a97bb996b2982835236cddcd493277295}{reason}}
+\item 
+\mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}} \mbox{\hyperlink{structhttplib_1_1Response_a5a2fe2a8acebca3f9c4e9e852fadbd5e}{headers}}
+\item 
+\mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}} \mbox{\hyperlink{structhttplib_1_1Response_a24bfdcaf1185ad3948e38f9e3a608b2f}{trailers}}
+\item 
+std\+::string \mbox{\hyperlink{structhttplib_1_1Response_ac77eb5c7e8758ac0c39ebb4507b7015c}{body}}
+\item 
+std\+::string \mbox{\hyperlink{structhttplib_1_1Response_af827c5094e658e262c290dc7313a7db9}{location}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structhttplib_1_1Response_a4e277c66cb41c498f43b59009c362e88}{content\+\_\+length\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{namespacehttplib_aa14ad56981e64fa7d4972a812866fa22}{Content\+Provider}} \mbox{\hyperlink{structhttplib_1_1Response_a0c8562c2db02036660c5f9c292ff8bc5}{content\+\_\+provider\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacehttplib_af5575b356ed07d8897ddac1297ef999a}{Content\+Provider\+Resource\+Releaser}} \mbox{\hyperlink{structhttplib_1_1Response_a72ac25eef25db862aa9cd7226a493976}{content\+\_\+provider\+\_\+resource\+\_\+releaser\+\_\+}}
+\item 
+bool \mbox{\hyperlink{structhttplib_1_1Response_a1061c4c1c6848c58cc3d66c0f595760d}{is\+\_\+chunked\+\_\+content\+\_\+provider\+\_\+}} = false
+\item 
+bool \mbox{\hyperlink{structhttplib_1_1Response_a6fb2ca0f63582d2e319a1ac8875f4a23}{content\+\_\+provider\+\_\+success\+\_\+}} = false
+\item 
+std\+::string \mbox{\hyperlink{structhttplib_1_1Response_a364fc9c10c0bd5393de0196d30a861c7}{file\+\_\+content\+\_\+path\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{structhttplib_1_1Response_ae9555e0e44859205dd886c118d0a0347}{file\+\_\+content\+\_\+content\+\_\+type\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structhttplib_1_1Response_a42df6b67dcf32c2cd4bc732c52d49b3e}\label{structhttplib_1_1Response_a42df6b67dcf32c2cd4bc732c52d49b3e}} 
+\index{httplib::Response@{httplib::Response}!Response@{Response}}
+\index{Response@{Response}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{Response()}{Response()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily httplib\+::\+Response\+::\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_ae5f48d4c40fe15b19032e77a3da32de7}\label{structhttplib_1_1Response_ae5f48d4c40fe15b19032e77a3da32de7}} 
+\index{httplib::Response@{httplib::Response}!Response@{Response}}
+\index{Response@{Response}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{Response()}{Response()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily httplib\+::\+Response\+::\+Response (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_aed3a526fe753e1c86ca3a848ccb26564}\label{structhttplib_1_1Response_aed3a526fe753e1c86ca3a848ccb26564}} 
+\index{httplib::Response@{httplib::Response}!Response@{Response}}
+\index{Response@{Response}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{Response()}{Response()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily httplib\+::\+Response\+::\+Response (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_ae607f8cc0a96ac25358f22a2fc7e9fd7}\label{structhttplib_1_1Response_ae607f8cc0a96ac25358f22a2fc7e9fd7}} 
+\index{httplib::Response@{httplib::Response}!````~Response@{$\sim$Response}}
+\index{````~Response@{$\sim$Response}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{$\sim$Response()}{~Response()}}
+{\footnotesize\ttfamily httplib\+::\+Response\+::$\sim$\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structhttplib_1_1Response_a72deccfd1778945eecaf301534bca49c}\label{structhttplib_1_1Response_a72deccfd1778945eecaf301534bca49c}} 
+\index{httplib::Response@{httplib::Response}!get\_header\_value@{get\_header\_value}}
+\index{get\_header\_value@{get\_header\_value}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{get\_header\_value()}{get\_header\_value()}}
+{\footnotesize\ttfamily std\+::string httplib\+::\+Response\+::get\+\_\+header\+\_\+value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const char $\ast$}]{def = {\ttfamily \char`\"{}\char`\"{}},  }\item[{size\+\_\+t}]{id = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_af65006cc0a2a8e78fc4dd97ad4073c3b}\label{structhttplib_1_1Response_af65006cc0a2a8e78fc4dd97ad4073c3b}} 
+\index{httplib::Response@{httplib::Response}!get\_header\_value\_count@{get\_header\_value\_count}}
+\index{get\_header\_value\_count@{get\_header\_value\_count}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{get\_header\_value\_count()}{get\_header\_value\_count()}}
+{\footnotesize\ttfamily size\+\_\+t httplib\+::\+Response\+::get\+\_\+header\+\_\+value\+\_\+count (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a39fc06c4274696f42565ea2f96f3a9d7}\label{structhttplib_1_1Response_a39fc06c4274696f42565ea2f96f3a9d7}} 
+\index{httplib::Response@{httplib::Response}!get\_header\_value\_u64@{get\_header\_value\_u64}}
+\index{get\_header\_value\_u64@{get\_header\_value\_u64}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{get\_header\_value\_u64()}{get\_header\_value\_u64()}}
+{\footnotesize\ttfamily size\+\_\+t httplib\+::\+Response\+::get\+\_\+header\+\_\+value\+\_\+u64 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{size\+\_\+t}]{def = {\ttfamily 0},  }\item[{size\+\_\+t}]{id = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a925fc610ce88abe9a3277c42b60e26f9}\label{structhttplib_1_1Response_a925fc610ce88abe9a3277c42b60e26f9}} 
+\index{httplib::Response@{httplib::Response}!get\_trailer\_value@{get\_trailer\_value}}
+\index{get\_trailer\_value@{get\_trailer\_value}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{get\_trailer\_value()}{get\_trailer\_value()}}
+{\footnotesize\ttfamily std\+::string httplib\+::\+Response\+::get\+\_\+trailer\+\_\+value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{size\+\_\+t}]{id = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_aa1da30603acdf57b0fceec6c9db73ab1}\label{structhttplib_1_1Response_aa1da30603acdf57b0fceec6c9db73ab1}} 
+\index{httplib::Response@{httplib::Response}!get\_trailer\_value\_count@{get\_trailer\_value\_count}}
+\index{get\_trailer\_value\_count@{get\_trailer\_value\_count}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{get\_trailer\_value\_count()}{get\_trailer\_value\_count()}}
+{\footnotesize\ttfamily size\+\_\+t httplib\+::\+Response\+::get\+\_\+trailer\+\_\+value\+\_\+count (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a6e55e134fff94fb7b2cedad09eec652c}\label{structhttplib_1_1Response_a6e55e134fff94fb7b2cedad09eec652c}} 
+\index{httplib::Response@{httplib::Response}!has\_header@{has\_header}}
+\index{has\_header@{has\_header}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{has\_header()}{has\_header()}}
+{\footnotesize\ttfamily bool httplib\+::\+Response\+::has\+\_\+header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_ad6887d47093217882a3bb9be13b38bf9}\label{structhttplib_1_1Response_ad6887d47093217882a3bb9be13b38bf9}} 
+\index{httplib::Response@{httplib::Response}!has\_trailer@{has\_trailer}}
+\index{has\_trailer@{has\_trailer}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{has\_trailer()}{has\_trailer()}}
+{\footnotesize\ttfamily bool httplib\+::\+Response\+::has\+\_\+trailer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_aa18ceca6216faeaff44fcf558cab8fb0}\label{structhttplib_1_1Response_aa18ceca6216faeaff44fcf558cab8fb0}} 
+\index{httplib::Response@{httplib::Response}!operator=@{operator=}}
+\index{operator=@{operator=}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhttplib_1_1Response}{Response}}\& httplib\+::\+Response\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a48811773410cc4884f59d395ab8aeed8}\label{structhttplib_1_1Response_a48811773410cc4884f59d395ab8aeed8}} 
+\index{httplib::Response@{httplib::Response}!operator=@{operator=}}
+\index{operator=@{operator=}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhttplib_1_1Response}{Response}}\& httplib\+::\+Response\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a89c1f3ce8bd8421f01a67300f23a6063}\label{structhttplib_1_1Response_a89c1f3ce8bd8421f01a67300f23a6063}} 
+\index{httplib::Response@{httplib::Response}!set\_chunked\_content\_provider@{set\_chunked\_content\_provider}}
+\index{set\_chunked\_content\_provider@{set\_chunked\_content\_provider}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{set\_chunked\_content\_provider()}{set\_chunked\_content\_provider()}}
+{\footnotesize\ttfamily void httplib\+::\+Response\+::set\+\_\+chunked\+\_\+content\+\_\+provider (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{content\+\_\+type,  }\item[{\mbox{\hyperlink{namespacehttplib_a42a80bc400ea2d522021461ca6df2fb6}{Content\+Provider\+Without\+Length}}}]{provider,  }\item[{\mbox{\hyperlink{namespacehttplib_af5575b356ed07d8897ddac1297ef999a}{Content\+Provider\+Resource\+Releaser}}}]{resource\+\_\+releaser = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a67c804875a512e2d028cc73432839802}\label{structhttplib_1_1Response_a67c804875a512e2d028cc73432839802}} 
+\index{httplib::Response@{httplib::Response}!set\_content@{set\_content}}
+\index{set\_content@{set\_content}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{set\_content()}{set\_content()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void httplib\+::\+Response\+::set\+\_\+content (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{size\+\_\+t}]{n,  }\item[{const std\+::string \&}]{content\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a2e2084169ceb3c4b92fbf3a5c3c666f2}\label{structhttplib_1_1Response_a2e2084169ceb3c4b92fbf3a5c3c666f2}} 
+\index{httplib::Response@{httplib::Response}!set\_content@{set\_content}}
+\index{set\_content@{set\_content}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{set\_content()}{set\_content()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void httplib\+::\+Response\+::set\+\_\+content (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s,  }\item[{const std\+::string \&}]{content\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a0e6bf2223de44957436cf7ba40a9b223}\label{structhttplib_1_1Response_a0e6bf2223de44957436cf7ba40a9b223}} 
+\index{httplib::Response@{httplib::Response}!set\_content@{set\_content}}
+\index{set\_content@{set\_content}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{set\_content()}{set\_content()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void httplib\+::\+Response\+::set\+\_\+content (\begin{DoxyParamCaption}\item[{std\+::string \&\&}]{s,  }\item[{const std\+::string \&}]{content\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_af3bf752e347007b358d7e5431620de78}\label{structhttplib_1_1Response_af3bf752e347007b358d7e5431620de78}} 
+\index{httplib::Response@{httplib::Response}!set\_content\_provider@{set\_content\_provider}}
+\index{set\_content\_provider@{set\_content\_provider}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{set\_content\_provider()}{set\_content\_provider()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void httplib\+::\+Response\+::set\+\_\+content\+\_\+provider (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{content\+\_\+type,  }\item[{\mbox{\hyperlink{namespacehttplib_a42a80bc400ea2d522021461ca6df2fb6}{Content\+Provider\+Without\+Length}}}]{provider,  }\item[{\mbox{\hyperlink{namespacehttplib_af5575b356ed07d8897ddac1297ef999a}{Content\+Provider\+Resource\+Releaser}}}]{resource\+\_\+releaser = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a55570b0bb6d192d7553340061dcd88bd}\label{structhttplib_1_1Response_a55570b0bb6d192d7553340061dcd88bd}} 
+\index{httplib::Response@{httplib::Response}!set\_content\_provider@{set\_content\_provider}}
+\index{set\_content\_provider@{set\_content\_provider}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{set\_content\_provider()}{set\_content\_provider()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void httplib\+::\+Response\+::set\+\_\+content\+\_\+provider (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{length,  }\item[{const std\+::string \&}]{content\+\_\+type,  }\item[{\mbox{\hyperlink{namespacehttplib_aa14ad56981e64fa7d4972a812866fa22}{Content\+Provider}}}]{provider,  }\item[{\mbox{\hyperlink{namespacehttplib_af5575b356ed07d8897ddac1297ef999a}{Content\+Provider\+Resource\+Releaser}}}]{resource\+\_\+releaser = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a4943621212cf47b9555bb1c6b94f6033}\label{structhttplib_1_1Response_a4943621212cf47b9555bb1c6b94f6033}} 
+\index{httplib::Response@{httplib::Response}!set\_file\_content@{set\_file\_content}}
+\index{set\_file\_content@{set\_file\_content}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{set\_file\_content()}{set\_file\_content()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void httplib\+::\+Response\+::set\+\_\+file\+\_\+content (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_acc3575061d25e59c7afe647209a4bdb3}\label{structhttplib_1_1Response_acc3575061d25e59c7afe647209a4bdb3}} 
+\index{httplib::Response@{httplib::Response}!set\_file\_content@{set\_file\_content}}
+\index{set\_file\_content@{set\_file\_content}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{set\_file\_content()}{set\_file\_content()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void httplib\+::\+Response\+::set\+\_\+file\+\_\+content (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{const std\+::string \&}]{content\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_aed852614ede4a90a18decdda35d74a96}\label{structhttplib_1_1Response_aed852614ede4a90a18decdda35d74a96}} 
+\index{httplib::Response@{httplib::Response}!set\_header@{set\_header}}
+\index{set\_header@{set\_header}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{set\_header()}{set\_header()}}
+{\footnotesize\ttfamily void httplib\+::\+Response\+::set\+\_\+header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a24f9445757ec0b429bde78c1b58700ea}\label{structhttplib_1_1Response_a24f9445757ec0b429bde78c1b58700ea}} 
+\index{httplib::Response@{httplib::Response}!set\_redirect@{set\_redirect}}
+\index{set\_redirect@{set\_redirect}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{set\_redirect()}{set\_redirect()}}
+{\footnotesize\ttfamily void httplib\+::\+Response\+::set\+\_\+redirect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{int}]{status = {\ttfamily StatusCode\+:\+:Found\+\_\+302} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhttplib_1_1Response_ac77eb5c7e8758ac0c39ebb4507b7015c}\label{structhttplib_1_1Response_ac77eb5c7e8758ac0c39ebb4507b7015c}} 
+\index{httplib::Response@{httplib::Response}!body@{body}}
+\index{body@{body}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{body}{body}}
+{\footnotesize\ttfamily std\+::string httplib\+::\+Response\+::body}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a4e277c66cb41c498f43b59009c362e88}\label{structhttplib_1_1Response_a4e277c66cb41c498f43b59009c362e88}} 
+\index{httplib::Response@{httplib::Response}!content\_length\_@{content\_length\_}}
+\index{content\_length\_@{content\_length\_}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{content\_length\_}{content\_length\_}}
+{\footnotesize\ttfamily size\+\_\+t httplib\+::\+Response\+::content\+\_\+length\+\_\+ = 0}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a0c8562c2db02036660c5f9c292ff8bc5}\label{structhttplib_1_1Response_a0c8562c2db02036660c5f9c292ff8bc5}} 
+\index{httplib::Response@{httplib::Response}!content\_provider\_@{content\_provider\_}}
+\index{content\_provider\_@{content\_provider\_}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{content\_provider\_}{content\_provider\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacehttplib_aa14ad56981e64fa7d4972a812866fa22}{Content\+Provider}} httplib\+::\+Response\+::content\+\_\+provider\+\_\+}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a72ac25eef25db862aa9cd7226a493976}\label{structhttplib_1_1Response_a72ac25eef25db862aa9cd7226a493976}} 
+\index{httplib::Response@{httplib::Response}!content\_provider\_resource\_releaser\_@{content\_provider\_resource\_releaser\_}}
+\index{content\_provider\_resource\_releaser\_@{content\_provider\_resource\_releaser\_}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{content\_provider\_resource\_releaser\_}{content\_provider\_resource\_releaser\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacehttplib_af5575b356ed07d8897ddac1297ef999a}{Content\+Provider\+Resource\+Releaser}} httplib\+::\+Response\+::content\+\_\+provider\+\_\+resource\+\_\+releaser\+\_\+}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a6fb2ca0f63582d2e319a1ac8875f4a23}\label{structhttplib_1_1Response_a6fb2ca0f63582d2e319a1ac8875f4a23}} 
+\index{httplib::Response@{httplib::Response}!content\_provider\_success\_@{content\_provider\_success\_}}
+\index{content\_provider\_success\_@{content\_provider\_success\_}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{content\_provider\_success\_}{content\_provider\_success\_}}
+{\footnotesize\ttfamily bool httplib\+::\+Response\+::content\+\_\+provider\+\_\+success\+\_\+ = false}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_ae9555e0e44859205dd886c118d0a0347}\label{structhttplib_1_1Response_ae9555e0e44859205dd886c118d0a0347}} 
+\index{httplib::Response@{httplib::Response}!file\_content\_content\_type\_@{file\_content\_content\_type\_}}
+\index{file\_content\_content\_type\_@{file\_content\_content\_type\_}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{file\_content\_content\_type\_}{file\_content\_content\_type\_}}
+{\footnotesize\ttfamily std\+::string httplib\+::\+Response\+::file\+\_\+content\+\_\+content\+\_\+type\+\_\+}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a364fc9c10c0bd5393de0196d30a861c7}\label{structhttplib_1_1Response_a364fc9c10c0bd5393de0196d30a861c7}} 
+\index{httplib::Response@{httplib::Response}!file\_content\_path\_@{file\_content\_path\_}}
+\index{file\_content\_path\_@{file\_content\_path\_}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{file\_content\_path\_}{file\_content\_path\_}}
+{\footnotesize\ttfamily std\+::string httplib\+::\+Response\+::file\+\_\+content\+\_\+path\+\_\+}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a5a2fe2a8acebca3f9c4e9e852fadbd5e}\label{structhttplib_1_1Response_a5a2fe2a8acebca3f9c4e9e852fadbd5e}} 
+\index{httplib::Response@{httplib::Response}!headers@{headers}}
+\index{headers@{headers}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{headers}{headers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}} httplib\+::\+Response\+::headers}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a1061c4c1c6848c58cc3d66c0f595760d}\label{structhttplib_1_1Response_a1061c4c1c6848c58cc3d66c0f595760d}} 
+\index{httplib::Response@{httplib::Response}!is\_chunked\_content\_provider\_@{is\_chunked\_content\_provider\_}}
+\index{is\_chunked\_content\_provider\_@{is\_chunked\_content\_provider\_}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{is\_chunked\_content\_provider\_}{is\_chunked\_content\_provider\_}}
+{\footnotesize\ttfamily bool httplib\+::\+Response\+::is\+\_\+chunked\+\_\+content\+\_\+provider\+\_\+ = false}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_af827c5094e658e262c290dc7313a7db9}\label{structhttplib_1_1Response_af827c5094e658e262c290dc7313a7db9}} 
+\index{httplib::Response@{httplib::Response}!location@{location}}
+\index{location@{location}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily std\+::string httplib\+::\+Response\+::location}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a97bb996b2982835236cddcd493277295}\label{structhttplib_1_1Response_a97bb996b2982835236cddcd493277295}} 
+\index{httplib::Response@{httplib::Response}!reason@{reason}}
+\index{reason@{reason}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{reason}{reason}}
+{\footnotesize\ttfamily std\+::string httplib\+::\+Response\+::reason}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a8b717024fa31c5146e9e7a46761a0653}\label{structhttplib_1_1Response_a8b717024fa31c5146e9e7a46761a0653}} 
+\index{httplib::Response@{httplib::Response}!status@{status}}
+\index{status@{status}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily int httplib\+::\+Response\+::status = -\/1}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a24bfdcaf1185ad3948e38f9e3a608b2f}\label{structhttplib_1_1Response_a24bfdcaf1185ad3948e38f9e3a608b2f}} 
+\index{httplib::Response@{httplib::Response}!trailers@{trailers}}
+\index{trailers@{trailers}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{trailers}{trailers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}} httplib\+::\+Response\+::trailers}
+
+\mbox{\Hypertarget{structhttplib_1_1Response_a56b71785ec6f10347a30eee0dc23d96c}\label{structhttplib_1_1Response_a56b71785ec6f10347a30eee0dc23d96c}} 
+\index{httplib::Response@{httplib::Response}!version@{version}}
+\index{version@{version}!httplib::Response@{httplib::Response}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily std\+::string httplib\+::\+Response\+::version}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/\mbox{\hyperlink{httplib_8h}{httplib.\+h}}\end{DoxyCompactItemize}

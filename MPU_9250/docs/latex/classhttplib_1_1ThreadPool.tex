@@ -1,0 +1,102 @@
+\hypertarget{classhttplib_1_1ThreadPool}{}\doxysection{httplib\+::Thread\+Pool Class Reference}
+\label{classhttplib_1_1ThreadPool}\index{httplib::ThreadPool@{httplib::ThreadPool}}
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+
+
+Inheritance diagram for httplib\+::Thread\+Pool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classhttplib_1_1ThreadPool__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for httplib\+::Thread\+Pool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classhttplib_1_1ThreadPool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhttplib_1_1ThreadPool_a37b2f9086f6a97b1f96bcc08d1562e8b}{Thread\+Pool}} (size\+\_\+t n, size\+\_\+t mqr=0)
+\item 
+\mbox{\hyperlink{classhttplib_1_1ThreadPool_aac78a365c5d7910e7367a83d21369ed2}{Thread\+Pool}} (const \mbox{\hyperlink{classhttplib_1_1ThreadPool}{Thread\+Pool}} \&)=delete
+\item 
+\mbox{\hyperlink{classhttplib_1_1ThreadPool_ad0f2cf2a96d2b9bcad7183c467c84e50}{$\sim$\+Thread\+Pool}} () override=default
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1ThreadPool_aebbfc6f52584e6d6c4b2e61d5dba0f6c}{enqueue}} (std\+::function$<$ void()$>$ fn) override
+\item 
+void \mbox{\hyperlink{classhttplib_1_1ThreadPool_a9884cbaef9ed5f92152b82d2c93340ea}{shutdown}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{classhttplib_1_1ThreadPool_a145c4e203b787f9b561489eb2032edb3}{worker}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_a37b2f9086f6a97b1f96bcc08d1562e8b}\label{classhttplib_1_1ThreadPool_a37b2f9086f6a97b1f96bcc08d1562e8b}} 
+\index{httplib::ThreadPool@{httplib::ThreadPool}!ThreadPool@{ThreadPool}}
+\index{ThreadPool@{ThreadPool}!httplib::ThreadPool@{httplib::ThreadPool}}
+\doxysubsubsection{\texorpdfstring{ThreadPool()}{ThreadPool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily httplib\+::\+Thread\+Pool\+::\+Thread\+Pool (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n,  }\item[{size\+\_\+t}]{mqr = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_aac78a365c5d7910e7367a83d21369ed2}\label{classhttplib_1_1ThreadPool_aac78a365c5d7910e7367a83d21369ed2}} 
+\index{httplib::ThreadPool@{httplib::ThreadPool}!ThreadPool@{ThreadPool}}
+\index{ThreadPool@{ThreadPool}!httplib::ThreadPool@{httplib::ThreadPool}}
+\doxysubsubsection{\texorpdfstring{ThreadPool()}{ThreadPool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily httplib\+::\+Thread\+Pool\+::\+Thread\+Pool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhttplib_1_1ThreadPool}{Thread\+Pool}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_ad0f2cf2a96d2b9bcad7183c467c84e50}\label{classhttplib_1_1ThreadPool_ad0f2cf2a96d2b9bcad7183c467c84e50}} 
+\index{httplib::ThreadPool@{httplib::ThreadPool}!````~ThreadPool@{$\sim$ThreadPool}}
+\index{````~ThreadPool@{$\sim$ThreadPool}!httplib::ThreadPool@{httplib::ThreadPool}}
+\doxysubsubsection{\texorpdfstring{$\sim$ThreadPool()}{~ThreadPool()}}
+{\footnotesize\ttfamily httplib\+::\+Thread\+Pool\+::$\sim$\+Thread\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_aebbfc6f52584e6d6c4b2e61d5dba0f6c}\label{classhttplib_1_1ThreadPool_aebbfc6f52584e6d6c4b2e61d5dba0f6c}} 
+\index{httplib::ThreadPool@{httplib::ThreadPool}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!httplib::ThreadPool@{httplib::ThreadPool}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily bool httplib\+::\+Thread\+Pool\+::enqueue (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhttplib_1_1TaskQueue_a1daf863086c844a78086d4ac04147ae8}{httplib\+::\+Task\+Queue}}.
+
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_a9884cbaef9ed5f92152b82d2c93340ea}\label{classhttplib_1_1ThreadPool_a9884cbaef9ed5f92152b82d2c93340ea}} 
+\index{httplib::ThreadPool@{httplib::ThreadPool}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!httplib::ThreadPool@{httplib::ThreadPool}}
+\doxysubsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily void httplib\+::\+Thread\+Pool\+::shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhttplib_1_1TaskQueue_ae9f356217bd1ed1797426001070b316d}{httplib\+::\+Task\+Queue}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classhttplib_1_1ThreadPool_a145c4e203b787f9b561489eb2032edb3}\label{classhttplib_1_1ThreadPool_a145c4e203b787f9b561489eb2032edb3}} 
+\index{httplib::ThreadPool@{httplib::ThreadPool}!worker@{worker}}
+\index{worker@{worker}!httplib::ThreadPool@{httplib::ThreadPool}}
+\doxysubsubsection{\texorpdfstring{worker}{worker}}
+{\footnotesize\ttfamily friend struct worker\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/\mbox{\hyperlink{httplib_8h}{httplib.\+h}}\end{DoxyCompactItemize}

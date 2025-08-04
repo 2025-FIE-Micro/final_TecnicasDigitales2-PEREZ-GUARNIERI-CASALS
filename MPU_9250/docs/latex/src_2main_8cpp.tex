@@ -1,0 +1,69 @@
+\hypertarget{src_2main_8cpp}{}\doxysection{Referencia del Archivo /home/perico/\+Descargas/\+MPU\+\_\+9250/src/main.cpp}
+\label{src_2main_8cpp}\index{/home/perico/Descargas/MPU\_9250/src/main.cpp@{/home/perico/Descargas/MPU\_9250/src/main.cpp}}
+
+
+Lectura del sensor MPU-\/9250 y transmisión de datos por puerto serial en formato JSON.  
+
+
+{\ttfamily \#include $<$Wire.\+h$>$}\newline
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$MPU9250\+\_\+asukiaaa.\+h$>$}\newline
+Dependencia gráfica adjunta para main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{src_2main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+MPU9250\+\_\+asukiaaa \mbox{\hyperlink{src_2main_8cpp_a9d1a0b423b1fb4cd01bb1c19e8b0e426}{mpu}} (0x68)
+\begin{DoxyCompactList}\small\item\em Instancia del sensor MPU9250 con dirección I2C por defecto (0x68) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{src_2main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Configura la comunicación serial, el bus I2C y el sensor MPU-\/9250. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{src_2main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Loop principal que actualiza sensores y genera salida JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Lectura del sensor MPU-\/9250 y transmisión de datos por puerto serial en formato JSON. 
+
+El programa mide aceleración (g), velocidad angular (°/s) y campo magnético (µT), usando un ESP8266 y el sensor MPU-\/9250. Los datos se imprimen en formato JSON por serial. 
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{src_2main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{src_2main_8cpp_afe461d27b9c48d5921c00d521181f12f}} 
+\index{main.cpp@{main.cpp}!loop@{loop}}
+\index{loop@{loop}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loop principal que actualiza sensores y genera salida JSON. 
+
+Lectura de\+:
+\begin{DoxyItemize}
+\item Acelerómetro en g ({\ttfamily accel\+\_\+x}, {\ttfamily accel\+\_\+y}, {\ttfamily accel\+\_\+z})
+\item Giroscopio en grados/segundo ({\ttfamily gyro\+\_\+x}, {\ttfamily gyro\+\_\+y}, {\ttfamily gyro\+\_\+z})
+\item Magnetómetro en microteslas ({\ttfamily mag\+\_\+x}, {\ttfamily mag\+\_\+y}, {\ttfamily mag\+\_\+z}) 
+\end{DoxyItemize}\mbox{\Hypertarget{src_2main_8cpp_a9d1a0b423b1fb4cd01bb1c19e8b0e426}\label{src_2main_8cpp_a9d1a0b423b1fb4cd01bb1c19e8b0e426}} 
+\index{main.cpp@{main.cpp}!mpu@{mpu}}
+\index{mpu@{mpu}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mpu()}{mpu()}}
+{\footnotesize\ttfamily MPU9250\+\_\+asukiaaa mpu (\begin{DoxyParamCaption}\item[{0x68}]{ }\end{DoxyParamCaption})}
+
+
+
+Instancia del sensor MPU9250 con dirección I2C por defecto (0x68) 
+
+\mbox{\Hypertarget{src_2main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{src_2main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{main.cpp@{main.cpp}!setup@{setup}}
+\index{setup@{setup}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Configura la comunicación serial, el bus I2C y el sensor MPU-\/9250. 
+

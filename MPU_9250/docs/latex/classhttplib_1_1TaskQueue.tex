@@ -1,0 +1,78 @@
+\hypertarget{classhttplib_1_1TaskQueue}{}\doxysection{httplib\+::Task\+Queue Class Reference}
+\label{classhttplib_1_1TaskQueue}\index{httplib::TaskQueue@{httplib::TaskQueue}}
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+
+
+Inheritance diagram for httplib\+::Task\+Queue\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classhttplib_1_1TaskQueue__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhttplib_1_1TaskQueue_a86c1d663c1a733d703617737441cbdc0}{Task\+Queue}} ()=default
+\item 
+virtual \mbox{\hyperlink{classhttplib_1_1TaskQueue_ac5c93354376774b4082bb40cef9ae63d}{$\sim$\+Task\+Queue}} ()=default
+\item 
+virtual bool \mbox{\hyperlink{classhttplib_1_1TaskQueue_a1daf863086c844a78086d4ac04147ae8}{enqueue}} (std\+::function$<$ void()$>$ fn)=0
+\item 
+virtual void \mbox{\hyperlink{classhttplib_1_1TaskQueue_ae9f356217bd1ed1797426001070b316d}{shutdown}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhttplib_1_1TaskQueue_a219e7364388477343f373c10db45333e}{on\+\_\+idle}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhttplib_1_1TaskQueue_a86c1d663c1a733d703617737441cbdc0}\label{classhttplib_1_1TaskQueue_a86c1d663c1a733d703617737441cbdc0}} 
+\index{httplib::TaskQueue@{httplib::TaskQueue}!TaskQueue@{TaskQueue}}
+\index{TaskQueue@{TaskQueue}!httplib::TaskQueue@{httplib::TaskQueue}}
+\doxysubsubsection{\texorpdfstring{TaskQueue()}{TaskQueue()}}
+{\footnotesize\ttfamily httplib\+::\+Task\+Queue\+::\+Task\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhttplib_1_1TaskQueue_ac5c93354376774b4082bb40cef9ae63d}\label{classhttplib_1_1TaskQueue_ac5c93354376774b4082bb40cef9ae63d}} 
+\index{httplib::TaskQueue@{httplib::TaskQueue}!````~TaskQueue@{$\sim$TaskQueue}}
+\index{````~TaskQueue@{$\sim$TaskQueue}!httplib::TaskQueue@{httplib::TaskQueue}}
+\doxysubsubsection{\texorpdfstring{$\sim$TaskQueue()}{~TaskQueue()}}
+{\footnotesize\ttfamily virtual httplib\+::\+Task\+Queue\+::$\sim$\+Task\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhttplib_1_1TaskQueue_a1daf863086c844a78086d4ac04147ae8}\label{classhttplib_1_1TaskQueue_a1daf863086c844a78086d4ac04147ae8}} 
+\index{httplib::TaskQueue@{httplib::TaskQueue}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!httplib::TaskQueue@{httplib::TaskQueue}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily virtual bool httplib\+::\+Task\+Queue\+::enqueue (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhttplib_1_1ThreadPool_aebbfc6f52584e6d6c4b2e61d5dba0f6c}{httplib\+::\+Thread\+Pool}}.
+
+\mbox{\Hypertarget{classhttplib_1_1TaskQueue_a219e7364388477343f373c10db45333e}\label{classhttplib_1_1TaskQueue_a219e7364388477343f373c10db45333e}} 
+\index{httplib::TaskQueue@{httplib::TaskQueue}!on\_idle@{on\_idle}}
+\index{on\_idle@{on\_idle}!httplib::TaskQueue@{httplib::TaskQueue}}
+\doxysubsubsection{\texorpdfstring{on\_idle()}{on\_idle()}}
+{\footnotesize\ttfamily virtual void httplib\+::\+Task\+Queue\+::on\+\_\+idle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhttplib_1_1TaskQueue_ae9f356217bd1ed1797426001070b316d}\label{classhttplib_1_1TaskQueue_ae9f356217bd1ed1797426001070b316d}} 
+\index{httplib::TaskQueue@{httplib::TaskQueue}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!httplib::TaskQueue@{httplib::TaskQueue}}
+\doxysubsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily virtual void httplib\+::\+Task\+Queue\+::shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhttplib_1_1ThreadPool_a9884cbaef9ed5f92152b82d2c93340ea}{httplib\+::\+Thread\+Pool}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/\mbox{\hyperlink{httplib_8h}{httplib.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['main_276',['main',['../serial__api__cpp_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['main_2ecpp_277',['main.cpp',['../src_2main_8cpp.html',1,'(Global Namespace)'],['../serial__api__cpp_2main_8cpp.html',1,'(Global Namespace)']]],
+  ['make_5fbasic_5fauthentication_5fheader_278',['make_basic_authentication_header',['../namespacehttplib.html#a6b202b4fd91bd8e6a10a83dba358bc02',1,'httplib']]],
+  ['make_5fbearer_5ftoken_5fauthentication_5fheader_279',['make_bearer_token_authentication_header',['../namespacehttplib.html#aa082ee1ea10ce9c5132da091292799f3',1,'httplib']]],
+  ['make_5fcontent_5frange_5fheader_5ffield_280',['make_content_range_header_field',['../namespacehttplib_1_1detail.html#ae93cf1427a53d3e03d83434d4a7229ef',1,'httplib::detail']]],
+  ['make_5fmultipart_5fdata_5fboundary_281',['make_multipart_data_boundary',['../namespacehttplib_1_1detail.html#ae144d55905f9808c3abae6e20bd9367a',1,'httplib::detail']]],
+  ['make_5fmultipart_5franges_5fdata_282',['make_multipart_ranges_data',['../namespacehttplib_1_1detail.html#a93c46a7c00e1f2faa9cbbf00d7889e40',1,'httplib::detail']]],
+  ['make_5frange_5fheader_283',['make_range_header',['../namespacehttplib.html#a20d1f793f38780604766f3ccbd7b7032',1,'httplib']]],
+  ['make_5funique_284',['make_unique',['../namespacehttplib_1_1detail.html#a6b2e9bf1d4d9b68d9f1cffc91b9ce6bc',1,'httplib::detail::make_unique(std::size_t n)'],['../namespacehttplib_1_1detail.html#a61042375918dc9fd9b5ebdf67719a085',1,'httplib::detail::make_unique(Args &amp;&amp;...args)']]],
+  ['match_285',['Match',['../namespacehttplib.html#a33c72941ad79dac75b23f0d6b5f02571',1,'httplib']]],
+  ['match_286',['match',['../classhttplib_1_1detail_1_1RegexMatcher.html#aef3f65a7264ead1b47b310d214f16666',1,'httplib::detail::RegexMatcher::match()'],['../classhttplib_1_1detail_1_1PathParamsMatcher.html#aa0446fa3fcb729f471f23b0e8ff71127',1,'httplib::detail::PathParamsMatcher::match()'],['../classhttplib_1_1detail_1_1MatcherBase.html#a00140d7713bc6fb22efb81cf6b7065d6',1,'httplib::detail::MatcherBase::match()']]],
+  ['matched_5froute_287',['matched_route',['../structhttplib_1_1Request.html#ad75ba398c92ab5de350401c33ee4c193',1,'httplib::Request']]],
+  ['matcherbase_288',['MatcherBase',['../classhttplib_1_1detail_1_1MatcherBase.html',1,'httplib::detail::MatcherBase'],['../classhttplib_1_1detail_1_1MatcherBase.html#af1f324851154b9cf7ea72f46a6bbaade',1,'httplib::detail::MatcherBase::MatcherBase()']]],
+  ['matches_289',['matches',['../structhttplib_1_1Request.html#a9c55b6ab1bcd7c25a40a9c23ee2af1db',1,'httplib::Request']]],
+  ['max_5ftimeout_5fmsec_5f_290',['max_timeout_msec_',['../classhttplib_1_1ClientImpl.html#a4a8c0f300c2310660c0be7585237cce6',1,'httplib::ClientImpl']]],
+  ['method_291',['method',['../structhttplib_1_1Request.html#af69b50892d54b1a66c9b47e53226badc',1,'httplib::Request']]],
+  ['methodnotallowed_5f405_292',['MethodNotAllowed_405',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaa7a2dcfda002e90844c715d0ea2f93cfe',1,'httplib']]],
+  ['misdirectedrequest_5f421_293',['MisdirectedRequest_421',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaa1586d4001f8ee4cae26e40c508a8f2f1',1,'httplib']]],
+  ['mmap_294',['mmap',['../classhttplib_1_1detail_1_1mmap.html',1,'httplib::detail::mmap'],['../classhttplib_1_1detail_1_1mmap.html#aa82a1caa3de42e547abf2984168fd4f1',1,'httplib::detail::mmap::mmap()']]],
+  ['movedpermanently_5f301_295',['MovedPermanently_301',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaab51eb13d6f1457145025dfcf78ef233e',1,'httplib']]],
+  ['mpu_296',['mpu',['../src_2main_8cpp.html#a9d1a0b423b1fb4cd01bb1c19e8b0e426',1,'main.cpp']]],
+  ['multipartformdata_297',['MultipartFormData',['../structhttplib_1_1MultipartFormData.html',1,'httplib']]],
+  ['multiplechoices_5f300_298',['MultipleChoices_300',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaa1fad6ee52b139e459c0fb9d014b6bd8f',1,'httplib']]],
+  ['multistatus_5f207_299',['MultiStatus_207',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaa7266846041e9f1ab7c3a7ee2d5cf5d3b',1,'httplib']]]
+];

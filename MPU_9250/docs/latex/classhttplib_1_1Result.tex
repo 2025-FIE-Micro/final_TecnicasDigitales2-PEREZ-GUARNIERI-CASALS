@@ -1,0 +1,148 @@
+\hypertarget{classhttplib_1_1Result}{}\doxysection{httplib\+::Result Class Reference}
+\label{classhttplib_1_1Result}\index{httplib::Result@{httplib::Result}}
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhttplib_1_1Result_a42c9e607826214336012946e89a68768}{Result}} ()=default
+\item 
+\mbox{\hyperlink{classhttplib_1_1Result_aa6badab908c06e5da630a303de27fedf}{Result}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structhttplib_1_1Response}{Response}} $>$ \&\&res, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24a}{Error}} err, \mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}} \&\&request\+\_\+headers=\mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}}\{\})
+\item 
+\mbox{\hyperlink{classhttplib_1_1Result_ac6c15eebdaed35d1d667ca44a2401bb6}{operator bool}} () const
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1Result_aa3da86d4b239532badf920e3c462d8c8}{operator==}} (std\+::nullptr\+\_\+t) const
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1Result_ab50071c2f593c8d3550efdae743f73c1}{operator!=}} (std\+::nullptr\+\_\+t) const
+\item 
+const \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \& \mbox{\hyperlink{classhttplib_1_1Result_ab45f150b0e8746ef169df254fc5c0efb}{value}} () const
+\item 
+\mbox{\hyperlink{structhttplib_1_1Response}{Response}} \& \mbox{\hyperlink{classhttplib_1_1Result_a3a33a81e40c5fb00e46838a1342702a4}{value}} ()
+\item 
+const \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \& \mbox{\hyperlink{classhttplib_1_1Result_af63a99de49d816615183f6295f161a8c}{operator$\ast$}} () const
+\item 
+\mbox{\hyperlink{structhttplib_1_1Response}{Response}} \& \mbox{\hyperlink{classhttplib_1_1Result_ae18c557600dd989bcc7eb31ea83d308b}{operator$\ast$}} ()
+\item 
+const \mbox{\hyperlink{structhttplib_1_1Response}{Response}} $\ast$ \mbox{\hyperlink{classhttplib_1_1Result_ae717e049d1c79e0f879eea0911f66036}{operator-\/$>$}} () const
+\item 
+\mbox{\hyperlink{structhttplib_1_1Response}{Response}} $\ast$ \mbox{\hyperlink{classhttplib_1_1Result_aa3a6a273907a19fbe3eb282be2935b64}{operator-\/$>$}} ()
+\item 
+\mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24a}{Error}} \mbox{\hyperlink{classhttplib_1_1Result_ae7305fb10af90fa0850c9efcaea1e99b}{error}} () const
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1Result_a0de2f7a18bec984ff58bc566c0838dc4}{has\+\_\+request\+\_\+header}} (const std\+::string \&key) const
+\item 
+std\+::string \mbox{\hyperlink{classhttplib_1_1Result_afe541966fce0372009d257e15432d1fb}{get\+\_\+request\+\_\+header\+\_\+value}} (const std\+::string \&key, const char $\ast$def=\char`\"{}\char`\"{}, size\+\_\+t id=0) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classhttplib_1_1Result_ad45ec91292751807a2c39c8e95c0c9d6}{get\+\_\+request\+\_\+header\+\_\+value\+\_\+u64}} (const std\+::string \&key, size\+\_\+t def=0, size\+\_\+t id=0) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classhttplib_1_1Result_a6fc93c8b64dd8b2639cb696fc8c0cf43}{get\+\_\+request\+\_\+header\+\_\+value\+\_\+count}} (const std\+::string \&key) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhttplib_1_1Result_a42c9e607826214336012946e89a68768}\label{classhttplib_1_1Result_a42c9e607826214336012946e89a68768}} 
+\index{httplib::Result@{httplib::Result}!Result@{Result}}
+\index{Result@{Result}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{Result()}{Result()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily httplib\+::\+Result\+::\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_aa6badab908c06e5da630a303de27fedf}\label{classhttplib_1_1Result_aa6badab908c06e5da630a303de27fedf}} 
+\index{httplib::Result@{httplib::Result}!Result@{Result}}
+\index{Result@{Result}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{Result()}{Result()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily httplib\+::\+Result\+::\+Result (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structhttplib_1_1Response}{Response}} $>$ \&\&}]{res,  }\item[{\mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24a}{Error}}}]{err,  }\item[{\mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}} \&\&}]{request\+\_\+headers = {\ttfamily \mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}}\{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhttplib_1_1Result_ae7305fb10af90fa0850c9efcaea1e99b}\label{classhttplib_1_1Result_ae7305fb10af90fa0850c9efcaea1e99b}} 
+\index{httplib::Result@{httplib::Result}!error@{error}}
+\index{error@{error}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24a}{Error}} httplib\+::\+Result\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_afe541966fce0372009d257e15432d1fb}\label{classhttplib_1_1Result_afe541966fce0372009d257e15432d1fb}} 
+\index{httplib::Result@{httplib::Result}!get\_request\_header\_value@{get\_request\_header\_value}}
+\index{get\_request\_header\_value@{get\_request\_header\_value}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{get\_request\_header\_value()}{get\_request\_header\_value()}}
+{\footnotesize\ttfamily std\+::string httplib\+::\+Result\+::get\+\_\+request\+\_\+header\+\_\+value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const char $\ast$}]{def = {\ttfamily \char`\"{}\char`\"{}},  }\item[{size\+\_\+t}]{id = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_a6fc93c8b64dd8b2639cb696fc8c0cf43}\label{classhttplib_1_1Result_a6fc93c8b64dd8b2639cb696fc8c0cf43}} 
+\index{httplib::Result@{httplib::Result}!get\_request\_header\_value\_count@{get\_request\_header\_value\_count}}
+\index{get\_request\_header\_value\_count@{get\_request\_header\_value\_count}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{get\_request\_header\_value\_count()}{get\_request\_header\_value\_count()}}
+{\footnotesize\ttfamily size\+\_\+t httplib\+::\+Result\+::get\+\_\+request\+\_\+header\+\_\+value\+\_\+count (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_ad45ec91292751807a2c39c8e95c0c9d6}\label{classhttplib_1_1Result_ad45ec91292751807a2c39c8e95c0c9d6}} 
+\index{httplib::Result@{httplib::Result}!get\_request\_header\_value\_u64@{get\_request\_header\_value\_u64}}
+\index{get\_request\_header\_value\_u64@{get\_request\_header\_value\_u64}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{get\_request\_header\_value\_u64()}{get\_request\_header\_value\_u64()}}
+{\footnotesize\ttfamily size\+\_\+t httplib\+::\+Result\+::get\+\_\+request\+\_\+header\+\_\+value\+\_\+u64 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{size\+\_\+t}]{def = {\ttfamily 0},  }\item[{size\+\_\+t}]{id = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_a0de2f7a18bec984ff58bc566c0838dc4}\label{classhttplib_1_1Result_a0de2f7a18bec984ff58bc566c0838dc4}} 
+\index{httplib::Result@{httplib::Result}!has\_request\_header@{has\_request\_header}}
+\index{has\_request\_header@{has\_request\_header}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{has\_request\_header()}{has\_request\_header()}}
+{\footnotesize\ttfamily bool httplib\+::\+Result\+::has\+\_\+request\+\_\+header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_ac6c15eebdaed35d1d667ca44a2401bb6}\label{classhttplib_1_1Result_ac6c15eebdaed35d1d667ca44a2401bb6}} 
+\index{httplib::Result@{httplib::Result}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily httplib\+::\+Result\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_ab50071c2f593c8d3550efdae743f73c1}\label{classhttplib_1_1Result_ab50071c2f593c8d3550efdae743f73c1}} 
+\index{httplib::Result@{httplib::Result}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool httplib\+::\+Result\+::operator!= (\begin{DoxyParamCaption}\item[{std\+::nullptr\+\_\+t}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_ae18c557600dd989bcc7eb31ea83d308b}\label{classhttplib_1_1Result_ae18c557600dd989bcc7eb31ea83d308b}} 
+\index{httplib::Result@{httplib::Result}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhttplib_1_1Response}{Response}}\& httplib\+::\+Result\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_af63a99de49d816615183f6295f161a8c}\label{classhttplib_1_1Result_af63a99de49d816615183f6295f161a8c}} 
+\index{httplib::Result@{httplib::Result}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structhttplib_1_1Response}{Response}}\& httplib\+::\+Result\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_aa3a6a273907a19fbe3eb282be2935b64}\label{classhttplib_1_1Result_aa3a6a273907a19fbe3eb282be2935b64}} 
+\index{httplib::Result@{httplib::Result}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhttplib_1_1Response}{Response}}$\ast$ httplib\+::\+Result\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_ae717e049d1c79e0f879eea0911f66036}\label{classhttplib_1_1Result_ae717e049d1c79e0f879eea0911f66036}} 
+\index{httplib::Result@{httplib::Result}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structhttplib_1_1Response}{Response}}$\ast$ httplib\+::\+Result\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_aa3da86d4b239532badf920e3c462d8c8}\label{classhttplib_1_1Result_aa3da86d4b239532badf920e3c462d8c8}} 
+\index{httplib::Result@{httplib::Result}!operator==@{operator==}}
+\index{operator==@{operator==}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool httplib\+::\+Result\+::operator== (\begin{DoxyParamCaption}\item[{std\+::nullptr\+\_\+t}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_a3a33a81e40c5fb00e46838a1342702a4}\label{classhttplib_1_1Result_a3a33a81e40c5fb00e46838a1342702a4}} 
+\index{httplib::Result@{httplib::Result}!value@{value}}
+\index{value@{value}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhttplib_1_1Response}{Response}}\& httplib\+::\+Result\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Result_ab45f150b0e8746ef169df254fc5c0efb}\label{classhttplib_1_1Result_ab45f150b0e8746ef169df254fc5c0efb}} 
+\index{httplib::Result@{httplib::Result}!value@{value}}
+\index{value@{value}!httplib::Result@{httplib::Result}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structhttplib_1_1Response}{Response}}\& httplib\+::\+Result\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/\mbox{\hyperlink{httplib_8h}{httplib.\+h}}\end{DoxyCompactItemize}

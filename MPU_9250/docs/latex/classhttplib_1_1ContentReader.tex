@@ -1,0 +1,88 @@
+\hypertarget{classhttplib_1_1ContentReader}{}\doxysection{httplib\+::Content\+Reader Class Reference}
+\label{classhttplib_1_1ContentReader}\index{httplib::ContentReader@{httplib::ContentReader}}
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classhttplib_1_1ContentReader_abc8da0da3f914be4fb5cc3bb67d8c443}{Reader}} = std\+::function$<$ bool(\mbox{\hyperlink{namespacehttplib_ad7425937de0bafb891b0b7cae87dc368}{Content\+Receiver}} receiver)$>$
+\item 
+using \mbox{\hyperlink{classhttplib_1_1ContentReader_adc1050ca227a8b1e1a12000b38e07e29}{Form\+Data\+Reader}} = std\+::function$<$ bool(\mbox{\hyperlink{namespacehttplib_ab120903da235f1cc60df3f94ee401dab}{Form\+Data\+Header}} header, \mbox{\hyperlink{namespacehttplib_ad7425937de0bafb891b0b7cae87dc368}{Content\+Receiver}} receiver)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhttplib_1_1ContentReader_a2c122c8d98c1b9bf17270d3237a7be0a}{Content\+Reader}} (\mbox{\hyperlink{classhttplib_1_1ContentReader_abc8da0da3f914be4fb5cc3bb67d8c443}{Reader}} reader, \mbox{\hyperlink{classhttplib_1_1ContentReader_adc1050ca227a8b1e1a12000b38e07e29}{Form\+Data\+Reader}} multipart\+\_\+reader)
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1ContentReader_a4a75129eecfd7c9b1d5580437f7ebdf8}{operator()}} (\mbox{\hyperlink{namespacehttplib_ab120903da235f1cc60df3f94ee401dab}{Form\+Data\+Header}} header, \mbox{\hyperlink{namespacehttplib_ad7425937de0bafb891b0b7cae87dc368}{Content\+Receiver}} receiver) const
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1ContentReader_aa6f3ec4f7b8669f1f1249a5fba969d5a}{operator()}} (\mbox{\hyperlink{namespacehttplib_ad7425937de0bafb891b0b7cae87dc368}{Content\+Receiver}} receiver) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhttplib_1_1ContentReader_abc8da0da3f914be4fb5cc3bb67d8c443}{Reader}} \mbox{\hyperlink{classhttplib_1_1ContentReader_a1fb51ae3a8bc275f1ef81ab01e85d86b}{reader\+\_\+}}
+\item 
+\mbox{\hyperlink{classhttplib_1_1ContentReader_adc1050ca227a8b1e1a12000b38e07e29}{Form\+Data\+Reader}} \mbox{\hyperlink{classhttplib_1_1ContentReader_ace6d95058db590a77023d2e39f4b7f79}{formdata\+\_\+reader\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_adc1050ca227a8b1e1a12000b38e07e29}\label{classhttplib_1_1ContentReader_adc1050ca227a8b1e1a12000b38e07e29}} 
+\index{httplib::ContentReader@{httplib::ContentReader}!FormDataReader@{FormDataReader}}
+\index{FormDataReader@{FormDataReader}!httplib::ContentReader@{httplib::ContentReader}}
+\doxysubsubsection{\texorpdfstring{FormDataReader}{FormDataReader}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classhttplib_1_1ContentReader_adc1050ca227a8b1e1a12000b38e07e29}{httplib\+::\+Content\+Reader\+::\+Form\+Data\+Reader}} =  std\+::function$<$bool(\mbox{\hyperlink{namespacehttplib_ab120903da235f1cc60df3f94ee401dab}{Form\+Data\+Header}} header, \mbox{\hyperlink{namespacehttplib_ad7425937de0bafb891b0b7cae87dc368}{Content\+Receiver}} receiver)$>$}
+
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_abc8da0da3f914be4fb5cc3bb67d8c443}\label{classhttplib_1_1ContentReader_abc8da0da3f914be4fb5cc3bb67d8c443}} 
+\index{httplib::ContentReader@{httplib::ContentReader}!Reader@{Reader}}
+\index{Reader@{Reader}!httplib::ContentReader@{httplib::ContentReader}}
+\doxysubsubsection{\texorpdfstring{Reader}{Reader}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classhttplib_1_1ContentReader_abc8da0da3f914be4fb5cc3bb67d8c443}{httplib\+::\+Content\+Reader\+::\+Reader}} =  std\+::function$<$bool(\mbox{\hyperlink{namespacehttplib_ad7425937de0bafb891b0b7cae87dc368}{Content\+Receiver}} receiver)$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_a2c122c8d98c1b9bf17270d3237a7be0a}\label{classhttplib_1_1ContentReader_a2c122c8d98c1b9bf17270d3237a7be0a}} 
+\index{httplib::ContentReader@{httplib::ContentReader}!ContentReader@{ContentReader}}
+\index{ContentReader@{ContentReader}!httplib::ContentReader@{httplib::ContentReader}}
+\doxysubsubsection{\texorpdfstring{ContentReader()}{ContentReader()}}
+{\footnotesize\ttfamily httplib\+::\+Content\+Reader\+::\+Content\+Reader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhttplib_1_1ContentReader_abc8da0da3f914be4fb5cc3bb67d8c443}{Reader}}}]{reader,  }\item[{\mbox{\hyperlink{classhttplib_1_1ContentReader_adc1050ca227a8b1e1a12000b38e07e29}{Form\+Data\+Reader}}}]{multipart\+\_\+reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_aa6f3ec4f7b8669f1f1249a5fba969d5a}\label{classhttplib_1_1ContentReader_aa6f3ec4f7b8669f1f1249a5fba969d5a}} 
+\index{httplib::ContentReader@{httplib::ContentReader}!operator()@{operator()}}
+\index{operator()@{operator()}!httplib::ContentReader@{httplib::ContentReader}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool httplib\+::\+Content\+Reader\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehttplib_ad7425937de0bafb891b0b7cae87dc368}{Content\+Receiver}}}]{receiver }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_a4a75129eecfd7c9b1d5580437f7ebdf8}\label{classhttplib_1_1ContentReader_a4a75129eecfd7c9b1d5580437f7ebdf8}} 
+\index{httplib::ContentReader@{httplib::ContentReader}!operator()@{operator()}}
+\index{operator()@{operator()}!httplib::ContentReader@{httplib::ContentReader}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool httplib\+::\+Content\+Reader\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehttplib_ab120903da235f1cc60df3f94ee401dab}{Form\+Data\+Header}}}]{header,  }\item[{\mbox{\hyperlink{namespacehttplib_ad7425937de0bafb891b0b7cae87dc368}{Content\+Receiver}}}]{receiver }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_ace6d95058db590a77023d2e39f4b7f79}\label{classhttplib_1_1ContentReader_ace6d95058db590a77023d2e39f4b7f79}} 
+\index{httplib::ContentReader@{httplib::ContentReader}!formdata\_reader\_@{formdata\_reader\_}}
+\index{formdata\_reader\_@{formdata\_reader\_}!httplib::ContentReader@{httplib::ContentReader}}
+\doxysubsubsection{\texorpdfstring{formdata\_reader\_}{formdata\_reader\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1ContentReader_adc1050ca227a8b1e1a12000b38e07e29}{Form\+Data\+Reader}} httplib\+::\+Content\+Reader\+::formdata\+\_\+reader\+\_\+}
+
+\mbox{\Hypertarget{classhttplib_1_1ContentReader_a1fb51ae3a8bc275f1ef81ab01e85d86b}\label{classhttplib_1_1ContentReader_a1fb51ae3a8bc275f1ef81ab01e85d86b}} 
+\index{httplib::ContentReader@{httplib::ContentReader}!reader\_@{reader\_}}
+\index{reader\_@{reader\_}!httplib::ContentReader@{httplib::ContentReader}}
+\doxysubsubsection{\texorpdfstring{reader\_}{reader\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1ContentReader_abc8da0da3f914be4fb5cc3bb67d8c443}{Reader}} httplib\+::\+Content\+Reader\+::reader\+\_\+}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/\mbox{\hyperlink{httplib_8h}{httplib.\+h}}\end{DoxyCompactItemize}

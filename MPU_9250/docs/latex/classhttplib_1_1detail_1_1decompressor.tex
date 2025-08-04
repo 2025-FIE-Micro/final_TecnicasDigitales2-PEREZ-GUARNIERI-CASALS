@@ -1,0 +1,58 @@
+\hypertarget{classhttplib_1_1detail_1_1decompressor}{}\doxysection{httplib\+::detail\+::decompressor Class Reference}
+\label{classhttplib_1_1detail_1_1decompressor}\index{httplib::detail::decompressor@{httplib::detail::decompressor}}
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ bool(const char $\ast$data, size\+\_\+t data\+\_\+len)$>$ \mbox{\hyperlink{classhttplib_1_1detail_1_1decompressor_afd922d878d8fd77012b87114f7193a78}{Callback}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classhttplib_1_1detail_1_1decompressor_a8dc4404b2247cbf43b60838aa4ffb938}{$\sim$decompressor}} ()=default
+\item 
+virtual bool \mbox{\hyperlink{classhttplib_1_1detail_1_1decompressor_adf987b42198e8f9fdd555ce9577341ba}{is\+\_\+valid}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{classhttplib_1_1detail_1_1decompressor_ad4fcf7cd57cd8e0b66e5a4d101fffc2e}{decompress}} (const char $\ast$data, size\+\_\+t data\+\_\+length, \mbox{\hyperlink{classhttplib_1_1detail_1_1decompressor_afd922d878d8fd77012b87114f7193a78}{Callback}} callback)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1decompressor_afd922d878d8fd77012b87114f7193a78}\label{classhttplib_1_1detail_1_1decompressor_afd922d878d8fd77012b87114f7193a78}} 
+\index{httplib::detail::decompressor@{httplib::detail::decompressor}!Callback@{Callback}}
+\index{Callback@{Callback}!httplib::detail::decompressor@{httplib::detail::decompressor}}
+\doxysubsubsection{\texorpdfstring{Callback}{Callback}}
+{\footnotesize\ttfamily typedef std\+::function$<$bool(const char $\ast$data, size\+\_\+t data\+\_\+len)$>$ \mbox{\hyperlink{classhttplib_1_1detail_1_1decompressor_afd922d878d8fd77012b87114f7193a78}{httplib\+::detail\+::decompressor\+::\+Callback}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1decompressor_a8dc4404b2247cbf43b60838aa4ffb938}\label{classhttplib_1_1detail_1_1decompressor_a8dc4404b2247cbf43b60838aa4ffb938}} 
+\index{httplib::detail::decompressor@{httplib::detail::decompressor}!````~decompressor@{$\sim$decompressor}}
+\index{````~decompressor@{$\sim$decompressor}!httplib::detail::decompressor@{httplib::detail::decompressor}}
+\doxysubsubsection{\texorpdfstring{$\sim$decompressor()}{~decompressor()}}
+{\footnotesize\ttfamily virtual httplib\+::detail\+::decompressor\+::$\sim$decompressor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1decompressor_ad4fcf7cd57cd8e0b66e5a4d101fffc2e}\label{classhttplib_1_1detail_1_1decompressor_ad4fcf7cd57cd8e0b66e5a4d101fffc2e}} 
+\index{httplib::detail::decompressor@{httplib::detail::decompressor}!decompress@{decompress}}
+\index{decompress@{decompress}!httplib::detail::decompressor@{httplib::detail::decompressor}}
+\doxysubsubsection{\texorpdfstring{decompress()}{decompress()}}
+{\footnotesize\ttfamily virtual bool httplib\+::detail\+::decompressor\+::decompress (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+length,  }\item[{\mbox{\hyperlink{classhttplib_1_1detail_1_1decompressor_afd922d878d8fd77012b87114f7193a78}{Callback}}}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1decompressor_adf987b42198e8f9fdd555ce9577341ba}\label{classhttplib_1_1detail_1_1decompressor_adf987b42198e8f9fdd555ce9577341ba}} 
+\index{httplib::detail::decompressor@{httplib::detail::decompressor}!is\_valid@{is\_valid}}
+\index{is\_valid@{is\_valid}!httplib::detail::decompressor@{httplib::detail::decompressor}}
+\doxysubsubsection{\texorpdfstring{is\_valid()}{is\_valid()}}
+{\footnotesize\ttfamily virtual bool httplib\+::detail\+::decompressor\+::is\+\_\+valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/\mbox{\hyperlink{httplib_8h}{httplib.\+h}}\end{DoxyCompactItemize}

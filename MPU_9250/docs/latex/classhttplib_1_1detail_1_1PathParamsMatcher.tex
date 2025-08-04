@@ -1,0 +1,69 @@
+\hypertarget{classhttplib_1_1detail_1_1PathParamsMatcher}{}\doxysection{httplib\+::detail\+::Path\+Params\+Matcher Class Reference}
+\label{classhttplib_1_1detail_1_1PathParamsMatcher}\index{httplib::detail::PathParamsMatcher@{httplib::detail::PathParamsMatcher}}
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+
+
+Inheritance diagram for httplib\+::detail\+::Path\+Params\+Matcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classhttplib_1_1detail_1_1PathParamsMatcher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for httplib\+::detail\+::Path\+Params\+Matcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classhttplib_1_1detail_1_1PathParamsMatcher__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhttplib_1_1detail_1_1PathParamsMatcher_a6b0b367cc4db29c2f81bd3e858da0e10}{Path\+Params\+Matcher}} (const std\+::string \&\mbox{\hyperlink{classhttplib_1_1detail_1_1MatcherBase_a3adb66b02258a1b7f37420dd5203ba91}{pattern}})
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1detail_1_1PathParamsMatcher_aa0446fa3fcb729f471f23b0e8ff71127}{match}} (\mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&request) const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Captures parameters in request path and stores them in \mbox{\hyperlink{structhttplib_1_1Request_a3d2f38f9019bcf700e2abba02d8b4157}{Request\+::path\+\_\+params}}
+
+Capture name is a substring of a pattern from \+: to /. The rest of the pattern is matched against the request path directly Parameters are captured starting from the next character after the end of the last matched static pattern fragment until the next /.
+
+Example pattern\+: \char`\"{}/path/fragments/\+:capture/more/fragments/\+:second\+\_\+capture\char`\"{} Static fragments\+: \char`\"{}/path/fragments/\char`\"{}, \char`\"{}more/fragments/\char`\"{}
+
+Given the following request path\+: \char`\"{}/path/fragments/\+:1/more/fragments/\+:2\char`\"{} the resulting capture will be \{\{\char`\"{}capture\char`\"{}, \char`\"{}1\char`\"{}\}, \{\char`\"{}second\+\_\+capture\char`\"{}, \char`\"{}2\char`\"{}\}\} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1PathParamsMatcher_a6b0b367cc4db29c2f81bd3e858da0e10}\label{classhttplib_1_1detail_1_1PathParamsMatcher_a6b0b367cc4db29c2f81bd3e858da0e10}} 
+\index{httplib::detail::PathParamsMatcher@{httplib::detail::PathParamsMatcher}!PathParamsMatcher@{PathParamsMatcher}}
+\index{PathParamsMatcher@{PathParamsMatcher}!httplib::detail::PathParamsMatcher@{httplib::detail::PathParamsMatcher}}
+\doxysubsubsection{\texorpdfstring{PathParamsMatcher()}{PathParamsMatcher()}}
+{\footnotesize\ttfamily httplib\+::detail\+::\+Path\+Params\+Matcher\+::\+Path\+Params\+Matcher (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1PathParamsMatcher_aa0446fa3fcb729f471f23b0e8ff71127}\label{classhttplib_1_1detail_1_1PathParamsMatcher_aa0446fa3fcb729f471f23b0e8ff71127}} 
+\index{httplib::detail::PathParamsMatcher@{httplib::detail::PathParamsMatcher}!match@{match}}
+\index{match@{match}!httplib::detail::PathParamsMatcher@{httplib::detail::PathParamsMatcher}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}}
+{\footnotesize\ttfamily bool httplib\+::detail\+::\+Path\+Params\+Matcher\+::match (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&}]{request }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhttplib_1_1detail_1_1MatcherBase_a00140d7713bc6fb22efb81cf6b7065d6}{httplib\+::detail\+::\+Matcher\+Base}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/\mbox{\hyperlink{httplib_8h}{httplib.\+h}}\end{DoxyCompactItemize}

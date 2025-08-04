@@ -1,0 +1,105 @@
+#include <Wire.h>
+#include <Arduino.h> 
+#include <MPU9250_asukiaaa.h>
+//#include <MPU9250.h> // alternativa popular
+
+
+uint8_t i2c_addr = 0x68; // dirección por defecto
+MPU9250_asukiaaa mySensor(i2c_addr);  
+
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+
+  Wire.begin(4, 5); // SDA = GPIO4 (D2), SCL = GPIO5 (D1)
+  Serial.println("Buscando MPU-9250...");
+
+  // Probar 0x68
+  Wire.beginTransmission(0x68);
+  if (Wire.endTransmission() == 0) {
+    i2c_addr = 0x68;
+    Serial.println("MPU-9250 encontrado en 0x68 ✅");
+  } else {
+    // Probar 0x69
+    Wire.beginTransmission(0x69);
+    if (Wire.endTransmission() == 0) {
+      i2c_addr = 0x69;
+      Serial.println("MPU-9250 encontrado en 0x69 ✅");
+    } else {
+      Serial.println("❌ No se detectó MPU-9250 en I2C (ni 0x68 ni 0x69)");
+      while (true); // Detener
+    }
+  }
+
+  mySensor.setWire(&Wire);
+
+  mySensor.beginAccel();
+  mySensor.beginGyro();
+  mySensor.beginMag();
+}
+
+void loop() {
+  mySensor.accelUpdate();
+  mySensor.gyroUpdate();
+  mySensor.magUpdate();
+
+  float ax = mySensor.accelX();
+  float ay = mySensor.accelY();
+  float az = mySensor.accelZ();
+  float gx = mySensor.gyroX();
+  float gy = mySensor.gyroY();
+  float gz = mySensor.gyroZ();
+  float mx = mySensor.magX();
+  float my = mySensor.magY();
+  float mz = mySensor.magZ();
+
+  // Validar que no sean NaN ni infinitos
+  if (!isnan(ax) && !isnan(ay) && !isnan(az) &&
+      !isnan(gx) && !isnan(gy) && !isnan(gz) &&
+      !isnan(mx) && !isnan(my) && !isnan(mz)) {
+    
+    Serial.print(ax); Serial.print(",");
+    Serial.print(ay); Serial.print(",");
+    Serial.print(az); Serial.print(",");
+    Serial.print(gx); Serial.print(",");
+    Serial.print(gy); Serial.print(",");
+    Serial.print(gz); Serial.print(",");
+    Serial.print(mx); Serial.print(",");
+    Serial.print(my); Serial.print(",");
+    Serial.println(mz); // fin de línea
+  }
+
+  delay(30); // Suaviza la lectura
+}
+
+
+
+// #include <Arduino.h>
+// #include <Wire.h>
+
+// void setup() {
+//   Serial.begin(115200);
+//   Wire.begin(4, 5); // SDA, SCL
+
+//   Serial.println("Escaneando dispositivos I2C...");
+
+//   uint8_t  count = 0;
+//   for (uint8_t  address = 1; address < 127; address++) {
+//     Wire.beginTransmission(address);
+//     if (Wire.endTransmission() == 0) {
+//       Serial.print("Dispositivo encontrado en 0x");
+//       Serial.println(address, HEX);
+//       count++;
+//     }
+//     delay(10);
+//   }
+
+//   if (count == 0) {
+//     Serial.println("❌ No se detectó ningún dispositivo I2C.");
+//   } else {
+//     Serial.print("✅ Total detectado: ");
+//     Serial.println(count);
+//   }
+// }
+
+// void loop() {}

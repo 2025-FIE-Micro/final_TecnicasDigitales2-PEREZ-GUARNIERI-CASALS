@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['ultimo_5fjson_526',['ultimo_json',['../serial__api__cpp_2main_8cpp.html#a46e0ba1a819960b6a9d0e7dcfcbbd535',1,'main.cpp']]],
+  ['unauthorized_5f401_527',['Unauthorized_401',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaa8a44ec2902cdab7dd99c16a6b7e5cea9',1,'httplib']]],
+  ['unavailableforlegalreasons_5f451_528',['UnavailableForLegalReasons_451',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaa22a889a3db211962127f0225fab6d0ee',1,'httplib']]],
+  ['unescape_5fabstract_5fnamespace_5funix_5fdomain_529',['unescape_abstract_namespace_unix_domain',['../namespacehttplib_1_1detail.html#aec462af74cad7de8d5d4283b4eae60df',1,'httplib::detail']]],
+  ['unhandled_530',['Unhandled',['../classhttplib_1_1Server.html#a68cf8c175834bde61120ac4216ea943ba6fe9e16b804e1ce4ac5868be60615007',1,'httplib::Server']]],
+  ['unknown_531',['Unknown',['../namespacehttplib.html#a46ff5da925971ebebf2c5693e367f24aa88183b946cc5f0e8c96b2e66e1c74a7e',1,'httplib']]],
+  ['unordered_5fset_532',['unordered_set',['../namespacehttplib_1_1detail_1_1case__ignore.html#a53e98c8d276e14e7c93fc217f9620d77',1,'httplib::detail::case_ignore']]],
+  ['unprocessablecontent_5f422_533',['UnprocessableContent_422',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaada8c01f6051d03f553a6cc1fbd340cd5',1,'httplib']]],
+  ['unsupportedmediatype_5f415_534',['UnsupportedMediaType_415',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaa49314619c75f8c18833e0232edb5a0c9',1,'httplib']]],
+  ['unsupportedmultipartboundarychars_535',['UnsupportedMultipartBoundaryChars',['../namespacehttplib.html#a46ff5da925971ebebf2c5693e367f24aae9bf6daa3624423795b289a290a59505',1,'httplib']]],
+  ['unused_5f306_536',['unused_306',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaa5a80775e405474653d56b93cbbbfc8b5',1,'httplib']]],
+  ['upgraderequired_5f426_537',['UpgradeRequired_426',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaaf9c473a4f9745602da8798077bf83278',1,'httplib']]],
+  ['upload_5fprogress_538',['upload_progress',['../structhttplib_1_1Request.html#a4b255e1257b3e81c90c6dea2b0efdeb1',1,'httplib::Request']]],
+  ['uploadformdata_539',['UploadFormData',['../structhttplib_1_1UploadFormData.html',1,'httplib']]],
+  ['uploadformdataitems_540',['UploadFormDataItems',['../namespacehttplib.html#ab8da7a8021989c12cf49f70fc5737beb',1,'httplib']]],
+  ['uploadprogress_541',['UploadProgress',['../namespacehttplib.html#aa42181a1f31cf7efed3e05afc42f2885',1,'httplib']]],
+  ['uritoolong_5f414_542',['UriTooLong_414',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaa3c6599766d38c5e1430de9da091c5487',1,'httplib']]],
+  ['use_5fif2ip_543',['USE_IF2IP',['../httplib_8h.html#aa546fa704e96e7242f4626183e02f61d',1,'httplib.h']]],
+  ['useproxy_5f305_544',['UseProxy_305',['../namespacehttplib.html#ade1f5845ce6b8d8fdb3a56676db48fbaa9e582177d52a4358f22ba483e4224f7e',1,'httplib']]]
+];

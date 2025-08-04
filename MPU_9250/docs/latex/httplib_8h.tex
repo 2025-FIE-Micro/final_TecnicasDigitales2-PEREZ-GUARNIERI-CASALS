@@ -1,0 +1,915 @@
+\hypertarget{httplib_8h}{}\doxysection{/home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/httplib.h File Reference}
+\label{httplib_8h}\index{/home/perico/Descargas/MPU\_9250/serial\_api\_cpp/httplib.h@{/home/perico/Descargas/MPU\_9250/serial\_api\_cpp/httplib.h}}
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$ifaddrs.\+h$>$}\newline
+{\ttfamily \#include $<$net/if.\+h$>$}\newline
+{\ttfamily \#include $<$netdb.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$csignal$>$}\newline
+{\ttfamily \#include $<$netinet/tcp.\+h$>$}\newline
+{\ttfamily \#include $<$poll.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$sys/un.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+Include dependency graph for httplib.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{httplib_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{httplib_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1detail_1_1case__ignore_1_1equal__to}{httplib\+::detail\+::case\+\_\+ignore\+::equal\+\_\+to}}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1detail_1_1case__ignore_1_1hash}{httplib\+::detail\+::case\+\_\+ignore\+::hash}}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1detail_1_1scope__exit}{httplib\+::detail\+::scope\+\_\+exit}}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1FormData}{httplib\+::\+Form\+Data}}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1FormField}{httplib\+::\+Form\+Field}}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1MultipartFormData}{httplib\+::\+Multipart\+Form\+Data}}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1UploadFormData}{httplib\+::\+Upload\+Form\+Data}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1DataSink}{httplib\+::\+Data\+Sink}}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1FormDataProvider}{httplib\+::\+Form\+Data\+Provider}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1ContentReader}{httplib\+::\+Content\+Reader}}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1Request}{httplib\+::\+Request}}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1Response}{httplib\+::\+Response}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1Stream}{httplib\+::\+Stream}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1TaskQueue}{httplib\+::\+Task\+Queue}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1ThreadPool}{httplib\+::\+Thread\+Pool}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1MatcherBase}{httplib\+::detail\+::\+Matcher\+Base}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1PathParamsMatcher}{httplib\+::detail\+::\+Path\+Params\+Matcher}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1RegexMatcher}{httplib\+::detail\+::\+Regex\+Matcher}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1Server}{httplib\+::\+Server}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1Result}{httplib\+::\+Result}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1ClientImpl}{httplib\+::\+Client\+Impl}}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1ClientImpl_1_1Socket}{httplib\+::\+Client\+Impl\+::\+Socket}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1Client}{httplib\+::\+Client}}
+\item 
+struct \mbox{\hyperlink{structhttplib_1_1detail_1_1FileStat}{httplib\+::detail\+::\+File\+Stat}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1BufferStream}{httplib\+::detail\+::\+Buffer\+Stream}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1compressor}{httplib\+::detail\+::compressor}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1decompressor}{httplib\+::detail\+::decompressor}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1nocompressor}{httplib\+::detail\+::nocompressor}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1stream__line__reader}{httplib\+::detail\+::stream\+\_\+line\+\_\+reader}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1mmap}{httplib\+::detail\+::mmap}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1SocketStream}{httplib\+::detail\+::\+Socket\+Stream}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1FormDataParser}{httplib\+::detail\+::\+Form\+Data\+Parser}}
+\item 
+class \mbox{\hyperlink{classhttplib_1_1detail_1_1ContentProviderAdapter}{httplib\+::detail\+::\+Content\+Provider\+Adapter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehttplib}{httplib}}
+\item 
+ \mbox{\hyperlink{namespacehttplib_1_1detail}{httplib\+::detail}}
+\item 
+ \mbox{\hyperlink{namespacehttplib_1_1detail_1_1case__ignore}{httplib\+::detail\+::case\+\_\+ignore}}
+\item 
+ \mbox{\hyperlink{namespacehttplib_1_1detail_1_1fields}{httplib\+::detail\+::fields}}
+\item 
+ \mbox{\hyperlink{namespacehttplib_1_1detail_1_1udl}{httplib\+::detail\+::udl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a047ad7234359c500d545a8104a9aa2ae}{CPPHTTPLIB\+\_\+\+VERSION}}~\char`\"{}0.\+24.\+0\char`\"{}
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a54d7baaffa410009acf237ec3021d09c}{CPPHTTPLIB\+\_\+\+VERSION\+\_\+\+NUM}}~\char`\"{}0x001800\char`\"{}
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a9290820a34ffe59a772df48b954fc4ac}{CPPHTTPLIB\+\_\+\+KEEPALIVE\+\_\+\+TIMEOUT\+\_\+\+SECOND}}~5
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a2f52f532efd14027e79677b79f2b181e}{CPPHTTPLIB\+\_\+\+KEEPALIVE\+\_\+\+TIMEOUT\+\_\+\+CHECK\+\_\+\+INTERVAL\+\_\+\+USECOND}}~10000
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a56599ecd6d67e12d9c71138ea69fc179}{CPPHTTPLIB\+\_\+\+KEEPALIVE\+\_\+\+MAX\+\_\+\+COUNT}}~100
+\item 
+\#define \mbox{\hyperlink{httplib_8h_ae9537bdb9c4b89b7b834642b3499effc}{CPPHTTPLIB\+\_\+\+CONNECTION\+\_\+\+TIMEOUT\+\_\+\+SECOND}}~300
+\item 
+\#define \mbox{\hyperlink{httplib_8h_af123748ea8c79f98e59ee2c2cb0741a6}{CPPHTTPLIB\+\_\+\+CONNECTION\+\_\+\+TIMEOUT\+\_\+\+USECOND}}~0
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a266bad4abcddf74aef65f2dc9f2cb699}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+SECOND}}~5
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a45fca6d3f1535a5cb5dc0ef0f906df1a}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+USECOND}}~0
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a46b9166c2149a12d8d5529c029eff6a9}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+SECOND}}~5
+\item 
+\#define \mbox{\hyperlink{httplib_8h_aad47e5608ca40ac49c13aeaf690110b0}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+USECOND}}~0
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a828ff04d1bea4f350981dd16c854ec21}{CPPHTTPLIB\+\_\+\+CLIENT\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+SECOND}}~300
+\item 
+\#define \mbox{\hyperlink{httplib_8h_ae545d94e2cf8b245d689a55e9e313944}{CPPHTTPLIB\+\_\+\+CLIENT\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+USECOND}}~0
+\item 
+\#define \mbox{\hyperlink{httplib_8h_ae909aefd0b5f39e562d2ee2468299a19}{CPPHTTPLIB\+\_\+\+CLIENT\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+SECOND}}~5
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a46f3a99709381ae089da222c79bfaf46}{CPPHTTPLIB\+\_\+\+CLIENT\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+USECOND}}~0
+\item 
+\#define \mbox{\hyperlink{httplib_8h_aa08b6c7771178f71649f98638d2687cd}{CPPHTTPLIB\+\_\+\+CLIENT\+\_\+\+MAX\+\_\+\+TIMEOUT\+\_\+\+MSECOND}}~0
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a4e0e9bf4fac8b733127daaca7ad6b20d}{CPPHTTPLIB\+\_\+\+IDLE\+\_\+\+INTERVAL\+\_\+\+SECOND}}~0
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a6ff1203f6506a846bce93b853dbc5a9a}{CPPHTTPLIB\+\_\+\+IDLE\+\_\+\+INTERVAL\+\_\+\+USECOND}}~0
+\item 
+\#define \mbox{\hyperlink{httplib_8h_ac260f5899a74e107b13c6c170d0ccc5a}{CPPHTTPLIB\+\_\+\+REQUEST\+\_\+\+URI\+\_\+\+MAX\+\_\+\+LENGTH}}~8192
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a8ca9b9f50a5abed0292e45d0004ebb31}{CPPHTTPLIB\+\_\+\+HEADER\+\_\+\+MAX\+\_\+\+LENGTH}}~8192
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a2563cd9e253bcf2bc02c55449f2e8a81}{CPPHTTPLIB\+\_\+\+HEADER\+\_\+\+MAX\+\_\+\+COUNT}}~100
+\item 
+\#define \mbox{\hyperlink{httplib_8h_ad3460b45576005d416bf69a708243d8d}{CPPHTTPLIB\+\_\+\+REDIRECT\+\_\+\+MAX\+\_\+\+COUNT}}~20
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a151a98e2ce083170a051536ee91e3cc3}{CPPHTTPLIB\+\_\+\+MULTIPART\+\_\+\+FORM\+\_\+\+DATA\+\_\+\+FILE\+\_\+\+MAX\+\_\+\+COUNT}}~1024
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a20a3df3819479bbd53093ce5e6ef86d6}{CPPHTTPLIB\+\_\+\+PAYLOAD\+\_\+\+MAX\+\_\+\+LENGTH}}~((std\+::numeric\+\_\+limits$<$size\+\_\+t$>$\+::max)())
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a630a43aa7f6e1b4ab8c4b0fe1955998a}{CPPHTTPLIB\+\_\+\+FORM\+\_\+\+URL\+\_\+\+ENCODED\+\_\+\+PAYLOAD\+\_\+\+MAX\+\_\+\+LENGTH}}~8192
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a56a36cceccb4602db848c7773876194d}{CPPHTTPLIB\+\_\+\+RANGE\+\_\+\+MAX\+\_\+\+COUNT}}~1024
+\item 
+\#define \mbox{\hyperlink{httplib_8h_ae5781dce6ebcf4a66364011bcdcaea4c}{CPPHTTPLIB\+\_\+\+TCP\+\_\+\+NODELAY}}~false
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a7b042846e82a8ada054754629c2cff08}{CPPHTTPLIB\+\_\+\+IPV6\+\_\+\+V6\+ONLY}}~false
+\item 
+\#define \mbox{\hyperlink{httplib_8h_ab16643d4a546f8214c9b82c6521ae30d}{CPPHTTPLIB\+\_\+\+RECV\+\_\+\+BUFSIZ}}~size\+\_\+t(16384u)
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a3f33e345b1017c973759df153a0cdc83}{CPPHTTPLIB\+\_\+\+SEND\+\_\+\+BUFSIZ}}~size\+\_\+t(16384u)
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a917dd36d5cbbfb3ebcbd2f89c6f66401}{CPPHTTPLIB\+\_\+\+COMPRESSION\+\_\+\+BUFSIZ}}~size\+\_\+t(16384u)
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a9acf66afe9b1400253ed6ebf445928bd}{CPPHTTPLIB\+\_\+\+THREAD\+\_\+\+POOL\+\_\+\+COUNT}}
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a7c84149fef26c90dd04c74075244bc5f}{CPPHTTPLIB\+\_\+\+RECV\+\_\+\+FLAGS}}~0
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a2d42b71c75c2a5d0259a9b1ea2fb9391}{CPPHTTPLIB\+\_\+\+SEND\+\_\+\+FLAGS}}~0
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a496966e31309e40020d86bb856a96a2c}{CPPHTTPLIB\+\_\+\+LISTEN\+\_\+\+BACKLOG}}~5
+\item 
+\#define \mbox{\hyperlink{httplib_8h_ad6b12233613725434b45e320a8355c6a}{CPPHTTPLIB\+\_\+\+MAX\+\_\+\+LINE\+\_\+\+LENGTH}}~32768
+\item 
+\#define \mbox{\hyperlink{httplib_8h_a26769957ec1a2beaf223f33b66ee64ab}{INVALID\+\_\+\+SOCKET}}~(-\/1)
+\item 
+\#define \mbox{\hyperlink{httplib_8h_aa546fa704e96e7242f4626183e02f61d}{USE\+\_\+\+IF2\+IP}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} = int
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacehttplib_1_1detail_1_1case__ignore_a53e98c8d276e14e7c93fc217f9620d77}{httplib\+::detail\+::case\+\_\+ignore\+::unordered\+\_\+set}} = std\+::unordered\+\_\+set$<$ T, detail\+::case\+\_\+ignore\+::hash, detail\+::case\+\_\+ignore\+::equal\+\_\+to $>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{httplib\+::\+Headers}} = std\+::unordered\+\_\+multimap$<$ std\+::string, std\+::string, detail\+::case\+\_\+ignore\+::hash, detail\+::case\+\_\+ignore\+::equal\+\_\+to $>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_a51ce06867e711ba5095eff9d606e802e}{httplib\+::\+Params}} = std\+::multimap$<$ std\+::string, std\+::string $>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_a33c72941ad79dac75b23f0d6b5f02571}{httplib\+::\+Match}} = std\+::smatch
+\item 
+using \mbox{\hyperlink{namespacehttplib_a44d136c65158a796cb1995b07d87bf9b}{httplib\+::\+Download\+Progress}} = std\+::function$<$ bool(size\+\_\+t current, size\+\_\+t total)$>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_aa42181a1f31cf7efed3e05afc42f2885}{httplib\+::\+Upload\+Progress}} = std\+::function$<$ bool(size\+\_\+t current, size\+\_\+t total)$>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_ad81ce13409edba1589c0b076b2dfab74}{httplib\+::\+Response\+Handler}} = std\+::function$<$ bool(const Response \&response)$>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_abb449c6d3eba76c6bc27f4fecee3c734}{httplib\+::\+Form\+Fields}} = std\+::multimap$<$ std\+::string, Form\+Field $>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_aab08873bd9e08a22ceddfae34eec6c75}{httplib\+::\+Form\+Files}} = std\+::multimap$<$ std\+::string, Form\+Data $>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_ab8da7a8021989c12cf49f70fc5737beb}{httplib\+::\+Upload\+Form\+Data\+Items}} = std\+::vector$<$ Upload\+Form\+Data $>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_aa14ad56981e64fa7d4972a812866fa22}{httplib\+::\+Content\+Provider}} = std\+::function$<$ bool(size\+\_\+t offset, size\+\_\+t length, Data\+Sink \&sink)$>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_a42a80bc400ea2d522021461ca6df2fb6}{httplib\+::\+Content\+Provider\+Without\+Length}} = std\+::function$<$ bool(size\+\_\+t offset, Data\+Sink \&sink)$>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_af5575b356ed07d8897ddac1297ef999a}{httplib\+::\+Content\+Provider\+Resource\+Releaser}} = std\+::function$<$ void(bool success)$>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_aa294a20cd73aa843dd47601beef2ffd7}{httplib\+::\+Form\+Data\+Provider\+Items}} = std\+::vector$<$ Form\+Data\+Provider $>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_a98b91cfccc0a4af656d06177d185fdfc}{httplib\+::\+Content\+Receiver\+With\+Progress}} = std\+::function$<$ bool(const char $\ast$data, size\+\_\+t data\+\_\+length, size\+\_\+t offset, size\+\_\+t total\+\_\+length)$>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_ad7425937de0bafb891b0b7cae87dc368}{httplib\+::\+Content\+Receiver}} = std\+::function$<$ bool(const char $\ast$data, size\+\_\+t data\+\_\+length)$>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_ab120903da235f1cc60df3f94ee401dab}{httplib\+::\+Form\+Data\+Header}} = std\+::function$<$ bool(const Form\+Data \&file)$>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_a47159528bf61f6bd74065b3fcec21697}{httplib\+::\+Range}} = std\+::pair$<$ ssize\+\_\+t, ssize\+\_\+t $>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_a3395bd4008ea82b092537f3084dddf5e}{httplib\+::\+Ranges}} = std\+::vector$<$ Range $>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_a45a8a23366055bec6273922974cff156}{httplib\+::\+Logger}} = std\+::function$<$ void(const Request \&, const Response \&)$>$
+\item 
+using \mbox{\hyperlink{namespacehttplib_a02305f842f48963eb2ed425ee5d1655d}{httplib\+::\+Socket\+Options}} = std\+::function$<$ void(\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacehttplib_a91beb2e6870464f254c39fd91aea9a8b}{httplib\+::\+SSLVerifier\+Response}} \{ \mbox{\hyperlink{namespacehttplib_a91beb2e6870464f254c39fd91aea9a8ba89f99706f5cce12cf8a66d50a44be3e1}{httplib\+::\+No\+Decision\+Made}}
+, \mbox{\hyperlink{namespacehttplib_a91beb2e6870464f254c39fd91aea9a8ba172169ca3b1b0243f7ea5bac36801d48}{httplib\+::\+Certificate\+Accepted}}
+, \mbox{\hyperlink{namespacehttplib_a91beb2e6870464f254c39fd91aea9a8ba3352fdd732be7e30905d91829a482c9e}{httplib\+::\+Certificate\+Rejected}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fba}{httplib\+::\+Status\+Code}} \{ \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaaee254b57c51bc5a8554e1de61668f946}{httplib\+::\+Continue\+\_\+100}} = 100
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa0e3e2e065deca116157ac02043685dc6}{httplib\+::\+Switching\+Protocol\+\_\+101}} = 101
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa32705ab7a2c596f6e537ca77c3445951}{httplib\+::\+Processing\+\_\+102}} = 102
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa2cf70904642df51136c7a1f80dd91b2e}{httplib\+::\+Early\+Hints\+\_\+103}} = 103
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa630d3bdfd6543dde3c5195ab53cddd3f}{httplib\+::\+OK\+\_\+200}} = 200
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa941cc48b3260cc48d27260442a4c4761}{httplib\+::\+Created\+\_\+201}} = 201
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa42327787d88e98a613ebde7e687a5481}{httplib\+::\+Accepted\+\_\+202}} = 202
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa3a176122a151bb959945e4656459dfdb}{httplib\+::\+Non\+Authoritative\+Information\+\_\+203}} = 203
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaaa390275b35b09350f1fb7a9466879206}{httplib\+::\+No\+Content\+\_\+204}} = 204
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa43e54bf84feab3f92d99176f370cf1ac}{httplib\+::\+Reset\+Content\+\_\+205}} = 205
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaac727c3e737e3a38119d744599ca6a750}{httplib\+::\+Partial\+Content\+\_\+206}} = 206
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa7266846041e9f1ab7c3a7ee2d5cf5d3b}{httplib\+::\+Multi\+Status\+\_\+207}} = 207
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa69808a79df782d331c223cd184e271c6}{httplib\+::\+Already\+Reported\+\_\+208}} = 208
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa00c301b6e888cea9eba6b2dd82cca9be}{httplib\+::\+IMUsed\+\_\+226}} = 226
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa1fad6ee52b139e459c0fb9d014b6bd8f}{httplib\+::\+Multiple\+Choices\+\_\+300}} = 300
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaab51eb13d6f1457145025dfcf78ef233e}{httplib\+::\+Moved\+Permanently\+\_\+301}} = 301
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa168be02b5dc6d0fac77a823cb956d78b}{httplib\+::\+Found\+\_\+302}} = 302
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa88779fce340f9af682ea695a223976e5}{httplib\+::\+See\+Other\+\_\+303}} = 303
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa57886b1dcbfb68d11b59e57935e85ce5}{httplib\+::\+Not\+Modified\+\_\+304}} = 304
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa9e582177d52a4358f22ba483e4224f7e}{httplib\+::\+Use\+Proxy\+\_\+305}} = 305
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa5a80775e405474653d56b93cbbbfc8b5}{httplib\+::unused\+\_\+306}} = 306
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa857e1eea8f4585f113306b9a0702cc8b}{httplib\+::\+Temporary\+Redirect\+\_\+307}} = 307
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa860a50cf47f943e5812e2669965a49d1}{httplib\+::\+Permanent\+Redirect\+\_\+308}} = 308
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaaf8cb1df7c3afe1a130a363c211e09205}{httplib\+::\+Bad\+Request\+\_\+400}} = 400
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa8a44ec2902cdab7dd99c16a6b7e5cea9}{httplib\+::\+Unauthorized\+\_\+401}} = 401
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa3855c0802bd12cd56e9ae3fe7c0ae5f5}{httplib\+::\+Payment\+Required\+\_\+402}} = 402
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa47530eda9a08c7dba2524898ae95d76e}{httplib\+::\+Forbidden\+\_\+403}} = 403
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa7ab8c63ce95fb072a6d2c2f2f1b144ad}{httplib\+::\+Not\+Found\+\_\+404}} = 404
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa7a2dcfda002e90844c715d0ea2f93cfe}{httplib\+::\+Method\+Not\+Allowed\+\_\+405}} = 405
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa75592043697527182fcf9b313db49cdf}{httplib\+::\+Not\+Acceptable\+\_\+406}} = 406
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa2ec00fda661b617701744093c4025e7a}{httplib\+::\+Proxy\+Authentication\+Required\+\_\+407}} = 407
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa62494a2b06d7b258025a4b2ad0667568}{httplib\+::\+Request\+Timeout\+\_\+408}} = 408
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa0089139c752c6f3aa4febcbf4e3f0dbf}{httplib\+::\+Conflict\+\_\+409}} = 409
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa47ae4740ee66569b88d6099db1ee26b5}{httplib\+::\+Gone\+\_\+410}} = 410
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaacaff4d27ff07a0b32fc8fb533c7ae296}{httplib\+::\+Length\+Required\+\_\+411}} = 411
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa91505f3df0434718bc1afbf2e809b310}{httplib\+::\+Precondition\+Failed\+\_\+412}} = 412
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaacdb1c80a0ac05a0467514ea4ede3ed2b}{httplib\+::\+Payload\+Too\+Large\+\_\+413}} = 413
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa3c6599766d38c5e1430de9da091c5487}{httplib\+::\+Uri\+Too\+Long\+\_\+414}} = 414
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa49314619c75f8c18833e0232edb5a0c9}{httplib\+::\+Unsupported\+Media\+Type\+\_\+415}} = 415
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaad87885de5dc60abc62c91450b44f1b49}{httplib\+::\+Range\+Not\+Satisfiable\+\_\+416}} = 416
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa77e70166dac605a506b1ce0be90f8c4e}{httplib\+::\+Expectation\+Failed\+\_\+417}} = 417
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa742a2de36115a8355716caf1af406a84}{httplib\+::\+Im\+ATeapot\+\_\+418}} = 418
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa1586d4001f8ee4cae26e40c508a8f2f1}{httplib\+::\+Misdirected\+Request\+\_\+421}} = 421
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaada8c01f6051d03f553a6cc1fbd340cd5}{httplib\+::\+Unprocessable\+Content\+\_\+422}} = 422
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa369148ac38e0aeb2eb9eaa69f9c0d78c}{httplib\+::\+Locked\+\_\+423}} = 423
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa159421e8bc9bf87daad5e62a1901f917}{httplib\+::\+Failed\+Dependency\+\_\+424}} = 424
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaaa89408edf4d077a2943623374bcca26e}{httplib\+::\+Too\+Early\+\_\+425}} = 425
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaaf9c473a4f9745602da8798077bf83278}{httplib\+::\+Upgrade\+Required\+\_\+426}} = 426
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaab55e2cf5727ddcf35ab571c40931b8c4}{httplib\+::\+Precondition\+Required\+\_\+428}} = 428
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa5a8596018b7b8591639f6f9d664169c3}{httplib\+::\+Too\+Many\+Requests\+\_\+429}} = 429
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaae1b23a33511964c0e39e8359b1234c09}{httplib\+::\+Request\+Header\+Fields\+Too\+Large\+\_\+431}} = 431
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa22a889a3db211962127f0225fab6d0ee}{httplib\+::\+Unavailable\+For\+Legal\+Reasons\+\_\+451}} = 451
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa76ff22cc81accd4327e5f6d947830b77}{httplib\+::\+Internal\+Server\+Error\+\_\+500}} = 500
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa9ccc98117a01e8edb6caaa4af069afa4}{httplib\+::\+Not\+Implemented\+\_\+501}} = 501
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaab11d9cf0f07dd46e0d6ec925620f5bcb}{httplib\+::\+Bad\+Gateway\+\_\+502}} = 502
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa24d65add0b5777c9d59c761162d9ec45}{httplib\+::\+Service\+Unavailable\+\_\+503}} = 503
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaafb47c0338ded575e27f578aee0f0bbe3}{httplib\+::\+Gateway\+Timeout\+\_\+504}} = 504
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaaffa8bce5b849001cb4d1f02a28f0d6b8}{httplib\+::\+Http\+Version\+Not\+Supported\+\_\+505}} = 505
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa596882a1e490167081cb4b6abd303550}{httplib\+::\+Variant\+Also\+Negotiates\+\_\+506}} = 506
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaaa826be982b9c10fc7ee5cae38ce44907}{httplib\+::\+Insufficient\+Storage\+\_\+507}} = 507
+, \newline
+\mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa239721862e1685babc308961055629b0}{httplib\+::\+Loop\+Detected\+\_\+508}} = 508
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa5773c1cd83427120b4b8dc53ad461649}{httplib\+::\+Not\+Extended\+\_\+510}} = 510
+, \mbox{\hyperlink{namespacehttplib_ade1f5845ce6b8d8fdb3a56676db48fbaa6410a03aa6392a6e057a610dca724a58}{httplib\+::\+Network\+Authentication\+Required\+\_\+511}} = 511
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24a}{httplib\+::\+Error}} \{ \newline
+\mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aa505a83f220c02df2f85c3810cd9ceb38}{httplib\+::\+Success}} = 0
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aa88183b946cc5f0e8c96b2e66e1c74a7e}{httplib\+::\+Unknown}}
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aac2cc7082a89c1ad6631a2f66af5f00c0}{httplib\+::\+Connection}}
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aa5c6f2a10b9abceb7fbc51bbbc87ff3be}{httplib\+::\+Bind\+IPAddress}}
+, \newline
+\mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aa7a1a5f3e79fdc91edf2f5ead9d66abb4}{httplib\+::\+Read}}
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aa1129c0e4d43f2d121652a7302712cff6}{httplib\+::\+Write}}
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aad6422afb361bc405f21b4c3b161c4af9}{httplib\+::\+Exceed\+Redirect\+Count}}
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aa0e22fe7d45f8e5632a4abf369b24e29c}{httplib\+::\+Canceled}}
+, \newline
+\mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aa9bb9fbee3e5c67350419bd204fa72ef9}{httplib\+::\+SSLConnection}}
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aae57c61ce09939265d2c53ef65a21d60f}{httplib\+::\+SSLLoading\+Certs}}
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aa28d1bff99746cf348566f0ba27209d64}{httplib\+::\+SSLServer\+Verification}}
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aa3ab9e70d943d41f88aa5bcdb81ddd7bf}{httplib\+::\+SSLServer\+Hostname\+Verification}}
+, \newline
+\mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aae9bf6daa3624423795b289a290a59505}{httplib\+::\+Unsupported\+Multipart\+Boundary\+Chars}}
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aa82af841589057aa8922b1ac3bb4a28a4}{httplib\+::\+Compression}}
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aa10682640c96d005f79a5662874e893b7}{httplib\+::\+Connection\+Timeout}}
+, \mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aaa97b092a775eba6828ad2198574f7dcb}{httplib\+::\+Proxy\+Connection}}
+, \newline
+\mbox{\hyperlink{namespacehttplib_a46ff5da925971ebebf2c5693e367f24aaf686f24d902a259f0e0b52c6f70755d3}{httplib\+::\+SSLPeer\+Could\+Be\+Closed\+\_\+}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacehttplib_1_1detail_a2d74473be3feaf34ea8f25d4e782dc1a}{httplib\+::detail\+::\+Encoding\+Type}} \{ \mbox{\hyperlink{namespacehttplib_1_1detail_a2d74473be3feaf34ea8f25d4e782dc1aa6adf97f83acf6453d4a6a4b1070f3754}{httplib\+::detail\+::\+None}} = 0
+, \mbox{\hyperlink{namespacehttplib_1_1detail_a2d74473be3feaf34ea8f25d4e782dc1aa2548e50da66f41afea53de1cbbf3b30c}{httplib\+::detail\+::\+Gzip}}
+, \mbox{\hyperlink{namespacehttplib_1_1detail_a2d74473be3feaf34ea8f25d4e782dc1aa4b9159701faed6a94df888e2c83b48bf}{httplib\+::detail\+::\+Brotli}}
+, \mbox{\hyperlink{namespacehttplib_1_1detail_a2d74473be3feaf34ea8f25d4e782dc1aa0c8468c9ff2f38e853335e1e40ade4c3}{httplib\+::detail\+::\+Zstd}}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacehttplib_1_1detail_af5e1352ea4973f718ca973916b905447}{httplib\+::detail\+::\+Read\+Content\+Result}} \{ \mbox{\hyperlink{namespacehttplib_1_1detail_af5e1352ea4973f718ca973916b905447a505a83f220c02df2f85c3810cd9ceb38}{httplib\+::detail\+::\+Success}}
+, \mbox{\hyperlink{namespacehttplib_1_1detail_af5e1352ea4973f718ca973916b905447a0234a767e9c5c06cdaf290cc9b690b34}{httplib\+::detail\+::\+Payload\+Too\+Large}}
+, \mbox{\hyperlink{namespacehttplib_1_1detail_af5e1352ea4973f718ca973916b905447a902b0d55fddef6f8d651fe1035b7d4bd}{httplib\+::detail\+::\+Error}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T , class... Args$>$ }\\std\+::enable\+\_\+if$<$!std\+::is\+\_\+array$<$ T $>$\+::value, std\+::unique\+\_\+ptr$<$ T $>$ $>$\+::type \mbox{\hyperlink{namespacehttplib_1_1detail_a61042375918dc9fd9b5ebdf67719a085}{httplib\+::detail\+::make\+\_\+unique}} (Args \&\&...args)
+\item 
+{\footnotesize template$<$class T $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+array$<$ T $>$\+::value, std\+::unique\+\_\+ptr$<$ T $>$ $>$\+::type \mbox{\hyperlink{namespacehttplib_1_1detail_a6b2e9bf1d4d9b68d9f1cffc91b9ce6bc}{httplib\+::detail\+::make\+\_\+unique}} (std\+::size\+\_\+t n)
+\item 
+unsigned char \mbox{\hyperlink{namespacehttplib_1_1detail_1_1case__ignore_ac59a65eeca90e44542ace79d35b3e91f}{httplib\+::detail\+::case\+\_\+ignore\+::to\+\_\+lower}} (int c)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_1_1case__ignore_a8fbb05c8b0053920e44876d09f30fbb8}{httplib\+::detail\+::case\+\_\+ignore\+::equal}} (const std\+::string \&a, const std\+::string \&b)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a7b7bdfd16ec816de776f13ab8867398d}{httplib\+::detail\+::set\+\_\+socket\+\_\+opt\+\_\+impl}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, int level, int optname, const void $\ast$optval, socklen\+\_\+t optlen)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_ad6b4811b1654dc66f0af31df7c781f94}{httplib\+::detail\+::set\+\_\+socket\+\_\+opt}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, int level, int optname, int opt)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_ae0a7a61846d6e29ed62bae2032330476}{httplib\+::detail\+::set\+\_\+socket\+\_\+opt\+\_\+time}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, int level, int optname, time\+\_\+t sec, time\+\_\+t usec)
+\item 
+void \mbox{\hyperlink{namespacehttplib_aeaecacf2684b63127fa7d26d8e1a622d}{httplib\+::default\+\_\+socket\+\_\+options}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock)
+\item 
+const char $\ast$ \mbox{\hyperlink{namespacehttplib_a7d92a38469467ffb0e2563e2cf8dea7f}{httplib\+::status\+\_\+message}} (int status)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_a91bed84cacddbfcf57cbaba797e74b93}{httplib\+::get\+\_\+bearer\+\_\+token\+\_\+auth}} (const Request \&req)
+\item 
+ssize\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_abc85cbf41b1214a5dc526521f989131b}{httplib\+::detail\+::write\+\_\+headers}} (Stream \&strm, const Headers \&headers)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_a498c3a79825ecbcb15c52ec5fcfd5c11}{httplib\+::to\+\_\+string}} (Error error)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacehttplib_a0ab1237a982cc180ebe624cabf756e90}{httplib\+::operator$<$$<$}} (std\+::ostream \&os, const Error \&obj)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\void \mbox{\hyperlink{namespacehttplib_1_1detail_ad7833c49ef4f17e86dbf495e69c6593d}{httplib\+::detail\+::duration\+\_\+to\+\_\+sec\+\_\+and\+\_\+usec}} (const T \&duration, U callback)
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\constexpr size\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_a951c9793e54fcdc6877f5c947667e878}{httplib\+::detail\+::str\+\_\+len}} (const char(\&)\mbox{[}N\mbox{]})
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_afaba0666ffaf1a0ae1f9449d1f6a65c6}{httplib\+::detail\+::is\+\_\+numeric}} (const std\+::string \&str)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_a32ed8b179c1b7a19dc3b07dcbe7904df}{httplib\+::detail\+::get\+\_\+header\+\_\+value\+\_\+u64}} (const Headers \&headers, const std\+::string \&key, size\+\_\+t def, size\+\_\+t id, bool \&is\+\_\+invalid\+\_\+value)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_a1bf8fc379480fbd33615e4f17579d202}{httplib\+::detail\+::get\+\_\+header\+\_\+value\+\_\+u64}} (const Headers \&headers, const std\+::string \&key, size\+\_\+t def, size\+\_\+t id)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_a383720c1f52ffab70b73273dc742b8c6}{httplib\+::hosted\+\_\+at}} (const std\+::string \&hostname)
+\item 
+void \mbox{\hyperlink{namespacehttplib_addc04d15a4f0b996589b862dd7c781b6}{httplib\+::hosted\+\_\+at}} (const std\+::string \&hostname, std\+::vector$<$ std\+::string $>$ \&addrs)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_a6959ccb746062bab487172fc7109962e}{httplib\+::encode\+\_\+uri\+\_\+component}} (const std\+::string \&value)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_adef3c6609bb880c32d21114f5a445df6}{httplib\+::encode\+\_\+uri}} (const std\+::string \&value)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_a3a958f23322a42a07a269618542e2a95}{httplib\+::decode\+\_\+uri\+\_\+component}} (const std\+::string \&value)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_ab7ab951bd0c2d8b305e49855c88ffa70}{httplib\+::decode\+\_\+uri}} (const std\+::string \&value)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_a20d2a76851442b5037eba6c48c120500}{httplib\+::encode\+\_\+path\+\_\+component}} (const std\+::string \&component)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_ab74f93a0032d2e353e6928a841709b25}{httplib\+::decode\+\_\+path\+\_\+component}} (const std\+::string \&component)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_abc6a878cfbc88569847a5e3afec30e0c}{httplib\+::encode\+\_\+query\+\_\+component}} (const std\+::string \&component, bool space\+\_\+as\+\_\+plus=true)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_ad93a297d0f0f53860cd4cf0c5015f388}{httplib\+::decode\+\_\+query\+\_\+component}} (const std\+::string \&component, bool plus\+\_\+as\+\_\+space=true)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_aefcf9d8f28e6903e783c9e310a752348}{httplib\+::append\+\_\+query\+\_\+params}} (const std\+::string \&path, const Params \&params)
+\item 
+std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{namespacehttplib_a20d1f793f38780604766f3ccbd7b7032}{httplib\+::make\+\_\+range\+\_\+header}} (const Ranges \&ranges)
+\item 
+std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{namespacehttplib_a6b202b4fd91bd8e6a10a83dba358bc02}{httplib\+::make\+\_\+basic\+\_\+authentication\+\_\+header}} (const std\+::string \&username, const std\+::string \&password, bool is\+\_\+proxy=false)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_a43195f9bc4116e2472476caa1c0fc062}{httplib\+::detail\+::trim\+\_\+copy}} (const std\+::string \&s)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a03b59b5dc2132d8489ce0a2f09543cce}{httplib\+::detail\+::divide}} (const char $\ast$data, std\+::size\+\_\+t size, char d, std\+::function$<$ void(const char $\ast$, std\+::size\+\_\+t, const char $\ast$, std\+::size\+\_\+t)$>$ fn)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a21e1d3a9af30238dd36a220b9b025ea6}{httplib\+::detail\+::divide}} (const std\+::string \&str, char d, std\+::function$<$ void(const char $\ast$, std\+::size\+\_\+t, const char $\ast$, std\+::size\+\_\+t)$>$ fn)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a34049cfd6a6fb079a3a4372efb95cc6c}{httplib\+::detail\+::split}} (const char $\ast$b, const char $\ast$e, char d, std\+::function$<$ void(const char $\ast$, const char $\ast$)$>$ fn)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a870b64c5e47d81e83ec023160df1984a}{httplib\+::detail\+::split}} (const char $\ast$b, const char $\ast$e, char d, size\+\_\+t m, std\+::function$<$ void(const char $\ast$, const char $\ast$)$>$ fn)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a67f47a66064bfa673b7b4421d7a219ef}{httplib\+::detail\+::process\+\_\+client\+\_\+socket}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, time\+\_\+t read\+\_\+timeout\+\_\+sec, time\+\_\+t read\+\_\+timeout\+\_\+usec, time\+\_\+t write\+\_\+timeout\+\_\+sec, time\+\_\+t write\+\_\+timeout\+\_\+usec, time\+\_\+t max\+\_\+timeout\+\_\+msec, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start\+\_\+time, std\+::function$<$ bool(Stream \&)$>$ callback)
+\item 
+\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} \mbox{\hyperlink{namespacehttplib_1_1detail_ac9bce8a047c718aff7bc0f7bfd15d494}{httplib\+::detail\+::create\+\_\+client\+\_\+socket}} (const std\+::string \&host, const std\+::string \&ip, int port, int address\+\_\+family, bool tcp\+\_\+nodelay, bool ipv6\+\_\+v6only, Socket\+Options socket\+\_\+options, time\+\_\+t connection\+\_\+timeout\+\_\+sec, time\+\_\+t connection\+\_\+timeout\+\_\+usec, time\+\_\+t read\+\_\+timeout\+\_\+sec, time\+\_\+t read\+\_\+timeout\+\_\+usec, time\+\_\+t write\+\_\+timeout\+\_\+sec, time\+\_\+t write\+\_\+timeout\+\_\+usec, const std\+::string \&intf, Error \&error)
+\item 
+const char $\ast$ \mbox{\hyperlink{namespacehttplib_1_1detail_ad7ae8c946e05ae907f70a793857d61f0}{httplib\+::detail\+::get\+\_\+header\+\_\+value}} (const Headers \&headers, const std\+::string \&key, const char $\ast$def, size\+\_\+t id)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_ab7b74c41eee2905c0d828e5819514a17}{httplib\+::detail\+::params\+\_\+to\+\_\+query\+\_\+str}} (const Params \&params)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a64d0280a774867fa343bd10164d3b766}{httplib\+::detail\+::parse\+\_\+query\+\_\+text}} (const char $\ast$data, std\+::size\+\_\+t size, Params \&params)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_acd471412f59b3f94884fcb9e7986a480}{httplib\+::detail\+::parse\+\_\+query\+\_\+text}} (const std\+::string \&s, Params \&params)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_ab575e708f5bc8388244b79a7bb020547}{httplib\+::detail\+::parse\+\_\+multipart\+\_\+boundary}} (const std\+::string \&content\+\_\+type, std\+::string \&boundary)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_ad4101f2d385e30a6c88e24b6a9058113}{httplib\+::detail\+::parse\+\_\+range\+\_\+header}} (const std\+::string \&s, Ranges \&ranges)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_ac732db7677111dc02baefcce1ef8c5d9}{httplib\+::detail\+::parse\+\_\+accept\+\_\+header}} (const std\+::string \&s, std\+::vector$<$ std\+::string $>$ \&content\+\_\+types)
+\item 
+int \mbox{\hyperlink{namespacehttplib_1_1detail_ab97ddef67a99aee8ed2aec5e20d90286}{httplib\+::detail\+::close\+\_\+socket}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock)
+\item 
+ssize\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_a0bbe1467db354fe890383ee516e65ebc}{httplib\+::detail\+::send\+\_\+socket}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, const void $\ast$ptr, size\+\_\+t size, int flags)
+\item 
+ssize\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_ab57c043e9d70df4cace18a07f9fbeeea}{httplib\+::detail\+::read\+\_\+socket}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, void $\ast$ptr, size\+\_\+t size, int flags)
+\item 
+Encoding\+Type \mbox{\hyperlink{namespacehttplib_1_1detail_ab3d7a73532e427696847a2c77090729d}{httplib\+::detail\+::encoding\+\_\+type}} (const Request \&req, const Response \&res)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_1_1fields_a5c6b32e772cc7ea4de4f47c5ec58bb30}{httplib\+::detail\+::fields\+::is\+\_\+token\+\_\+char}} (char c)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_1_1fields_a53e5f002162a6f23db6578aa7be3ad23}{httplib\+::detail\+::fields\+::is\+\_\+token}} (const std\+::string \&s)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_1_1fields_a6c85ab88d355b6e6b3842e74b85dfde0}{httplib\+::detail\+::fields\+::is\+\_\+field\+\_\+name}} (const std\+::string \&s)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_1_1fields_a1565989ac5aec3ae99e3232868111d1e}{httplib\+::detail\+::fields\+::is\+\_\+vchar}} (char c)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_1_1fields_a1317ffdde582e9ab4441b96d189ac976}{httplib\+::detail\+::fields\+::is\+\_\+obs\+\_\+text}} (char c)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_1_1fields_acd3e3c75b4a57803bda1d70f89043ad3}{httplib\+::detail\+::fields\+::is\+\_\+field\+\_\+vchar}} (char c)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_1_1fields_ab16765916f34ece1a3582052e0b6022e}{httplib\+::detail\+::fields\+::is\+\_\+field\+\_\+content}} (const std\+::string \&s)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_1_1fields_a23671feadada09be4b1ce2f4c86ed10d}{httplib\+::detail\+::fields\+::is\+\_\+field\+\_\+value}} (const std\+::string \&s)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a4a74a4e9cde826f1a91894f63ddb2d9a}{httplib\+::detail\+::is\+\_\+hex}} (char c, int \&v)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a62592aa626f8ab0e3af59e681a28ac1b}{httplib\+::detail\+::from\+\_\+hex\+\_\+to\+\_\+i}} (const std\+::string \&s, size\+\_\+t i, size\+\_\+t cnt, int \&val)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_ac08f80eff074b5a4adcb6e160a1380a5}{httplib\+::detail\+::from\+\_\+i\+\_\+to\+\_\+hex}} (size\+\_\+t n)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_a011d617356300d12aeb93d2dda1560b9}{httplib\+::detail\+::to\+\_\+utf8}} (int code, char $\ast$buff)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_a455e8db9d2cc4c24565af6d9b884eeaf}{httplib\+::detail\+::base64\+\_\+encode}} (const std\+::string \&in)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a955ed1d5e52f6e2513d06d969ceeb668}{httplib\+::detail\+::is\+\_\+valid\+\_\+path}} (const std\+::string \&path)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_afd99cbe9add1d7b092d1d27fbb6d9efd}{httplib\+::detail\+::encode\+\_\+path}} (const std\+::string \&s)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_a810a6c09469427bb1729f084db0d92d3}{httplib\+::detail\+::file\+\_\+extension}} (const std\+::string \&path)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a516825616cd42123cbe974a9f42718aa}{httplib\+::detail\+::is\+\_\+space\+\_\+or\+\_\+tab}} (char c)
+\item 
+std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \mbox{\hyperlink{namespacehttplib_1_1detail_a684e5b601171494a4e06c6ff05a60522}{httplib\+::detail\+::trim}} (const char $\ast$b, const char $\ast$e, size\+\_\+t left, size\+\_\+t right)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_a0b5f3f1c3270d5e213e85dd07f0417a4}{httplib\+::detail\+::trim\+\_\+double\+\_\+quotes\+\_\+copy}} (const std\+::string \&s)
+\item 
+{\footnotesize template$<$typename T $>$ }\\ssize\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_a8fbaa8fefb24f6dd249b62f832f64a84}{httplib\+::detail\+::handle\+\_\+\+EINTR}} (T fn)
+\item 
+int \mbox{\hyperlink{namespacehttplib_1_1detail_a2ca4d0c28f622f42b65292329cd6dbaa}{httplib\+::detail\+::poll\+\_\+wrapper}} (struct pollfd $\ast$fds, nfds\+\_\+t nfds, int timeout)
+\item 
+{\footnotesize template$<$bool Read$>$ }\\ssize\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_a29597954afc7d24c631f4312f9ea7d2e}{httplib\+::detail\+::select\+\_\+impl}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, time\+\_\+t sec, time\+\_\+t usec)
+\item 
+ssize\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_ade5583c2e13e0822f2a90227894d92fe}{httplib\+::detail\+::select\+\_\+read}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, time\+\_\+t sec, time\+\_\+t usec)
+\item 
+ssize\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_a904dd937c3c0a43da925cab16b8b896b}{httplib\+::detail\+::select\+\_\+write}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, time\+\_\+t sec, time\+\_\+t usec)
+\item 
+Error \mbox{\hyperlink{namespacehttplib_1_1detail_af5775ea20d33682ecef32a4f45d5d237}{httplib\+::detail\+::wait\+\_\+until\+\_\+socket\+\_\+is\+\_\+ready}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, time\+\_\+t sec, time\+\_\+t usec)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a261b439327ed5df0ce9044ca2731d3de}{httplib\+::detail\+::is\+\_\+socket\+\_\+alive}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a7884779e15ff915085a5c27ba1e2ea7e}{httplib\+::detail\+::keep\+\_\+alive}} (const std\+::atomic$<$ \mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} $>$ \&svr\+\_\+sock, \mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, time\+\_\+t keep\+\_\+alive\+\_\+timeout\+\_\+sec)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_affee16dfce6b4d7693bb6e1bdc4df700}{httplib\+::detail\+::process\+\_\+server\+\_\+socket\+\_\+core}} (const std\+::atomic$<$ \mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} $>$ \&svr\+\_\+sock, \mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, size\+\_\+t keep\+\_\+alive\+\_\+max\+\_\+count, time\+\_\+t keep\+\_\+alive\+\_\+timeout\+\_\+sec, T callback)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_af7f44460fe8b3e1548efc6f45f30c1d0}{httplib\+::detail\+::process\+\_\+server\+\_\+socket}} (const std\+::atomic$<$ \mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} $>$ \&svr\+\_\+sock, \mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, size\+\_\+t keep\+\_\+alive\+\_\+max\+\_\+count, time\+\_\+t keep\+\_\+alive\+\_\+timeout\+\_\+sec, time\+\_\+t read\+\_\+timeout\+\_\+sec, time\+\_\+t read\+\_\+timeout\+\_\+usec, time\+\_\+t write\+\_\+timeout\+\_\+sec, time\+\_\+t write\+\_\+timeout\+\_\+usec, T callback)
+\item 
+int \mbox{\hyperlink{namespacehttplib_1_1detail_a6fe756f70ad6d331f8269d1504ecc296}{httplib\+::detail\+::shutdown\+\_\+socket}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_ae961908f1732643d7d4a6234ed83bab4}{httplib\+::detail\+::escape\+\_\+abstract\+\_\+namespace\+\_\+unix\+\_\+domain}} (const std\+::string \&s)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_aec462af74cad7de8d5d4283b4eae60df}{httplib\+::detail\+::unescape\+\_\+abstract\+\_\+namespace\+\_\+unix\+\_\+domain}} (const std\+::string \&s)
+\item 
+int \mbox{\hyperlink{namespacehttplib_1_1detail_afad6142d12257aad20b4d9702aa0bc7c}{httplib\+::detail\+::getaddrinfo\+\_\+with\+\_\+timeout}} (const char $\ast$node, const char $\ast$service, const struct addrinfo $\ast$hints, struct addrinfo $\ast$$\ast$res, time\+\_\+t timeout\+\_\+sec)
+\item 
+{\footnotesize template$<$typename Bind\+Or\+Connect $>$ }\\\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} \mbox{\hyperlink{namespacehttplib_1_1detail_a69f3bf696496a93368f05f5677ebdb1a}{httplib\+::detail\+::create\+\_\+socket}} (const std\+::string \&host, const std\+::string \&ip, int port, int address\+\_\+family, int socket\+\_\+flags, bool tcp\+\_\+nodelay, bool ipv6\+\_\+v6only, Socket\+Options socket\+\_\+options, Bind\+Or\+Connect bind\+\_\+or\+\_\+connect, time\+\_\+t timeout\+\_\+sec=0)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a697035fa14dcfff9fb4705d6cffea733}{httplib\+::detail\+::set\+\_\+nonblocking}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, bool nonblocking)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_aefb0b64a836468f95269d11943464a29}{httplib\+::detail\+::is\+\_\+connection\+\_\+error}} ()
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_ab56dd425e1a0658b754401c7957563a3}{httplib\+::detail\+::bind\+\_\+ip\+\_\+address}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, const std\+::string \&host)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_a4b14d35027dddb92656dc00527cf3a71}{httplib\+::detail\+::if2ip}} (int address\+\_\+family, const std\+::string \&ifn)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a9110811cc24098af07b831160080bdf3}{httplib\+::detail\+::get\+\_\+ip\+\_\+and\+\_\+port}} (const struct sockaddr\+\_\+storage \&addr, socklen\+\_\+t addr\+\_\+len, std\+::string \&ip, int \&port)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_ae2648653c70a3b97397f43c079d063ed}{httplib\+::detail\+::get\+\_\+local\+\_\+ip\+\_\+and\+\_\+port}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, std\+::string \&ip, int \&port)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a179925921531261e6f657e92c78542c3}{httplib\+::detail\+::get\+\_\+remote\+\_\+ip\+\_\+and\+\_\+port}} (\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} sock, std\+::string \&ip, int \&port)
+\item 
+constexpr unsigned int \mbox{\hyperlink{namespacehttplib_1_1detail_afbbe1f2e45c67a29f1cb3cb68eadbfa6}{httplib\+::detail\+::str2tag\+\_\+core}} (const char $\ast$s, size\+\_\+t l, unsigned int h)
+\item 
+unsigned int \mbox{\hyperlink{namespacehttplib_1_1detail_a8421d59405044ca97486b9b41d728b0b}{httplib\+::detail\+::str2tag}} (const std\+::string \&s)
+\item 
+constexpr unsigned int \mbox{\hyperlink{namespacehttplib_1_1detail_1_1udl_acf1b4d4557e7a66eb1fca9c75ef12370}{httplib\+::detail\+::udl\+::operator\char`\"{}\char`\"{}\+\_\+t}} (const char $\ast$s, size\+\_\+t l)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_ad8a108abfa1eb9181a35468eaddd091a}{httplib\+::detail\+::find\+\_\+content\+\_\+type}} (const std\+::string \&path, const std\+::map$<$ std\+::string, std\+::string $>$ \&user\+\_\+data, const std\+::string \&default\+\_\+content\+\_\+type)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_abe508674330c10dbe19fc1a33901c535}{httplib\+::detail\+::can\+\_\+compress\+\_\+content\+\_\+type}} (const std\+::string \&content\+\_\+type)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a275bacceee663280bb937fc79a7f3bce}{httplib\+::detail\+::has\+\_\+header}} (const Headers \&headers, const std\+::string \&key)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_a9f88ca460e7fee64d3598e4d79349f9a}{httplib\+::detail\+::parse\+\_\+header}} (const char $\ast$beg, const char $\ast$end, T fn)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_aeb8db950848e27227eb130f609b293cf}{httplib\+::detail\+::read\+\_\+headers}} (Stream \&strm, Headers \&headers)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a38fc6bbfe20f0aa994a56a355a4975f6}{httplib\+::detail\+::read\+\_\+content\+\_\+with\+\_\+length}} (Stream \&strm, size\+\_\+t len, Download\+Progress progress, Content\+Receiver\+With\+Progress out)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a71564ac45e2ba87a2c9d3843f09093e6}{httplib\+::detail\+::skip\+\_\+content\+\_\+with\+\_\+length}} (Stream \&strm, size\+\_\+t len)
+\item 
+Read\+Content\+Result \mbox{\hyperlink{namespacehttplib_1_1detail_ab99e1cbd112b945ae391c0cade32284c}{httplib\+::detail\+::read\+\_\+content\+\_\+without\+\_\+length}} (Stream \&strm, size\+\_\+t payload\+\_\+max\+\_\+length, Content\+Receiver\+With\+Progress out)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Read\+Content\+Result \mbox{\hyperlink{namespacehttplib_1_1detail_ae4a5b6ed2475628fb6f363a8b2cd8c12}{httplib\+::detail\+::read\+\_\+content\+\_\+chunked}} (Stream \&strm, T \&x, size\+\_\+t payload\+\_\+max\+\_\+length, Content\+Receiver\+With\+Progress out)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_abd6e246430f90f7881c9475acb026d00}{httplib\+::detail\+::is\+\_\+chunked\+\_\+transfer\+\_\+encoding}} (const Headers \&headers)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_adde3b6920db2d9d0065c119a8b255b7c}{httplib\+::detail\+::prepare\+\_\+content\+\_\+receiver}} (T \&x, int \&status, Content\+Receiver\+With\+Progress receiver, bool decompress, U callback)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_a3c36f9fed86fc4682677590588d09981}{httplib\+::detail\+::read\+\_\+content}} (Stream \&strm, T \&x, size\+\_\+t payload\+\_\+max\+\_\+length, int \&status, Download\+Progress progress, Content\+Receiver\+With\+Progress receiver, bool decompress)
+\item 
+ssize\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_ae912aeb1728f0c94f106ae9596c6ed7a}{httplib\+::detail\+::write\+\_\+request\+\_\+line}} (Stream \&strm, const std\+::string \&method, const std\+::string \&path)
+\item 
+ssize\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_a518783751b593266e3068cf0a38d8bbe}{httplib\+::detail\+::write\+\_\+response\+\_\+line}} (Stream \&strm, int status)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_aefec7c4fea53eda1af3a7362002c5223}{httplib\+::detail\+::write\+\_\+data}} (Stream \&strm, const char $\ast$d, size\+\_\+t l)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_a80b925d3fa580bbf72e89453c091d5a1}{httplib\+::detail\+::write\+\_\+content\+\_\+with\+\_\+progress}} (Stream \&strm, const Content\+Provider \&content\+\_\+provider, size\+\_\+t offset, size\+\_\+t length, T is\+\_\+shutting\+\_\+down, const Upload\+Progress \&upload\+\_\+progress, Error \&error)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_ac17dd7d7a80ce12e5966f5f577b67a75}{httplib\+::detail\+::write\+\_\+content}} (Stream \&strm, const Content\+Provider \&content\+\_\+provider, size\+\_\+t offset, size\+\_\+t length, T is\+\_\+shutting\+\_\+down, Error \&error)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_ae545b65e4ea144c8dbfb1dfb5991afa5}{httplib\+::detail\+::write\+\_\+content}} (Stream \&strm, const Content\+Provider \&content\+\_\+provider, size\+\_\+t offset, size\+\_\+t length, const T \&is\+\_\+shutting\+\_\+down)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_a4b08839cc083b4d71b0a3961c9a1686d}{httplib\+::detail\+::write\+\_\+content\+\_\+without\+\_\+length}} (Stream \&strm, const Content\+Provider \&content\+\_\+provider, const T \&is\+\_\+shutting\+\_\+down)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_af586311a8460e53bac51d7d02802ede9}{httplib\+::detail\+::write\+\_\+content\+\_\+chunked}} (Stream \&strm, const Content\+Provider \&content\+\_\+provider, const T \&is\+\_\+shutting\+\_\+down, U \&compressor, Error \&error)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_a466dfb2ad14ff432f525dff144af09a2}{httplib\+::detail\+::write\+\_\+content\+\_\+chunked}} (Stream \&strm, const Content\+Provider \&content\+\_\+provider, const T \&is\+\_\+shutting\+\_\+down, U \&compressor)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_a5617aea1da053ebdb2bac81742a25fc0}{httplib\+::detail\+::redirect}} (T \&cli, Request \&req, Response \&res, const std\+::string \&path, const std\+::string \&location, Error \&error)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a827f8fddf677ea989f099cc59692cf2b}{httplib\+::detail\+::parse\+\_\+disposition\+\_\+params}} (const std\+::string \&s, Params \&params)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_aa473f5aff2d646f2801456f003183b1b}{httplib\+::detail\+::random\+\_\+string}} (size\+\_\+t length)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_ae144d55905f9808c3abae6e20bd9367a}{httplib\+::detail\+::make\+\_\+multipart\+\_\+data\+\_\+boundary}} ()
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_ae4cbb364380280ebf28f477dfe11f9c3}{httplib\+::detail\+::is\+\_\+multipart\+\_\+boundary\+\_\+chars\+\_\+valid}} (const std\+::string \&boundary)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_a7ab42864352bc4bf339c8ac3e5900476}{httplib\+::detail\+::serialize\+\_\+multipart\+\_\+formdata\+\_\+item\+\_\+begin}} (const T \&item, const std\+::string \&boundary)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_a4775688e3c3d0be38ade93517b00f9cc}{httplib\+::detail\+::serialize\+\_\+multipart\+\_\+formdata\+\_\+item\+\_\+end}} ()
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_ab718a6f383e2de1c7a2b0ebc26983e28}{httplib\+::detail\+::serialize\+\_\+multipart\+\_\+formdata\+\_\+finish}} (const std\+::string \&boundary)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_a22a3b7880fae2701433d9a2b6359b8b9}{httplib\+::detail\+::serialize\+\_\+multipart\+\_\+formdata\+\_\+get\+\_\+content\+\_\+type}} (const std\+::string \&boundary)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_adf1dd161de6be5a8e79f66a3dec2d065}{httplib\+::detail\+::serialize\+\_\+multipart\+\_\+formdata}} (const Upload\+Form\+Data\+Items \&items, const std\+::string \&boundary, bool finish=true)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a2742d2f2dc126f71b85f30467c92c015}{httplib\+::detail\+::coalesce\+\_\+ranges}} (Ranges \&ranges, size\+\_\+t content\+\_\+length)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_ab0340f26816e1a1a5bbd6d1a2c79816d}{httplib\+::detail\+::range\+\_\+error}} (Request \&req, Response \&res)
+\item 
+std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \mbox{\hyperlink{namespacehttplib_1_1detail_af3ee387aa148fa5fe69d6355b5360e03}{httplib\+::detail\+::get\+\_\+range\+\_\+offset\+\_\+and\+\_\+length}} (Range r, size\+\_\+t content\+\_\+length)
+\item 
+std\+::string \mbox{\hyperlink{namespacehttplib_1_1detail_ae93cf1427a53d3e03d83434d4a7229ef}{httplib\+::detail\+::make\+\_\+content\+\_\+range\+\_\+header\+\_\+field}} (const std\+::pair$<$ size\+\_\+t, size\+\_\+t $>$ \&offset\+\_\+and\+\_\+length, size\+\_\+t content\+\_\+length)
+\item 
+{\footnotesize template$<$typename SToken , typename CToken , typename Content $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_aa8bfc0f5ee915e4f92907ca646ba422a}{httplib\+::detail\+::process\+\_\+multipart\+\_\+ranges\+\_\+data}} (const Request \&req, const std\+::string \&boundary, const std\+::string \&content\+\_\+type, size\+\_\+t content\+\_\+length, SToken stoken, CToken ctoken, Content content)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a93c46a7c00e1f2faa9cbbf00d7889e40}{httplib\+::detail\+::make\+\_\+multipart\+\_\+ranges\+\_\+data}} (const Request \&req, Response \&res, const std\+::string \&boundary, const std\+::string \&content\+\_\+type, size\+\_\+t content\+\_\+length, std\+::string \&data)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacehttplib_1_1detail_ae57e812fd24b5e4acecb01ea4a947049}{httplib\+::detail\+::get\+\_\+multipart\+\_\+ranges\+\_\+data\+\_\+length}} (const Request \&req, const std\+::string \&boundary, const std\+::string \&content\+\_\+type, size\+\_\+t content\+\_\+length)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespacehttplib_1_1detail_ad7467069e85f955efc30627cff9dd327}{httplib\+::detail\+::write\+\_\+multipart\+\_\+ranges\+\_\+data}} (Stream \&strm, const Request \&req, Response \&res, const std\+::string \&boundary, const std\+::string \&content\+\_\+type, size\+\_\+t content\+\_\+length, const T \&is\+\_\+shutting\+\_\+down)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a8cc06e1287343bb2231f8009621db60e}{httplib\+::detail\+::expect\+\_\+content}} (const Request \&req)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a1bfcbc5ada5082188cc2b7399ed019f2}{httplib\+::detail\+::has\+\_\+crlf}} (const std\+::string \&s)
+\item 
+bool \mbox{\hyperlink{namespacehttplib_1_1detail_a1852c9e2cbefaa5869d2a1a7c95ddb82}{httplib\+::detail\+::parse\+\_\+www\+\_\+authenticate}} (const Response \&res, std\+::map$<$ std\+::string, std\+::string $>$ \&auth, bool is\+\_\+proxy)
+\item 
+std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{namespacehttplib_aa082ee1ea10ce9c5132da091292799f3}{httplib\+::make\+\_\+bearer\+\_\+token\+\_\+authentication\+\_\+header}} (const std\+::string \&token, bool is\+\_\+proxy=false)
+\item 
+void \mbox{\hyperlink{namespacehttplib_1_1detail_a8a3430e05d62496d39cf34a8a9b41631}{httplib\+::detail\+::calc\+\_\+actual\+\_\+timeout}} (time\+\_\+t max\+\_\+timeout\+\_\+msec, time\+\_\+t duration\+\_\+msec, time\+\_\+t timeout\+\_\+sec, time\+\_\+t timeout\+\_\+usec, time\+\_\+t \&actual\+\_\+timeout\+\_\+sec, time\+\_\+t \&actual\+\_\+timeout\+\_\+usec)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{httplib_8h_aa08b6c7771178f71649f98638d2687cd}\label{httplib_8h_aa08b6c7771178f71649f98638d2687cd}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_CLIENT\_MAX\_TIMEOUT\_MSECOND@{CPPHTTPLIB\_CLIENT\_MAX\_TIMEOUT\_MSECOND}}
+\index{CPPHTTPLIB\_CLIENT\_MAX\_TIMEOUT\_MSECOND@{CPPHTTPLIB\_CLIENT\_MAX\_TIMEOUT\_MSECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_CLIENT\_MAX\_TIMEOUT\_MSECOND}{CPPHTTPLIB\_CLIENT\_MAX\_TIMEOUT\_MSECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+CLIENT\+\_\+\+MAX\+\_\+\+TIMEOUT\+\_\+\+MSECOND~0}
+
+\mbox{\Hypertarget{httplib_8h_a828ff04d1bea4f350981dd16c854ec21}\label{httplib_8h_a828ff04d1bea4f350981dd16c854ec21}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_SECOND@{CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_SECOND}}
+\index{CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_SECOND@{CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_SECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_SECOND}{CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_SECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+CLIENT\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+SECOND~300}
+
+\mbox{\Hypertarget{httplib_8h_ae545d94e2cf8b245d689a55e9e313944}\label{httplib_8h_ae545d94e2cf8b245d689a55e9e313944}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_USECOND@{CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_USECOND}}
+\index{CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_USECOND@{CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_USECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_USECOND}{CPPHTTPLIB\_CLIENT\_READ\_TIMEOUT\_USECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+CLIENT\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+USECOND~0}
+
+\mbox{\Hypertarget{httplib_8h_ae909aefd0b5f39e562d2ee2468299a19}\label{httplib_8h_ae909aefd0b5f39e562d2ee2468299a19}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_SECOND@{CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_SECOND}}
+\index{CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_SECOND@{CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_SECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_SECOND}{CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_SECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+CLIENT\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+SECOND~5}
+
+\mbox{\Hypertarget{httplib_8h_a46f3a99709381ae089da222c79bfaf46}\label{httplib_8h_a46f3a99709381ae089da222c79bfaf46}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_USECOND@{CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_USECOND}}
+\index{CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_USECOND@{CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_USECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_USECOND}{CPPHTTPLIB\_CLIENT\_WRITE\_TIMEOUT\_USECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+CLIENT\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+USECOND~0}
+
+\mbox{\Hypertarget{httplib_8h_a917dd36d5cbbfb3ebcbd2f89c6f66401}\label{httplib_8h_a917dd36d5cbbfb3ebcbd2f89c6f66401}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_COMPRESSION\_BUFSIZ@{CPPHTTPLIB\_COMPRESSION\_BUFSIZ}}
+\index{CPPHTTPLIB\_COMPRESSION\_BUFSIZ@{CPPHTTPLIB\_COMPRESSION\_BUFSIZ}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_COMPRESSION\_BUFSIZ}{CPPHTTPLIB\_COMPRESSION\_BUFSIZ}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+COMPRESSION\+\_\+\+BUFSIZ~size\+\_\+t(16384u)}
+
+\mbox{\Hypertarget{httplib_8h_ae9537bdb9c4b89b7b834642b3499effc}\label{httplib_8h_ae9537bdb9c4b89b7b834642b3499effc}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_CONNECTION\_TIMEOUT\_SECOND@{CPPHTTPLIB\_CONNECTION\_TIMEOUT\_SECOND}}
+\index{CPPHTTPLIB\_CONNECTION\_TIMEOUT\_SECOND@{CPPHTTPLIB\_CONNECTION\_TIMEOUT\_SECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_CONNECTION\_TIMEOUT\_SECOND}{CPPHTTPLIB\_CONNECTION\_TIMEOUT\_SECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+CONNECTION\+\_\+\+TIMEOUT\+\_\+\+SECOND~300}
+
+\mbox{\Hypertarget{httplib_8h_af123748ea8c79f98e59ee2c2cb0741a6}\label{httplib_8h_af123748ea8c79f98e59ee2c2cb0741a6}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_CONNECTION\_TIMEOUT\_USECOND@{CPPHTTPLIB\_CONNECTION\_TIMEOUT\_USECOND}}
+\index{CPPHTTPLIB\_CONNECTION\_TIMEOUT\_USECOND@{CPPHTTPLIB\_CONNECTION\_TIMEOUT\_USECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_CONNECTION\_TIMEOUT\_USECOND}{CPPHTTPLIB\_CONNECTION\_TIMEOUT\_USECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+CONNECTION\+\_\+\+TIMEOUT\+\_\+\+USECOND~0}
+
+\mbox{\Hypertarget{httplib_8h_a630a43aa7f6e1b4ab8c4b0fe1955998a}\label{httplib_8h_a630a43aa7f6e1b4ab8c4b0fe1955998a}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_FORM\_URL\_ENCODED\_PAYLOAD\_MAX\_LENGTH@{CPPHTTPLIB\_FORM\_URL\_ENCODED\_PAYLOAD\_MAX\_LENGTH}}
+\index{CPPHTTPLIB\_FORM\_URL\_ENCODED\_PAYLOAD\_MAX\_LENGTH@{CPPHTTPLIB\_FORM\_URL\_ENCODED\_PAYLOAD\_MAX\_LENGTH}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_FORM\_URL\_ENCODED\_PAYLOAD\_MAX\_LENGTH}{CPPHTTPLIB\_FORM\_URL\_ENCODED\_PAYLOAD\_MAX\_LENGTH}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+FORM\+\_\+\+URL\+\_\+\+ENCODED\+\_\+\+PAYLOAD\+\_\+\+MAX\+\_\+\+LENGTH~8192}
+
+\mbox{\Hypertarget{httplib_8h_a2563cd9e253bcf2bc02c55449f2e8a81}\label{httplib_8h_a2563cd9e253bcf2bc02c55449f2e8a81}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_HEADER\_MAX\_COUNT@{CPPHTTPLIB\_HEADER\_MAX\_COUNT}}
+\index{CPPHTTPLIB\_HEADER\_MAX\_COUNT@{CPPHTTPLIB\_HEADER\_MAX\_COUNT}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_HEADER\_MAX\_COUNT}{CPPHTTPLIB\_HEADER\_MAX\_COUNT}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+HEADER\+\_\+\+MAX\+\_\+\+COUNT~100}
+
+\mbox{\Hypertarget{httplib_8h_a8ca9b9f50a5abed0292e45d0004ebb31}\label{httplib_8h_a8ca9b9f50a5abed0292e45d0004ebb31}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_HEADER\_MAX\_LENGTH@{CPPHTTPLIB\_HEADER\_MAX\_LENGTH}}
+\index{CPPHTTPLIB\_HEADER\_MAX\_LENGTH@{CPPHTTPLIB\_HEADER\_MAX\_LENGTH}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_HEADER\_MAX\_LENGTH}{CPPHTTPLIB\_HEADER\_MAX\_LENGTH}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+HEADER\+\_\+\+MAX\+\_\+\+LENGTH~8192}
+
+\mbox{\Hypertarget{httplib_8h_a4e0e9bf4fac8b733127daaca7ad6b20d}\label{httplib_8h_a4e0e9bf4fac8b733127daaca7ad6b20d}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_IDLE\_INTERVAL\_SECOND@{CPPHTTPLIB\_IDLE\_INTERVAL\_SECOND}}
+\index{CPPHTTPLIB\_IDLE\_INTERVAL\_SECOND@{CPPHTTPLIB\_IDLE\_INTERVAL\_SECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_IDLE\_INTERVAL\_SECOND}{CPPHTTPLIB\_IDLE\_INTERVAL\_SECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+IDLE\+\_\+\+INTERVAL\+\_\+\+SECOND~0}
+
+\mbox{\Hypertarget{httplib_8h_a6ff1203f6506a846bce93b853dbc5a9a}\label{httplib_8h_a6ff1203f6506a846bce93b853dbc5a9a}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_IDLE\_INTERVAL\_USECOND@{CPPHTTPLIB\_IDLE\_INTERVAL\_USECOND}}
+\index{CPPHTTPLIB\_IDLE\_INTERVAL\_USECOND@{CPPHTTPLIB\_IDLE\_INTERVAL\_USECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_IDLE\_INTERVAL\_USECOND}{CPPHTTPLIB\_IDLE\_INTERVAL\_USECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+IDLE\+\_\+\+INTERVAL\+\_\+\+USECOND~0}
+
+\mbox{\Hypertarget{httplib_8h_a7b042846e82a8ada054754629c2cff08}\label{httplib_8h_a7b042846e82a8ada054754629c2cff08}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_IPV6\_V6ONLY@{CPPHTTPLIB\_IPV6\_V6ONLY}}
+\index{CPPHTTPLIB\_IPV6\_V6ONLY@{CPPHTTPLIB\_IPV6\_V6ONLY}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_IPV6\_V6ONLY}{CPPHTTPLIB\_IPV6\_V6ONLY}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+IPV6\+\_\+\+V6\+ONLY~false}
+
+\mbox{\Hypertarget{httplib_8h_a56599ecd6d67e12d9c71138ea69fc179}\label{httplib_8h_a56599ecd6d67e12d9c71138ea69fc179}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_KEEPALIVE\_MAX\_COUNT@{CPPHTTPLIB\_KEEPALIVE\_MAX\_COUNT}}
+\index{CPPHTTPLIB\_KEEPALIVE\_MAX\_COUNT@{CPPHTTPLIB\_KEEPALIVE\_MAX\_COUNT}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_KEEPALIVE\_MAX\_COUNT}{CPPHTTPLIB\_KEEPALIVE\_MAX\_COUNT}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+KEEPALIVE\+\_\+\+MAX\+\_\+\+COUNT~100}
+
+\mbox{\Hypertarget{httplib_8h_a2f52f532efd14027e79677b79f2b181e}\label{httplib_8h_a2f52f532efd14027e79677b79f2b181e}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_CHECK\_INTERVAL\_USECOND@{CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_CHECK\_INTERVAL\_USECOND}}
+\index{CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_CHECK\_INTERVAL\_USECOND@{CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_CHECK\_INTERVAL\_USECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_CHECK\_INTERVAL\_USECOND}{CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_CHECK\_INTERVAL\_USECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+KEEPALIVE\+\_\+\+TIMEOUT\+\_\+\+CHECK\+\_\+\+INTERVAL\+\_\+\+USECOND~10000}
+
+\mbox{\Hypertarget{httplib_8h_a9290820a34ffe59a772df48b954fc4ac}\label{httplib_8h_a9290820a34ffe59a772df48b954fc4ac}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_SECOND@{CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_SECOND}}
+\index{CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_SECOND@{CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_SECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_SECOND}{CPPHTTPLIB\_KEEPALIVE\_TIMEOUT\_SECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+KEEPALIVE\+\_\+\+TIMEOUT\+\_\+\+SECOND~5}
+
+\mbox{\Hypertarget{httplib_8h_a496966e31309e40020d86bb856a96a2c}\label{httplib_8h_a496966e31309e40020d86bb856a96a2c}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_LISTEN\_BACKLOG@{CPPHTTPLIB\_LISTEN\_BACKLOG}}
+\index{CPPHTTPLIB\_LISTEN\_BACKLOG@{CPPHTTPLIB\_LISTEN\_BACKLOG}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_LISTEN\_BACKLOG}{CPPHTTPLIB\_LISTEN\_BACKLOG}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+LISTEN\+\_\+\+BACKLOG~5}
+
+\mbox{\Hypertarget{httplib_8h_ad6b12233613725434b45e320a8355c6a}\label{httplib_8h_ad6b12233613725434b45e320a8355c6a}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_MAX\_LINE\_LENGTH@{CPPHTTPLIB\_MAX\_LINE\_LENGTH}}
+\index{CPPHTTPLIB\_MAX\_LINE\_LENGTH@{CPPHTTPLIB\_MAX\_LINE\_LENGTH}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_MAX\_LINE\_LENGTH}{CPPHTTPLIB\_MAX\_LINE\_LENGTH}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+MAX\+\_\+\+LINE\+\_\+\+LENGTH~32768}
+
+\mbox{\Hypertarget{httplib_8h_a151a98e2ce083170a051536ee91e3cc3}\label{httplib_8h_a151a98e2ce083170a051536ee91e3cc3}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_MULTIPART\_FORM\_DATA\_FILE\_MAX\_COUNT@{CPPHTTPLIB\_MULTIPART\_FORM\_DATA\_FILE\_MAX\_COUNT}}
+\index{CPPHTTPLIB\_MULTIPART\_FORM\_DATA\_FILE\_MAX\_COUNT@{CPPHTTPLIB\_MULTIPART\_FORM\_DATA\_FILE\_MAX\_COUNT}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_MULTIPART\_FORM\_DATA\_FILE\_MAX\_COUNT}{CPPHTTPLIB\_MULTIPART\_FORM\_DATA\_FILE\_MAX\_COUNT}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+MULTIPART\+\_\+\+FORM\+\_\+\+DATA\+\_\+\+FILE\+\_\+\+MAX\+\_\+\+COUNT~1024}
+
+\mbox{\Hypertarget{httplib_8h_a20a3df3819479bbd53093ce5e6ef86d6}\label{httplib_8h_a20a3df3819479bbd53093ce5e6ef86d6}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_PAYLOAD\_MAX\_LENGTH@{CPPHTTPLIB\_PAYLOAD\_MAX\_LENGTH}}
+\index{CPPHTTPLIB\_PAYLOAD\_MAX\_LENGTH@{CPPHTTPLIB\_PAYLOAD\_MAX\_LENGTH}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_PAYLOAD\_MAX\_LENGTH}{CPPHTTPLIB\_PAYLOAD\_MAX\_LENGTH}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+PAYLOAD\+\_\+\+MAX\+\_\+\+LENGTH~((std\+::numeric\+\_\+limits$<$size\+\_\+t$>$\+::max)())}
+
+\mbox{\Hypertarget{httplib_8h_a56a36cceccb4602db848c7773876194d}\label{httplib_8h_a56a36cceccb4602db848c7773876194d}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_RANGE\_MAX\_COUNT@{CPPHTTPLIB\_RANGE\_MAX\_COUNT}}
+\index{CPPHTTPLIB\_RANGE\_MAX\_COUNT@{CPPHTTPLIB\_RANGE\_MAX\_COUNT}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_RANGE\_MAX\_COUNT}{CPPHTTPLIB\_RANGE\_MAX\_COUNT}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+RANGE\+\_\+\+MAX\+\_\+\+COUNT~1024}
+
+\mbox{\Hypertarget{httplib_8h_ab16643d4a546f8214c9b82c6521ae30d}\label{httplib_8h_ab16643d4a546f8214c9b82c6521ae30d}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_RECV\_BUFSIZ@{CPPHTTPLIB\_RECV\_BUFSIZ}}
+\index{CPPHTTPLIB\_RECV\_BUFSIZ@{CPPHTTPLIB\_RECV\_BUFSIZ}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_RECV\_BUFSIZ}{CPPHTTPLIB\_RECV\_BUFSIZ}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+RECV\+\_\+\+BUFSIZ~size\+\_\+t(16384u)}
+
+\mbox{\Hypertarget{httplib_8h_a7c84149fef26c90dd04c74075244bc5f}\label{httplib_8h_a7c84149fef26c90dd04c74075244bc5f}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_RECV\_FLAGS@{CPPHTTPLIB\_RECV\_FLAGS}}
+\index{CPPHTTPLIB\_RECV\_FLAGS@{CPPHTTPLIB\_RECV\_FLAGS}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_RECV\_FLAGS}{CPPHTTPLIB\_RECV\_FLAGS}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+RECV\+\_\+\+FLAGS~0}
+
+\mbox{\Hypertarget{httplib_8h_ad3460b45576005d416bf69a708243d8d}\label{httplib_8h_ad3460b45576005d416bf69a708243d8d}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_REDIRECT\_MAX\_COUNT@{CPPHTTPLIB\_REDIRECT\_MAX\_COUNT}}
+\index{CPPHTTPLIB\_REDIRECT\_MAX\_COUNT@{CPPHTTPLIB\_REDIRECT\_MAX\_COUNT}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_REDIRECT\_MAX\_COUNT}{CPPHTTPLIB\_REDIRECT\_MAX\_COUNT}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+REDIRECT\+\_\+\+MAX\+\_\+\+COUNT~20}
+
+\mbox{\Hypertarget{httplib_8h_ac260f5899a74e107b13c6c170d0ccc5a}\label{httplib_8h_ac260f5899a74e107b13c6c170d0ccc5a}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_REQUEST\_URI\_MAX\_LENGTH@{CPPHTTPLIB\_REQUEST\_URI\_MAX\_LENGTH}}
+\index{CPPHTTPLIB\_REQUEST\_URI\_MAX\_LENGTH@{CPPHTTPLIB\_REQUEST\_URI\_MAX\_LENGTH}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_REQUEST\_URI\_MAX\_LENGTH}{CPPHTTPLIB\_REQUEST\_URI\_MAX\_LENGTH}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+REQUEST\+\_\+\+URI\+\_\+\+MAX\+\_\+\+LENGTH~8192}
+
+\mbox{\Hypertarget{httplib_8h_a3f33e345b1017c973759df153a0cdc83}\label{httplib_8h_a3f33e345b1017c973759df153a0cdc83}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_SEND\_BUFSIZ@{CPPHTTPLIB\_SEND\_BUFSIZ}}
+\index{CPPHTTPLIB\_SEND\_BUFSIZ@{CPPHTTPLIB\_SEND\_BUFSIZ}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_SEND\_BUFSIZ}{CPPHTTPLIB\_SEND\_BUFSIZ}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+SEND\+\_\+\+BUFSIZ~size\+\_\+t(16384u)}
+
+\mbox{\Hypertarget{httplib_8h_a2d42b71c75c2a5d0259a9b1ea2fb9391}\label{httplib_8h_a2d42b71c75c2a5d0259a9b1ea2fb9391}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_SEND\_FLAGS@{CPPHTTPLIB\_SEND\_FLAGS}}
+\index{CPPHTTPLIB\_SEND\_FLAGS@{CPPHTTPLIB\_SEND\_FLAGS}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_SEND\_FLAGS}{CPPHTTPLIB\_SEND\_FLAGS}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+SEND\+\_\+\+FLAGS~0}
+
+\mbox{\Hypertarget{httplib_8h_a266bad4abcddf74aef65f2dc9f2cb699}\label{httplib_8h_a266bad4abcddf74aef65f2dc9f2cb699}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_SECOND@{CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_SECOND}}
+\index{CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_SECOND@{CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_SECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_SECOND}{CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_SECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+SECOND~5}
+
+\mbox{\Hypertarget{httplib_8h_a45fca6d3f1535a5cb5dc0ef0f906df1a}\label{httplib_8h_a45fca6d3f1535a5cb5dc0ef0f906df1a}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_USECOND@{CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_USECOND}}
+\index{CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_USECOND@{CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_USECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_USECOND}{CPPHTTPLIB\_SERVER\_READ\_TIMEOUT\_USECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+USECOND~0}
+
+\mbox{\Hypertarget{httplib_8h_a46b9166c2149a12d8d5529c029eff6a9}\label{httplib_8h_a46b9166c2149a12d8d5529c029eff6a9}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_SECOND@{CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_SECOND}}
+\index{CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_SECOND@{CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_SECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_SECOND}{CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_SECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+SECOND~5}
+
+\mbox{\Hypertarget{httplib_8h_aad47e5608ca40ac49c13aeaf690110b0}\label{httplib_8h_aad47e5608ca40ac49c13aeaf690110b0}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_USECOND@{CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_USECOND}}
+\index{CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_USECOND@{CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_USECOND}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_USECOND}{CPPHTTPLIB\_SERVER\_WRITE\_TIMEOUT\_USECOND}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+USECOND~0}
+
+\mbox{\Hypertarget{httplib_8h_ae5781dce6ebcf4a66364011bcdcaea4c}\label{httplib_8h_ae5781dce6ebcf4a66364011bcdcaea4c}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_TCP\_NODELAY@{CPPHTTPLIB\_TCP\_NODELAY}}
+\index{CPPHTTPLIB\_TCP\_NODELAY@{CPPHTTPLIB\_TCP\_NODELAY}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_TCP\_NODELAY}{CPPHTTPLIB\_TCP\_NODELAY}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+TCP\+\_\+\+NODELAY~false}
+
+\mbox{\Hypertarget{httplib_8h_a9acf66afe9b1400253ed6ebf445928bd}\label{httplib_8h_a9acf66afe9b1400253ed6ebf445928bd}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_THREAD\_POOL\_COUNT@{CPPHTTPLIB\_THREAD\_POOL\_COUNT}}
+\index{CPPHTTPLIB\_THREAD\_POOL\_COUNT@{CPPHTTPLIB\_THREAD\_POOL\_COUNT}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_THREAD\_POOL\_COUNT}{CPPHTTPLIB\_THREAD\_POOL\_COUNT}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+THREAD\+\_\+\+POOL\+\_\+\+COUNT}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  ((std::max)(8u, std::thread::hardware\_concurrency() > 0                      \(\backslash\)}
+\DoxyCodeLine{                      ? std::thread::hardware\_concurrency() -\/ 1                \(\backslash\)}
+\DoxyCodeLine{                      : 0))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{httplib_8h_a047ad7234359c500d545a8104a9aa2ae}\label{httplib_8h_a047ad7234359c500d545a8104a9aa2ae}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_VERSION@{CPPHTTPLIB\_VERSION}}
+\index{CPPHTTPLIB\_VERSION@{CPPHTTPLIB\_VERSION}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_VERSION}{CPPHTTPLIB\_VERSION}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+VERSION~\char`\"{}0.\+24.\+0\char`\"{}}
+
+\mbox{\Hypertarget{httplib_8h_a54d7baaffa410009acf237ec3021d09c}\label{httplib_8h_a54d7baaffa410009acf237ec3021d09c}} 
+\index{httplib.h@{httplib.h}!CPPHTTPLIB\_VERSION\_NUM@{CPPHTTPLIB\_VERSION\_NUM}}
+\index{CPPHTTPLIB\_VERSION\_NUM@{CPPHTTPLIB\_VERSION\_NUM}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{CPPHTTPLIB\_VERSION\_NUM}{CPPHTTPLIB\_VERSION\_NUM}}
+{\footnotesize\ttfamily \#define CPPHTTPLIB\+\_\+\+VERSION\+\_\+\+NUM~\char`\"{}0x001800\char`\"{}}
+
+\mbox{\Hypertarget{httplib_8h_a26769957ec1a2beaf223f33b66ee64ab}\label{httplib_8h_a26769957ec1a2beaf223f33b66ee64ab}} 
+\index{httplib.h@{httplib.h}!INVALID\_SOCKET@{INVALID\_SOCKET}}
+\index{INVALID\_SOCKET@{INVALID\_SOCKET}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_SOCKET}{INVALID\_SOCKET}}
+{\footnotesize\ttfamily \#define INVALID\+\_\+\+SOCKET~(-\/1)}
+
+\mbox{\Hypertarget{httplib_8h_aa546fa704e96e7242f4626183e02f61d}\label{httplib_8h_aa546fa704e96e7242f4626183e02f61d}} 
+\index{httplib.h@{httplib.h}!USE\_IF2IP@{USE\_IF2IP}}
+\index{USE\_IF2IP@{USE\_IF2IP}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{USE\_IF2IP}{USE\_IF2IP}}
+{\footnotesize\ttfamily \#define USE\+\_\+\+IF2\+IP}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}\label{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}} 
+\index{httplib.h@{httplib.h}!socket\_t@{socket\_t}}
+\index{socket\_t@{socket\_t}!httplib.h@{httplib.h}}
+\doxysubsubsection{\texorpdfstring{socket\_t}{socket\_t}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} =  int}
+

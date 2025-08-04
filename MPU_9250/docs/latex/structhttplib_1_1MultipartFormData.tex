@@ -1,0 +1,103 @@
+\hypertarget{structhttplib_1_1MultipartFormData}{}\doxysection{httplib\+::Multipart\+Form\+Data Struct Reference}
+\label{structhttplib_1_1MultipartFormData}\index{httplib::MultipartFormData@{httplib::MultipartFormData}}
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structhttplib_1_1MultipartFormData_a04baf40f37013cf951c11f6e6232989f}{get\+\_\+field}} (const std\+::string \&key, size\+\_\+t id=0) const
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structhttplib_1_1MultipartFormData_ae12344147b82944f309be675855e209a}{get\+\_\+fields}} (const std\+::string \&key) const
+\item 
+bool \mbox{\hyperlink{structhttplib_1_1MultipartFormData_a3892c445609cb24418eaede46ab4ca23}{has\+\_\+field}} (const std\+::string \&key) const
+\item 
+size\+\_\+t \mbox{\hyperlink{structhttplib_1_1MultipartFormData_aed0e8db1bb70fc8f7653277bbcc03972}{get\+\_\+field\+\_\+count}} (const std\+::string \&key) const
+\item 
+\mbox{\hyperlink{structhttplib_1_1FormData}{Form\+Data}} \mbox{\hyperlink{structhttplib_1_1MultipartFormData_a328449d56b4352eaecae6154e7ba57cb}{get\+\_\+file}} (const std\+::string \&key, size\+\_\+t id=0) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structhttplib_1_1FormData}{Form\+Data}} $>$ \mbox{\hyperlink{structhttplib_1_1MultipartFormData_a82377dc1c31a52ffdf3f89d34d118dc8}{get\+\_\+files}} (const std\+::string \&key) const
+\item 
+bool \mbox{\hyperlink{structhttplib_1_1MultipartFormData_a1564dd42bfc5961d4447a081c65176d9}{has\+\_\+file}} (const std\+::string \&key) const
+\item 
+size\+\_\+t \mbox{\hyperlink{structhttplib_1_1MultipartFormData_a7d41d49576bacafee156c516d92f361a}{get\+\_\+file\+\_\+count}} (const std\+::string \&key) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacehttplib_abb449c6d3eba76c6bc27f4fecee3c734}{Form\+Fields}} \mbox{\hyperlink{structhttplib_1_1MultipartFormData_ad03062538bf84afaab2a0152ddf0bcbc}{fields}}
+\item 
+\mbox{\hyperlink{namespacehttplib_aab08873bd9e08a22ceddfae34eec6c75}{Form\+Files}} \mbox{\hyperlink{structhttplib_1_1MultipartFormData_a87e428cd7feb8a23a3137cb6f4f65aae}{files}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structhttplib_1_1MultipartFormData_a04baf40f37013cf951c11f6e6232989f}\label{structhttplib_1_1MultipartFormData_a04baf40f37013cf951c11f6e6232989f}} 
+\index{httplib::MultipartFormData@{httplib::MultipartFormData}!get\_field@{get\_field}}
+\index{get\_field@{get\_field}!httplib::MultipartFormData@{httplib::MultipartFormData}}
+\doxysubsubsection{\texorpdfstring{get\_field()}{get\_field()}}
+{\footnotesize\ttfamily std\+::string httplib\+::\+Multipart\+Form\+Data\+::get\+\_\+field (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{size\+\_\+t}]{id = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1MultipartFormData_aed0e8db1bb70fc8f7653277bbcc03972}\label{structhttplib_1_1MultipartFormData_aed0e8db1bb70fc8f7653277bbcc03972}} 
+\index{httplib::MultipartFormData@{httplib::MultipartFormData}!get\_field\_count@{get\_field\_count}}
+\index{get\_field\_count@{get\_field\_count}!httplib::MultipartFormData@{httplib::MultipartFormData}}
+\doxysubsubsection{\texorpdfstring{get\_field\_count()}{get\_field\_count()}}
+{\footnotesize\ttfamily size\+\_\+t httplib\+::\+Multipart\+Form\+Data\+::get\+\_\+field\+\_\+count (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1MultipartFormData_ae12344147b82944f309be675855e209a}\label{structhttplib_1_1MultipartFormData_ae12344147b82944f309be675855e209a}} 
+\index{httplib::MultipartFormData@{httplib::MultipartFormData}!get\_fields@{get\_fields}}
+\index{get\_fields@{get\_fields}!httplib::MultipartFormData@{httplib::MultipartFormData}}
+\doxysubsubsection{\texorpdfstring{get\_fields()}{get\_fields()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ httplib\+::\+Multipart\+Form\+Data\+::get\+\_\+fields (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1MultipartFormData_a328449d56b4352eaecae6154e7ba57cb}\label{structhttplib_1_1MultipartFormData_a328449d56b4352eaecae6154e7ba57cb}} 
+\index{httplib::MultipartFormData@{httplib::MultipartFormData}!get\_file@{get\_file}}
+\index{get\_file@{get\_file}!httplib::MultipartFormData@{httplib::MultipartFormData}}
+\doxysubsubsection{\texorpdfstring{get\_file()}{get\_file()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhttplib_1_1FormData}{Form\+Data}} httplib\+::\+Multipart\+Form\+Data\+::get\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{size\+\_\+t}]{id = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1MultipartFormData_a7d41d49576bacafee156c516d92f361a}\label{structhttplib_1_1MultipartFormData_a7d41d49576bacafee156c516d92f361a}} 
+\index{httplib::MultipartFormData@{httplib::MultipartFormData}!get\_file\_count@{get\_file\_count}}
+\index{get\_file\_count@{get\_file\_count}!httplib::MultipartFormData@{httplib::MultipartFormData}}
+\doxysubsubsection{\texorpdfstring{get\_file\_count()}{get\_file\_count()}}
+{\footnotesize\ttfamily size\+\_\+t httplib\+::\+Multipart\+Form\+Data\+::get\+\_\+file\+\_\+count (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1MultipartFormData_a82377dc1c31a52ffdf3f89d34d118dc8}\label{structhttplib_1_1MultipartFormData_a82377dc1c31a52ffdf3f89d34d118dc8}} 
+\index{httplib::MultipartFormData@{httplib::MultipartFormData}!get\_files@{get\_files}}
+\index{get\_files@{get\_files}!httplib::MultipartFormData@{httplib::MultipartFormData}}
+\doxysubsubsection{\texorpdfstring{get\_files()}{get\_files()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structhttplib_1_1FormData}{Form\+Data}} $>$ httplib\+::\+Multipart\+Form\+Data\+::get\+\_\+files (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1MultipartFormData_a3892c445609cb24418eaede46ab4ca23}\label{structhttplib_1_1MultipartFormData_a3892c445609cb24418eaede46ab4ca23}} 
+\index{httplib::MultipartFormData@{httplib::MultipartFormData}!has\_field@{has\_field}}
+\index{has\_field@{has\_field}!httplib::MultipartFormData@{httplib::MultipartFormData}}
+\doxysubsubsection{\texorpdfstring{has\_field()}{has\_field()}}
+{\footnotesize\ttfamily bool httplib\+::\+Multipart\+Form\+Data\+::has\+\_\+field (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structhttplib_1_1MultipartFormData_a1564dd42bfc5961d4447a081c65176d9}\label{structhttplib_1_1MultipartFormData_a1564dd42bfc5961d4447a081c65176d9}} 
+\index{httplib::MultipartFormData@{httplib::MultipartFormData}!has\_file@{has\_file}}
+\index{has\_file@{has\_file}!httplib::MultipartFormData@{httplib::MultipartFormData}}
+\doxysubsubsection{\texorpdfstring{has\_file()}{has\_file()}}
+{\footnotesize\ttfamily bool httplib\+::\+Multipart\+Form\+Data\+::has\+\_\+file (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhttplib_1_1MultipartFormData_ad03062538bf84afaab2a0152ddf0bcbc}\label{structhttplib_1_1MultipartFormData_ad03062538bf84afaab2a0152ddf0bcbc}} 
+\index{httplib::MultipartFormData@{httplib::MultipartFormData}!fields@{fields}}
+\index{fields@{fields}!httplib::MultipartFormData@{httplib::MultipartFormData}}
+\doxysubsubsection{\texorpdfstring{fields}{fields}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacehttplib_abb449c6d3eba76c6bc27f4fecee3c734}{Form\+Fields}} httplib\+::\+Multipart\+Form\+Data\+::fields}
+
+\mbox{\Hypertarget{structhttplib_1_1MultipartFormData_a87e428cd7feb8a23a3137cb6f4f65aae}\label{structhttplib_1_1MultipartFormData_a87e428cd7feb8a23a3137cb6f4f65aae}} 
+\index{httplib::MultipartFormData@{httplib::MultipartFormData}!files@{files}}
+\index{files@{files}!httplib::MultipartFormData@{httplib::MultipartFormData}}
+\doxysubsubsection{\texorpdfstring{files}{files}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacehttplib_aab08873bd9e08a22ceddfae34eec6c75}{Form\+Files}} httplib\+::\+Multipart\+Form\+Data\+::files}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/\mbox{\hyperlink{httplib_8h}{httplib.\+h}}\end{DoxyCompactItemize}

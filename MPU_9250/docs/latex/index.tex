@@ -1,0 +1,27 @@
+\hypertarget{index_resumen}{}\doxysection{🧠 Resumen}\label{index_resumen}
+Este proyecto implementa un sistema de adquisición y visualización de datos en tiempo real utilizando el sensor MPU-\/9250. ~\newline
+ La arquitectura se basa en un ESP8266 que lee los valores del sensor por I2C y los transmite por USB a una PC. ~\newline
+ Luego, una aplicación en C++ expone esos datos como una API REST accesible vía HTTP.\hypertarget{index_hardware}{}\doxysection{🔩 Hardware utilizado}\label{index_hardware}
+
+\begin{DoxyItemize}
+\item MPU-\/9250 (acelerómetro, giroscopio y magnetómetro)
+\item Placa ESP8266 Node\+MCU
+\item Conexión I2C (SDA\+: GPIO4, SCL\+: GPIO5)
+\item Comunicación serial USB
+\end{DoxyItemize}\hypertarget{index_software}{}\doxysection{🧰 Software utilizado}\label{index_software}
+
+\begin{DoxyItemize}
+\item Platform\+IO (programación del ESP8266)
+\item C++ con {\ttfamily cpp-\/httplib} (servidor HTTP embebido)
+\item Doxygen (documentación automática)
+\end{DoxyItemize}\hypertarget{index_equipo}{}\doxysection{👨‍💻 Autores}\label{index_equipo}
+
+\begin{DoxyItemize}
+\item Hernán Ariel Pérez ~\newline
+
+\item Franco Guarnieri ~\newline
+
+\item Mauricio Casasl ~\newline
+
+\item Año\+: 2025 
+\end{DoxyItemize}

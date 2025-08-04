@@ -1,0 +1,111 @@
+\hypertarget{serial__api__cpp_2main_8cpp}{}\doxysection{Referencia del Archivo /home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/main.cpp}
+\label{serial__api__cpp_2main_8cpp}\index{/home/perico/Descargas/MPU\_9250/serial\_api\_cpp/main.cpp@{/home/perico/Descargas/MPU\_9250/serial\_api\_cpp/main.cpp}}
+
+
+API en C++ para exponer los datos del sensor MPU-\/9250 leídos por puerto serial.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}httplib.\+h\char`\"{}}\newline
+Dependencia gráfica adjunta para main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serial__api__cpp_2main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{serial__api__cpp_2main_8cpp_add5ceb2c3a5470548130125e819ed432}{leer\+\_\+serial}} (const std\+::string \&puerto)
+\begin{DoxyCompactList}\small\item\em Hilo lector del puerto serial. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{serial__api__cpp_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Función principal del programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{serial__api__cpp_2main_8cpp_a46e0ba1a819960b6a9d0e7dcfcbbd535}{ultimo\+\_\+json}} = \char`\"{}\{\}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Último JSON recibido desde el microcontrolador. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{serial__api__cpp_2main_8cpp_a8b02d22b924fe4732c60f4abe9538181}{json\+\_\+mutex}}
+\begin{DoxyCompactList}\small\item\em Mutex para acceso seguro al JSON compartido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+API en C++ para exponer los datos del sensor MPU-\/9250 leídos por puerto serial. 
+
+Este programa abre un puerto serial (por ejemplo, /dev/tty\+USB0), lee datos en formato JSON enviados por un microcontrolador (ESP8266), y los expone a través de un servidor HTTP en la ruta {\ttfamily /data}.
+
+Librerías usadas\+:
+\begin{DoxyItemize}
+\item cpp-\/httplib\+: para servidor HTTP embebido
+\item C++ estándar\+: para concurrencia, lectura de puerto serial, sincronización 
+\end{DoxyItemize}
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{serial__api__cpp_2main_8cpp_add5ceb2c3a5470548130125e819ed432}\label{serial__api__cpp_2main_8cpp_add5ceb2c3a5470548130125e819ed432}} 
+\index{main.cpp@{main.cpp}!leer\_serial@{leer\_serial}}
+\index{leer\_serial@{leer\_serial}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{leer\_serial()}{leer\_serial()}}
+{\footnotesize\ttfamily void leer\+\_\+serial (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{puerto }\end{DoxyParamCaption})}
+
+
+
+Hilo lector del puerto serial. 
+
+Abre el puerto serial especificado y lee línea por línea. Cada línea debe ser un JSON válido enviado por el ESP8266. El último JSON recibido se guarda en una variable global protegida por mutex.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em puerto} & Ruta del dispositivo serial (ejemplo\+: \char`\"{}/dev/tty\+USB0\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{serial__api__cpp_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{serial__api__cpp_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función principal del programa. 
+
+
+\begin{DoxyItemize}
+\item Inicia el hilo lector del puerto serial.
+\item Inicia un servidor HTTP que expone los datos del sensor en formato JSON.
+\item La ruta {\ttfamily /data} devuelve el último JSON recibido.
+\item La ruta OPTIONS maneja preflight para CORS.
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Devuelve}
+int Código de salida del programa (0 = OK) 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de las variables}
+\mbox{\Hypertarget{serial__api__cpp_2main_8cpp_a8b02d22b924fe4732c60f4abe9538181}\label{serial__api__cpp_2main_8cpp_a8b02d22b924fe4732c60f4abe9538181}} 
+\index{main.cpp@{main.cpp}!json\_mutex@{json\_mutex}}
+\index{json\_mutex@{json\_mutex}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{json\_mutex}{json\_mutex}}
+{\footnotesize\ttfamily std\+::mutex json\+\_\+mutex}
+
+
+
+Mutex para acceso seguro al JSON compartido. 
+
+\mbox{\Hypertarget{serial__api__cpp_2main_8cpp_a46e0ba1a819960b6a9d0e7dcfcbbd535}\label{serial__api__cpp_2main_8cpp_a46e0ba1a819960b6a9d0e7dcfcbbd535}} 
+\index{main.cpp@{main.cpp}!ultimo\_json@{ultimo\_json}}
+\index{ultimo\_json@{ultimo\_json}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ultimo\_json}{ultimo\_json}}
+{\footnotesize\ttfamily std\+::string ultimo\+\_\+json = \char`\"{}\{\}\char`\"{}}
+
+
+
+Último JSON recibido desde el microcontrolador. 
+

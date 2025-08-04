@@ -1,0 +1,601 @@
+\hypertarget{classhttplib_1_1Server}{}\doxysection{httplib\+::Server Class Reference}
+\label{classhttplib_1_1Server}\index{httplib::Server@{httplib::Server}}
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943b}{Handler\+Response}} \{ \mbox{\hyperlink{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943ba827211270de454ea3e0df8f57995efed}{Handled}}
+, \mbox{\hyperlink{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943ba6fe9e16b804e1ce4ac5868be60615007}{Unhandled}}
+ \}
+\item 
+using \mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}} = std\+::function$<$ void(const \mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&, \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&)$>$
+\item 
+using \mbox{\hyperlink{classhttplib_1_1Server_aa29460e3dffc0be70c85f218122dc994}{Exception\+Handler}} = std\+::function$<$ void(const \mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&, \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&, std\+::exception\+\_\+ptr ep)$>$
+\item 
+using \mbox{\hyperlink{classhttplib_1_1Server_a1dff40a6ecd0b29a7b7d850e1666477c}{Handler\+With\+Response}} = std\+::function$<$ \mbox{\hyperlink{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943b}{Handler\+Response}}(const \mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&, \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&)$>$
+\item 
+using \mbox{\hyperlink{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}{Handler\+With\+Content\+Reader}} = std\+::function$<$ void(const \mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&, \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&, const \mbox{\hyperlink{classhttplib_1_1ContentReader}{Content\+Reader}} \&content\+\_\+reader)$>$
+\item 
+using \mbox{\hyperlink{classhttplib_1_1Server_a771b94c22126548bb00e8438738adae2}{Expect100\+Continue\+Handler}} = std\+::function$<$ int(const \mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&, \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server_a55b2afc239586d61c9208039efd970ae}{Server}} ()
+\item 
+virtual \mbox{\hyperlink{classhttplib_1_1Server_af115868f3665c97326770b7fa87c6cce}{$\sim$\+Server}} ()
+\item 
+virtual bool \mbox{\hyperlink{classhttplib_1_1Server_a4f02314a47adbae984a7483e8e820c05}{is\+\_\+valid}} () const
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a74a4a4a3142e60854e8e24da96cdbcca}{Get}} (const std\+::string \&pattern, \mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a94c2dad6da1c6e4e02095a692a5b02a8}{Post}} (const std\+::string \&pattern, \mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_ab454f425b92fc5a857cb60bb322727dd}{Post}} (const std\+::string \&pattern, \mbox{\hyperlink{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}{Handler\+With\+Content\+Reader}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a1cf7f1accef56826b2bf09117f1d4103}{Put}} (const std\+::string \&pattern, \mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a2d450f42f8b6fc6ababec2fcaca22d50}{Put}} (const std\+::string \&pattern, \mbox{\hyperlink{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}{Handler\+With\+Content\+Reader}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a6c72621c8b7ab935c7a3872999eeb692}{Patch}} (const std\+::string \&pattern, \mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a865253d431defef7a894e58fe41c92a0}{Patch}} (const std\+::string \&pattern, \mbox{\hyperlink{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}{Handler\+With\+Content\+Reader}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a20a2348fa99b1107853dda9ef9b3e6e2}{Delete}} (const std\+::string \&pattern, \mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a255eb85d73a38405c9a46f2b16c9cb43}{Delete}} (const std\+::string \&pattern, \mbox{\hyperlink{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}{Handler\+With\+Content\+Reader}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a4e5873454e8a2003810e80511e9e2830}{Options}} (const std\+::string \&pattern, \mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}} handler)
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1Server_a36c137f4b03c3d1128b1e07d1a029169}{set\+\_\+base\+\_\+dir}} (const std\+::string \&dir, const std\+::string \&mount\+\_\+point=std\+::string())
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1Server_ac6d41f4b6066757830b91064a0043a3e}{set\+\_\+mount\+\_\+point}} (const std\+::string \&mount\+\_\+point, const std\+::string \&dir, \mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}} headers=\mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}}())
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1Server_aa6937f9f0804b55f1a0af1673118acd5}{remove\+\_\+mount\+\_\+point}} (const std\+::string \&mount\+\_\+point)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_af3bca9e3d68dcc860ba75c1b6e5241ea}{set\+\_\+file\+\_\+extension\+\_\+and\+\_\+mimetype\+\_\+mapping}} (const std\+::string \&ext, const std\+::string \&mime)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a0af6b429a195771184c3b13e999b59fe}{set\+\_\+default\+\_\+file\+\_\+mimetype}} (const std\+::string \&mime)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a7b6925d325402d78965f77588044b741}{set\+\_\+file\+\_\+request\+\_\+handler}} (\mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}} handler)
+\item 
+{\footnotesize template$<$class Error\+Handler\+Func $>$ }\\\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a95a19e681978ce0d05caeb085d8883c1}{set\+\_\+error\+\_\+handler}} (Error\+Handler\+Func \&\&handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_ad66316cc550d27081398c69be8e38935}{set\+\_\+exception\+\_\+handler}} (\mbox{\hyperlink{classhttplib_1_1Server_aa29460e3dffc0be70c85f218122dc994}{Exception\+Handler}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a26bbbe58ee42f3eef5703015b16c696a}{set\+\_\+pre\+\_\+routing\+\_\+handler}} (\mbox{\hyperlink{classhttplib_1_1Server_a1dff40a6ecd0b29a7b7d850e1666477c}{Handler\+With\+Response}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a9399eb3235f737c934618b9f8f16f7a6}{set\+\_\+post\+\_\+routing\+\_\+handler}} (\mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_ad0cd90200f60fbbacb0ff735607f9c9e}{set\+\_\+pre\+\_\+request\+\_\+handler}} (\mbox{\hyperlink{classhttplib_1_1Server_a1dff40a6ecd0b29a7b7d850e1666477c}{Handler\+With\+Response}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_ada7a1b8419547c9ea72f21ecb6d1f2d3}{set\+\_\+expect\+\_\+100\+\_\+continue\+\_\+handler}} (\mbox{\hyperlink{classhttplib_1_1Server_a771b94c22126548bb00e8438738adae2}{Expect100\+Continue\+Handler}} handler)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_ab3f469bd07871a357da96de772ec7987}{set\+\_\+logger}} (\mbox{\hyperlink{namespacehttplib_a45a8a23366055bec6273922974cff156}{Logger}} logger)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_ac707a6580e64b2c5f5a38c9dd216c720}{set\+\_\+pre\+\_\+compression\+\_\+logger}} (\mbox{\hyperlink{namespacehttplib_a45a8a23366055bec6273922974cff156}{Logger}} logger)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a964e626f335e98b5cd20902cf8088d1a}{set\+\_\+address\+\_\+family}} (int family)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a3fcd849f27f63fec7f62a6d8cc7d8435}{set\+\_\+tcp\+\_\+nodelay}} (bool on)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_ae08a105e4085ff8c72ffa7c970f24e83}{set\+\_\+ipv6\+\_\+v6only}} (bool on)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_ac6e87e1cedccef84813a4638694acd5c}{set\+\_\+socket\+\_\+options}} (\mbox{\hyperlink{namespacehttplib_a02305f842f48963eb2ed425ee5d1655d}{Socket\+Options}} socket\+\_\+options)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a6db0eaa0afd802fc59d845688f8ed8f3}{set\+\_\+default\+\_\+headers}} (\mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}} headers)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a496293dd3c104f14fd73251b350324db}{set\+\_\+header\+\_\+writer}} (std\+::function$<$ ssize\+\_\+t(\mbox{\hyperlink{classhttplib_1_1Stream}{Stream}} \&, \mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}} \&)$>$ const \&writer)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_af8905c1e99bdc3a0b353b8c3985fe7fc}{set\+\_\+keep\+\_\+alive\+\_\+max\+\_\+count}} (size\+\_\+t count)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_aae7a9a5c73dc8cd71003da7d5d1cbd7d}{set\+\_\+keep\+\_\+alive\+\_\+timeout}} (time\+\_\+t sec)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_af9522ea3e32aa5b2e1cb9c7c93cf9473}{set\+\_\+read\+\_\+timeout}} (time\+\_\+t sec, time\+\_\+t usec=0)
+\item 
+{\footnotesize template$<$class Rep , class Period $>$ }\\\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_abd1a933ed52d307f3c6625dbe20f6772}{set\+\_\+read\+\_\+timeout}} (const std\+::chrono\+::duration$<$ Rep, Period $>$ \&duration)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a286064a2bc6aa22cdd7e022f093deaad}{set\+\_\+write\+\_\+timeout}} (time\+\_\+t sec, time\+\_\+t usec=0)
+\item 
+{\footnotesize template$<$class Rep , class Period $>$ }\\\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a4b23a94ce77ac1ede2c5b67a6b369064}{set\+\_\+write\+\_\+timeout}} (const std\+::chrono\+::duration$<$ Rep, Period $>$ \&duration)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a9604f44fb0bd01389635442e4f1f9e77}{set\+\_\+idle\+\_\+interval}} (time\+\_\+t sec, time\+\_\+t usec=0)
+\item 
+{\footnotesize template$<$class Rep , class Period $>$ }\\\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_aee285a502bbfa6c5ae8e1915c7d4fde4}{set\+\_\+idle\+\_\+interval}} (const std\+::chrono\+::duration$<$ Rep, Period $>$ \&duration)
+\item 
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& \mbox{\hyperlink{classhttplib_1_1Server_a4d6c37f9ae370d54513775082340a255}{set\+\_\+payload\+\_\+max\+\_\+length}} (size\+\_\+t length)
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1Server_a5bde755667689ba58fa80eedcc4fd2f3}{bind\+\_\+to\+\_\+port}} (const std\+::string \&host, int port, int socket\+\_\+flags=0)
+\item 
+int \mbox{\hyperlink{classhttplib_1_1Server_a5535b14de270d9bc64deae069a55592a}{bind\+\_\+to\+\_\+any\+\_\+port}} (const std\+::string \&host, int socket\+\_\+flags=0)
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1Server_a3e50f66dfe531fe18590aa421ef2595f}{listen\+\_\+after\+\_\+bind}} ()
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1Server_a319d49f06dc5484b234bcc1f8e637fd3}{listen}} (const std\+::string \&host, int port, int socket\+\_\+flags=0)
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1Server_a93a632ffae8eea0380daaac719cba06c}{is\+\_\+running}} () const
+\item 
+void \mbox{\hyperlink{classhttplib_1_1Server_a9365350e22a3baec09a711ee1ec8ecb4}{wait\+\_\+until\+\_\+ready}} () const
+\item 
+void \mbox{\hyperlink{classhttplib_1_1Server_a0f2a6a638ad99012886c87c9786a43b3}{stop}} ()
+\item 
+void \mbox{\hyperlink{classhttplib_1_1Server_a3781b84c57ecb53376b5ee40fba3bbe8}{decommission}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ \mbox{\hyperlink{classhttplib_1_1TaskQueue}{Task\+Queue}} $\ast$(void)$>$ \mbox{\hyperlink{classhttplib_1_1Server_ab02ba5727ab7e9c757f329d557e8d60f}{new\+\_\+task\+\_\+queue}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classhttplib_1_1Server_ab1ba81c352b6091e3ab741634c590f7b}{process\+\_\+request}} (\mbox{\hyperlink{classhttplib_1_1Stream}{Stream}} \&strm, const std\+::string \&remote\+\_\+addr, int remote\+\_\+port, const std\+::string \&local\+\_\+addr, int local\+\_\+port, bool close\+\_\+connection, bool \&connection\+\_\+closed, const std\+::function$<$ void(\mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&)$>$ \&setup\+\_\+request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}} $>$ \mbox{\hyperlink{classhttplib_1_1Server_a8bc06c5e7e93632a22db8fd35f68b4a1}{svr\+\_\+sock\+\_\+}} \{\mbox{\hyperlink{httplib_8h_a26769957ec1a2beaf223f33b66ee64ab}{INVALID\+\_\+\+SOCKET}}\}
+\item 
+size\+\_\+t \mbox{\hyperlink{classhttplib_1_1Server_a2a39446892282230d483cd137c56e4f7}{keep\+\_\+alive\+\_\+max\+\_\+count\+\_\+}} = \mbox{\hyperlink{httplib_8h_a56599ecd6d67e12d9c71138ea69fc179}{CPPHTTPLIB\+\_\+\+KEEPALIVE\+\_\+\+MAX\+\_\+\+COUNT}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classhttplib_1_1Server_a65cd6213eca9dedec862e9477436a625}{keep\+\_\+alive\+\_\+timeout\+\_\+sec\+\_\+}} = \mbox{\hyperlink{httplib_8h_a9290820a34ffe59a772df48b954fc4ac}{CPPHTTPLIB\+\_\+\+KEEPALIVE\+\_\+\+TIMEOUT\+\_\+\+SECOND}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classhttplib_1_1Server_ac9f203c13fe12f2ecb04386df44f6081}{read\+\_\+timeout\+\_\+sec\+\_\+}} = \mbox{\hyperlink{httplib_8h_a266bad4abcddf74aef65f2dc9f2cb699}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+SECOND}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classhttplib_1_1Server_a03a97129a6573eab65a00e5e190e2f7a}{read\+\_\+timeout\+\_\+usec\+\_\+}} = \mbox{\hyperlink{httplib_8h_a45fca6d3f1535a5cb5dc0ef0f906df1a}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+USECOND}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classhttplib_1_1Server_a30362cb23ea93927768bc2a1a93e61bb}{write\+\_\+timeout\+\_\+sec\+\_\+}} = \mbox{\hyperlink{httplib_8h_a46b9166c2149a12d8d5529c029eff6a9}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+SECOND}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classhttplib_1_1Server_a5fabd1ab73b311873c2e6d555d8ed6f8}{write\+\_\+timeout\+\_\+usec\+\_\+}} = \mbox{\hyperlink{httplib_8h_aad47e5608ca40ac49c13aeaf690110b0}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+USECOND}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classhttplib_1_1Server_a5a100e3e30db5c877c093c035b434a0e}{idle\+\_\+interval\+\_\+sec\+\_\+}} = \mbox{\hyperlink{httplib_8h_a4e0e9bf4fac8b733127daaca7ad6b20d}{CPPHTTPLIB\+\_\+\+IDLE\+\_\+\+INTERVAL\+\_\+\+SECOND}}
+\item 
+time\+\_\+t \mbox{\hyperlink{classhttplib_1_1Server_a29c76072511d044af75f81140e7ae34e}{idle\+\_\+interval\+\_\+usec\+\_\+}} = \mbox{\hyperlink{httplib_8h_a6ff1203f6506a846bce93b853dbc5a9a}{CPPHTTPLIB\+\_\+\+IDLE\+\_\+\+INTERVAL\+\_\+\+USECOND}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classhttplib_1_1Server_aef94224ccf466318570d0309faa6c721}{payload\+\_\+max\+\_\+length\+\_\+}} = \mbox{\hyperlink{httplib_8h_a20a3df3819479bbd53093ce5e6ef86d6}{CPPHTTPLIB\+\_\+\+PAYLOAD\+\_\+\+MAX\+\_\+\+LENGTH}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classhttplib_1_1Server_aa29460e3dffc0be70c85f218122dc994}\label{classhttplib_1_1Server_aa29460e3dffc0be70c85f218122dc994}} 
+\index{httplib::Server@{httplib::Server}!ExceptionHandler@{ExceptionHandler}}
+\index{ExceptionHandler@{ExceptionHandler}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{ExceptionHandler}{ExceptionHandler}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classhttplib_1_1Server_aa29460e3dffc0be70c85f218122dc994}{httplib\+::\+Server\+::\+Exception\+Handler}} =  std\+::function$<$void(const \mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&, \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&, std\+::exception\+\_\+ptr ep)$>$}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a771b94c22126548bb00e8438738adae2}\label{classhttplib_1_1Server_a771b94c22126548bb00e8438738adae2}} 
+\index{httplib::Server@{httplib::Server}!Expect100ContinueHandler@{Expect100ContinueHandler}}
+\index{Expect100ContinueHandler@{Expect100ContinueHandler}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Expect100ContinueHandler}{Expect100ContinueHandler}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classhttplib_1_1Server_a771b94c22126548bb00e8438738adae2}{httplib\+::\+Server\+::\+Expect100\+Continue\+Handler}} =  std\+::function$<$int(const \mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&, \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&)$>$}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}\label{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}} 
+\index{httplib::Server@{httplib::Server}!Handler@{Handler}}
+\index{Handler@{Handler}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Handler}{Handler}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{httplib\+::\+Server\+::\+Handler}} =  std\+::function$<$void(const \mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&, \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&)$>$}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}\label{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}} 
+\index{httplib::Server@{httplib::Server}!HandlerWithContentReader@{HandlerWithContentReader}}
+\index{HandlerWithContentReader@{HandlerWithContentReader}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{HandlerWithContentReader}{HandlerWithContentReader}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}{httplib\+::\+Server\+::\+Handler\+With\+Content\+Reader}} =  std\+::function$<$void( const \mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&, \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&, const \mbox{\hyperlink{classhttplib_1_1ContentReader}{Content\+Reader}} \&content\+\_\+reader)$>$}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a1dff40a6ecd0b29a7b7d850e1666477c}\label{classhttplib_1_1Server_a1dff40a6ecd0b29a7b7d850e1666477c}} 
+\index{httplib::Server@{httplib::Server}!HandlerWithResponse@{HandlerWithResponse}}
+\index{HandlerWithResponse@{HandlerWithResponse}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{HandlerWithResponse}{HandlerWithResponse}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classhttplib_1_1Server_a1dff40a6ecd0b29a7b7d850e1666477c}{httplib\+::\+Server\+::\+Handler\+With\+Response}} =  std\+::function$<$\mbox{\hyperlink{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943b}{Handler\+Response}}(const \mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&, \mbox{\hyperlink{structhttplib_1_1Response}{Response}} \&)$>$}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943b}\label{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943b}} 
+\index{httplib::Server@{httplib::Server}!HandlerResponse@{HandlerResponse}}
+\index{HandlerResponse@{HandlerResponse}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{HandlerResponse}{HandlerResponse}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943b}{httplib\+::\+Server\+::\+Handler\+Response}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Handled@{Handled}!httplib::Server@{httplib::Server}}\index{httplib::Server@{httplib::Server}!Handled@{Handled}}}\mbox{\Hypertarget{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943ba827211270de454ea3e0df8f57995efed}\label{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943ba827211270de454ea3e0df8f57995efed}} 
+Handled&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unhandled@{Unhandled}!httplib::Server@{httplib::Server}}\index{httplib::Server@{httplib::Server}!Unhandled@{Unhandled}}}\mbox{\Hypertarget{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943ba6fe9e16b804e1ce4ac5868be60615007}\label{classhttplib_1_1Server_a68cf8c175834bde61120ac4216ea943ba6fe9e16b804e1ce4ac5868be60615007}} 
+Unhandled&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhttplib_1_1Server_a55b2afc239586d61c9208039efd970ae}\label{classhttplib_1_1Server_a55b2afc239586d61c9208039efd970ae}} 
+\index{httplib::Server@{httplib::Server}!Server@{Server}}
+\index{Server@{Server}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily httplib\+::\+Server\+::\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_af115868f3665c97326770b7fa87c6cce}\label{classhttplib_1_1Server_af115868f3665c97326770b7fa87c6cce}} 
+\index{httplib::Server@{httplib::Server}!````~Server@{$\sim$Server}}
+\index{````~Server@{$\sim$Server}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{$\sim$Server()}{~Server()}}
+{\footnotesize\ttfamily httplib\+::\+Server\+::$\sim$\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhttplib_1_1Server_a5535b14de270d9bc64deae069a55592a}\label{classhttplib_1_1Server_a5535b14de270d9bc64deae069a55592a}} 
+\index{httplib::Server@{httplib::Server}!bind\_to\_any\_port@{bind\_to\_any\_port}}
+\index{bind\_to\_any\_port@{bind\_to\_any\_port}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{bind\_to\_any\_port()}{bind\_to\_any\_port()}}
+{\footnotesize\ttfamily int httplib\+::\+Server\+::bind\+\_\+to\+\_\+any\+\_\+port (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{int}]{socket\+\_\+flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a5bde755667689ba58fa80eedcc4fd2f3}\label{classhttplib_1_1Server_a5bde755667689ba58fa80eedcc4fd2f3}} 
+\index{httplib::Server@{httplib::Server}!bind\_to\_port@{bind\_to\_port}}
+\index{bind\_to\_port@{bind\_to\_port}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{bind\_to\_port()}{bind\_to\_port()}}
+{\footnotesize\ttfamily bool httplib\+::\+Server\+::bind\+\_\+to\+\_\+port (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{int}]{port,  }\item[{int}]{socket\+\_\+flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a3781b84c57ecb53376b5ee40fba3bbe8}\label{classhttplib_1_1Server_a3781b84c57ecb53376b5ee40fba3bbe8}} 
+\index{httplib::Server@{httplib::Server}!decommission@{decommission}}
+\index{decommission@{decommission}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{decommission()}{decommission()}}
+{\footnotesize\ttfamily void httplib\+::\+Server\+::decommission (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a20a2348fa99b1107853dda9ef9b3e6e2}\label{classhttplib_1_1Server_a20a2348fa99b1107853dda9ef9b3e6e2}} 
+\index{httplib::Server@{httplib::Server}!Delete@{Delete}}
+\index{Delete@{Delete}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::\+Delete (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern,  }\item[{\mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a255eb85d73a38405c9a46f2b16c9cb43}\label{classhttplib_1_1Server_a255eb85d73a38405c9a46f2b16c9cb43}} 
+\index{httplib::Server@{httplib::Server}!Delete@{Delete}}
+\index{Delete@{Delete}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::\+Delete (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern,  }\item[{\mbox{\hyperlink{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}{Handler\+With\+Content\+Reader}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a74a4a4a3142e60854e8e24da96cdbcca}\label{classhttplib_1_1Server_a74a4a4a3142e60854e8e24da96cdbcca}} 
+\index{httplib::Server@{httplib::Server}!Get@{Get}}
+\index{Get@{Get}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::\+Get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern,  }\item[{\mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a93a632ffae8eea0380daaac719cba06c}\label{classhttplib_1_1Server_a93a632ffae8eea0380daaac719cba06c}} 
+\index{httplib::Server@{httplib::Server}!is\_running@{is\_running}}
+\index{is\_running@{is\_running}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{is\_running()}{is\_running()}}
+{\footnotesize\ttfamily bool httplib\+::\+Server\+::is\+\_\+running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a4f02314a47adbae984a7483e8e820c05}\label{classhttplib_1_1Server_a4f02314a47adbae984a7483e8e820c05}} 
+\index{httplib::Server@{httplib::Server}!is\_valid@{is\_valid}}
+\index{is\_valid@{is\_valid}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{is\_valid()}{is\_valid()}}
+{\footnotesize\ttfamily bool httplib\+::\+Server\+::is\+\_\+valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a319d49f06dc5484b234bcc1f8e637fd3}\label{classhttplib_1_1Server_a319d49f06dc5484b234bcc1f8e637fd3}} 
+\index{httplib::Server@{httplib::Server}!listen@{listen}}
+\index{listen@{listen}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}}
+{\footnotesize\ttfamily bool httplib\+::\+Server\+::listen (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{int}]{port,  }\item[{int}]{socket\+\_\+flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a3e50f66dfe531fe18590aa421ef2595f}\label{classhttplib_1_1Server_a3e50f66dfe531fe18590aa421ef2595f}} 
+\index{httplib::Server@{httplib::Server}!listen\_after\_bind@{listen\_after\_bind}}
+\index{listen\_after\_bind@{listen\_after\_bind}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{listen\_after\_bind()}{listen\_after\_bind()}}
+{\footnotesize\ttfamily bool httplib\+::\+Server\+::listen\+\_\+after\+\_\+bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a4e5873454e8a2003810e80511e9e2830}\label{classhttplib_1_1Server_a4e5873454e8a2003810e80511e9e2830}} 
+\index{httplib::Server@{httplib::Server}!Options@{Options}}
+\index{Options@{Options}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Options()}{Options()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::\+Options (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern,  }\item[{\mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a6c72621c8b7ab935c7a3872999eeb692}\label{classhttplib_1_1Server_a6c72621c8b7ab935c7a3872999eeb692}} 
+\index{httplib::Server@{httplib::Server}!Patch@{Patch}}
+\index{Patch@{Patch}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::\+Patch (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern,  }\item[{\mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a865253d431defef7a894e58fe41c92a0}\label{classhttplib_1_1Server_a865253d431defef7a894e58fe41c92a0}} 
+\index{httplib::Server@{httplib::Server}!Patch@{Patch}}
+\index{Patch@{Patch}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Patch()}{Patch()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::\+Patch (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern,  }\item[{\mbox{\hyperlink{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}{Handler\+With\+Content\+Reader}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a94c2dad6da1c6e4e02095a692a5b02a8}\label{classhttplib_1_1Server_a94c2dad6da1c6e4e02095a692a5b02a8}} 
+\index{httplib::Server@{httplib::Server}!Post@{Post}}
+\index{Post@{Post}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::\+Post (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern,  }\item[{\mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ab454f425b92fc5a857cb60bb322727dd}\label{classhttplib_1_1Server_ab454f425b92fc5a857cb60bb322727dd}} 
+\index{httplib::Server@{httplib::Server}!Post@{Post}}
+\index{Post@{Post}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::\+Post (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern,  }\item[{\mbox{\hyperlink{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}{Handler\+With\+Content\+Reader}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ab1ba81c352b6091e3ab741634c590f7b}\label{classhttplib_1_1Server_ab1ba81c352b6091e3ab741634c590f7b}} 
+\index{httplib::Server@{httplib::Server}!process\_request@{process\_request}}
+\index{process\_request@{process\_request}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{process\_request()}{process\_request()}}
+{\footnotesize\ttfamily bool httplib\+::\+Server\+::process\+\_\+request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhttplib_1_1Stream}{Stream}} \&}]{strm,  }\item[{const std\+::string \&}]{remote\+\_\+addr,  }\item[{int}]{remote\+\_\+port,  }\item[{const std\+::string \&}]{local\+\_\+addr,  }\item[{int}]{local\+\_\+port,  }\item[{bool}]{close\+\_\+connection,  }\item[{bool \&}]{connection\+\_\+closed,  }\item[{const std\+::function$<$ void(\mbox{\hyperlink{structhttplib_1_1Request}{Request}} \&)$>$ \&}]{setup\+\_\+request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a1cf7f1accef56826b2bf09117f1d4103}\label{classhttplib_1_1Server_a1cf7f1accef56826b2bf09117f1d4103}} 
+\index{httplib::Server@{httplib::Server}!Put@{Put}}
+\index{Put@{Put}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::\+Put (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern,  }\item[{\mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a2d450f42f8b6fc6ababec2fcaca22d50}\label{classhttplib_1_1Server_a2d450f42f8b6fc6ababec2fcaca22d50}} 
+\index{httplib::Server@{httplib::Server}!Put@{Put}}
+\index{Put@{Put}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{Put()}{Put()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::\+Put (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern,  }\item[{\mbox{\hyperlink{classhttplib_1_1Server_a494a53d50a549a0e292fdf4485a5b5f8}{Handler\+With\+Content\+Reader}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_aa6937f9f0804b55f1a0af1673118acd5}\label{classhttplib_1_1Server_aa6937f9f0804b55f1a0af1673118acd5}} 
+\index{httplib::Server@{httplib::Server}!remove\_mount\_point@{remove\_mount\_point}}
+\index{remove\_mount\_point@{remove\_mount\_point}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{remove\_mount\_point()}{remove\_mount\_point()}}
+{\footnotesize\ttfamily bool httplib\+::\+Server\+::remove\+\_\+mount\+\_\+point (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mount\+\_\+point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a964e626f335e98b5cd20902cf8088d1a}\label{classhttplib_1_1Server_a964e626f335e98b5cd20902cf8088d1a}} 
+\index{httplib::Server@{httplib::Server}!set\_address\_family@{set\_address\_family}}
+\index{set\_address\_family@{set\_address\_family}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_address\_family()}{set\_address\_family()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+address\+\_\+family (\begin{DoxyParamCaption}\item[{int}]{family }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a36c137f4b03c3d1128b1e07d1a029169}\label{classhttplib_1_1Server_a36c137f4b03c3d1128b1e07d1a029169}} 
+\index{httplib::Server@{httplib::Server}!set\_base\_dir@{set\_base\_dir}}
+\index{set\_base\_dir@{set\_base\_dir}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_base\_dir()}{set\_base\_dir()}}
+{\footnotesize\ttfamily bool httplib\+::\+Server\+::set\+\_\+base\+\_\+dir (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dir,  }\item[{const std\+::string \&}]{mount\+\_\+point = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a0af6b429a195771184c3b13e999b59fe}\label{classhttplib_1_1Server_a0af6b429a195771184c3b13e999b59fe}} 
+\index{httplib::Server@{httplib::Server}!set\_default\_file\_mimetype@{set\_default\_file\_mimetype}}
+\index{set\_default\_file\_mimetype@{set\_default\_file\_mimetype}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_default\_file\_mimetype()}{set\_default\_file\_mimetype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+default\+\_\+file\+\_\+mimetype (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a6db0eaa0afd802fc59d845688f8ed8f3}\label{classhttplib_1_1Server_a6db0eaa0afd802fc59d845688f8ed8f3}} 
+\index{httplib::Server@{httplib::Server}!set\_default\_headers@{set\_default\_headers}}
+\index{set\_default\_headers@{set\_default\_headers}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_default\_headers()}{set\_default\_headers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+default\+\_\+headers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}}}]{headers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a95a19e681978ce0d05caeb085d8883c1}\label{classhttplib_1_1Server_a95a19e681978ce0d05caeb085d8883c1}} 
+\index{httplib::Server@{httplib::Server}!set\_error\_handler@{set\_error\_handler}}
+\index{set\_error\_handler@{set\_error\_handler}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_error\_handler()}{set\_error\_handler()}}
+{\footnotesize\ttfamily template$<$class Error\+Handler\+Func $>$ \\
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}}\& httplib\+::\+Server\+::set\+\_\+error\+\_\+handler (\begin{DoxyParamCaption}\item[{Error\+Handler\+Func \&\&}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ad66316cc550d27081398c69be8e38935}\label{classhttplib_1_1Server_ad66316cc550d27081398c69be8e38935}} 
+\index{httplib::Server@{httplib::Server}!set\_exception\_handler@{set\_exception\_handler}}
+\index{set\_exception\_handler@{set\_exception\_handler}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_exception\_handler()}{set\_exception\_handler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+exception\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhttplib_1_1Server_aa29460e3dffc0be70c85f218122dc994}{Exception\+Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ada7a1b8419547c9ea72f21ecb6d1f2d3}\label{classhttplib_1_1Server_ada7a1b8419547c9ea72f21ecb6d1f2d3}} 
+\index{httplib::Server@{httplib::Server}!set\_expect\_100\_continue\_handler@{set\_expect\_100\_continue\_handler}}
+\index{set\_expect\_100\_continue\_handler@{set\_expect\_100\_continue\_handler}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_expect\_100\_continue\_handler()}{set\_expect\_100\_continue\_handler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+expect\+\_\+100\+\_\+continue\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhttplib_1_1Server_a771b94c22126548bb00e8438738adae2}{Expect100\+Continue\+Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_af3bca9e3d68dcc860ba75c1b6e5241ea}\label{classhttplib_1_1Server_af3bca9e3d68dcc860ba75c1b6e5241ea}} 
+\index{httplib::Server@{httplib::Server}!set\_file\_extension\_and\_mimetype\_mapping@{set\_file\_extension\_and\_mimetype\_mapping}}
+\index{set\_file\_extension\_and\_mimetype\_mapping@{set\_file\_extension\_and\_mimetype\_mapping}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_file\_extension\_and\_mimetype\_mapping()}{set\_file\_extension\_and\_mimetype\_mapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+file\+\_\+extension\+\_\+and\+\_\+mimetype\+\_\+mapping (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ext,  }\item[{const std\+::string \&}]{mime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a7b6925d325402d78965f77588044b741}\label{classhttplib_1_1Server_a7b6925d325402d78965f77588044b741}} 
+\index{httplib::Server@{httplib::Server}!set\_file\_request\_handler@{set\_file\_request\_handler}}
+\index{set\_file\_request\_handler@{set\_file\_request\_handler}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_file\_request\_handler()}{set\_file\_request\_handler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+file\+\_\+request\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a496293dd3c104f14fd73251b350324db}\label{classhttplib_1_1Server_a496293dd3c104f14fd73251b350324db}} 
+\index{httplib::Server@{httplib::Server}!set\_header\_writer@{set\_header\_writer}}
+\index{set\_header\_writer@{set\_header\_writer}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_header\_writer()}{set\_header\_writer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+header\+\_\+writer (\begin{DoxyParamCaption}\item[{std\+::function$<$ ssize\+\_\+t(\mbox{\hyperlink{classhttplib_1_1Stream}{Stream}} \&, \mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}} \&)$>$ const \&}]{writer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_aee285a502bbfa6c5ae8e1915c7d4fde4}\label{classhttplib_1_1Server_aee285a502bbfa6c5ae8e1915c7d4fde4}} 
+\index{httplib::Server@{httplib::Server}!set\_idle\_interval@{set\_idle\_interval}}
+\index{set\_idle\_interval@{set\_idle\_interval}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_idle\_interval()}{set\_idle\_interval()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Rep , class Period $>$ \\
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+idle\+\_\+interval (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::duration$<$ Rep, Period $>$ \&}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a9604f44fb0bd01389635442e4f1f9e77}\label{classhttplib_1_1Server_a9604f44fb0bd01389635442e4f1f9e77}} 
+\index{httplib::Server@{httplib::Server}!set\_idle\_interval@{set\_idle\_interval}}
+\index{set\_idle\_interval@{set\_idle\_interval}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_idle\_interval()}{set\_idle\_interval()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+idle\+\_\+interval (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{sec,  }\item[{time\+\_\+t}]{usec = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ae08a105e4085ff8c72ffa7c970f24e83}\label{classhttplib_1_1Server_ae08a105e4085ff8c72ffa7c970f24e83}} 
+\index{httplib::Server@{httplib::Server}!set\_ipv6\_v6only@{set\_ipv6\_v6only}}
+\index{set\_ipv6\_v6only@{set\_ipv6\_v6only}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_ipv6\_v6only()}{set\_ipv6\_v6only()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+ipv6\+\_\+v6only (\begin{DoxyParamCaption}\item[{bool}]{on }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_af8905c1e99bdc3a0b353b8c3985fe7fc}\label{classhttplib_1_1Server_af8905c1e99bdc3a0b353b8c3985fe7fc}} 
+\index{httplib::Server@{httplib::Server}!set\_keep\_alive\_max\_count@{set\_keep\_alive\_max\_count}}
+\index{set\_keep\_alive\_max\_count@{set\_keep\_alive\_max\_count}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_keep\_alive\_max\_count()}{set\_keep\_alive\_max\_count()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+keep\+\_\+alive\+\_\+max\+\_\+count (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_aae7a9a5c73dc8cd71003da7d5d1cbd7d}\label{classhttplib_1_1Server_aae7a9a5c73dc8cd71003da7d5d1cbd7d}} 
+\index{httplib::Server@{httplib::Server}!set\_keep\_alive\_timeout@{set\_keep\_alive\_timeout}}
+\index{set\_keep\_alive\_timeout@{set\_keep\_alive\_timeout}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_keep\_alive\_timeout()}{set\_keep\_alive\_timeout()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+keep\+\_\+alive\+\_\+timeout (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{sec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ab3f469bd07871a357da96de772ec7987}\label{classhttplib_1_1Server_ab3f469bd07871a357da96de772ec7987}} 
+\index{httplib::Server@{httplib::Server}!set\_logger@{set\_logger}}
+\index{set\_logger@{set\_logger}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_logger()}{set\_logger()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehttplib_a45a8a23366055bec6273922974cff156}{Logger}}}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ac6d41f4b6066757830b91064a0043a3e}\label{classhttplib_1_1Server_ac6d41f4b6066757830b91064a0043a3e}} 
+\index{httplib::Server@{httplib::Server}!set\_mount\_point@{set\_mount\_point}}
+\index{set\_mount\_point@{set\_mount\_point}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_mount\_point()}{set\_mount\_point()}}
+{\footnotesize\ttfamily bool httplib\+::\+Server\+::set\+\_\+mount\+\_\+point (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mount\+\_\+point,  }\item[{const std\+::string \&}]{dir,  }\item[{\mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}}}]{headers = {\ttfamily \mbox{\hyperlink{namespacehttplib_a622679f6bed1aba6222757bdbdf101ee}{Headers}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a4d6c37f9ae370d54513775082340a255}\label{classhttplib_1_1Server_a4d6c37f9ae370d54513775082340a255}} 
+\index{httplib::Server@{httplib::Server}!set\_payload\_max\_length@{set\_payload\_max\_length}}
+\index{set\_payload\_max\_length@{set\_payload\_max\_length}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_payload\_max\_length()}{set\_payload\_max\_length()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+payload\+\_\+max\+\_\+length (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a9399eb3235f737c934618b9f8f16f7a6}\label{classhttplib_1_1Server_a9399eb3235f737c934618b9f8f16f7a6}} 
+\index{httplib::Server@{httplib::Server}!set\_post\_routing\_handler@{set\_post\_routing\_handler}}
+\index{set\_post\_routing\_handler@{set\_post\_routing\_handler}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_post\_routing\_handler()}{set\_post\_routing\_handler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+post\+\_\+routing\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhttplib_1_1Server_a7dd90fb4275b663feff97966b3581b9e}{Handler}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ac707a6580e64b2c5f5a38c9dd216c720}\label{classhttplib_1_1Server_ac707a6580e64b2c5f5a38c9dd216c720}} 
+\index{httplib::Server@{httplib::Server}!set\_pre\_compression\_logger@{set\_pre\_compression\_logger}}
+\index{set\_pre\_compression\_logger@{set\_pre\_compression\_logger}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_pre\_compression\_logger()}{set\_pre\_compression\_logger()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+pre\+\_\+compression\+\_\+logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehttplib_a45a8a23366055bec6273922974cff156}{Logger}}}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ad0cd90200f60fbbacb0ff735607f9c9e}\label{classhttplib_1_1Server_ad0cd90200f60fbbacb0ff735607f9c9e}} 
+\index{httplib::Server@{httplib::Server}!set\_pre\_request\_handler@{set\_pre\_request\_handler}}
+\index{set\_pre\_request\_handler@{set\_pre\_request\_handler}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_pre\_request\_handler()}{set\_pre\_request\_handler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+pre\+\_\+request\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhttplib_1_1Server_a1dff40a6ecd0b29a7b7d850e1666477c}{Handler\+With\+Response}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a26bbbe58ee42f3eef5703015b16c696a}\label{classhttplib_1_1Server_a26bbbe58ee42f3eef5703015b16c696a}} 
+\index{httplib::Server@{httplib::Server}!set\_pre\_routing\_handler@{set\_pre\_routing\_handler}}
+\index{set\_pre\_routing\_handler@{set\_pre\_routing\_handler}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_pre\_routing\_handler()}{set\_pre\_routing\_handler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+pre\+\_\+routing\+\_\+handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhttplib_1_1Server_a1dff40a6ecd0b29a7b7d850e1666477c}{Handler\+With\+Response}}}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_abd1a933ed52d307f3c6625dbe20f6772}\label{classhttplib_1_1Server_abd1a933ed52d307f3c6625dbe20f6772}} 
+\index{httplib::Server@{httplib::Server}!set\_read\_timeout@{set\_read\_timeout}}
+\index{set\_read\_timeout@{set\_read\_timeout}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_read\_timeout()}{set\_read\_timeout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Rep , class Period $>$ \\
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+read\+\_\+timeout (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::duration$<$ Rep, Period $>$ \&}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_af9522ea3e32aa5b2e1cb9c7c93cf9473}\label{classhttplib_1_1Server_af9522ea3e32aa5b2e1cb9c7c93cf9473}} 
+\index{httplib::Server@{httplib::Server}!set\_read\_timeout@{set\_read\_timeout}}
+\index{set\_read\_timeout@{set\_read\_timeout}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_read\_timeout()}{set\_read\_timeout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+read\+\_\+timeout (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{sec,  }\item[{time\+\_\+t}]{usec = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ac6e87e1cedccef84813a4638694acd5c}\label{classhttplib_1_1Server_ac6e87e1cedccef84813a4638694acd5c}} 
+\index{httplib::Server@{httplib::Server}!set\_socket\_options@{set\_socket\_options}}
+\index{set\_socket\_options@{set\_socket\_options}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_socket\_options()}{set\_socket\_options()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+socket\+\_\+options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehttplib_a02305f842f48963eb2ed425ee5d1655d}{Socket\+Options}}}]{socket\+\_\+options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a3fcd849f27f63fec7f62a6d8cc7d8435}\label{classhttplib_1_1Server_a3fcd849f27f63fec7f62a6d8cc7d8435}} 
+\index{httplib::Server@{httplib::Server}!set\_tcp\_nodelay@{set\_tcp\_nodelay}}
+\index{set\_tcp\_nodelay@{set\_tcp\_nodelay}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_tcp\_nodelay()}{set\_tcp\_nodelay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+tcp\+\_\+nodelay (\begin{DoxyParamCaption}\item[{bool}]{on }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a4b23a94ce77ac1ede2c5b67a6b369064}\label{classhttplib_1_1Server_a4b23a94ce77ac1ede2c5b67a6b369064}} 
+\index{httplib::Server@{httplib::Server}!set\_write\_timeout@{set\_write\_timeout}}
+\index{set\_write\_timeout@{set\_write\_timeout}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_write\_timeout()}{set\_write\_timeout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Rep , class Period $>$ \\
+\mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+write\+\_\+timeout (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::duration$<$ Rep, Period $>$ \&}]{duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a286064a2bc6aa22cdd7e022f093deaad}\label{classhttplib_1_1Server_a286064a2bc6aa22cdd7e022f093deaad}} 
+\index{httplib::Server@{httplib::Server}!set\_write\_timeout@{set\_write\_timeout}}
+\index{set\_write\_timeout@{set\_write\_timeout}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{set\_write\_timeout()}{set\_write\_timeout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhttplib_1_1Server}{Server}} \& httplib\+::\+Server\+::set\+\_\+write\+\_\+timeout (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{sec,  }\item[{time\+\_\+t}]{usec = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a0f2a6a638ad99012886c87c9786a43b3}\label{classhttplib_1_1Server_a0f2a6a638ad99012886c87c9786a43b3}} 
+\index{httplib::Server@{httplib::Server}!stop@{stop}}
+\index{stop@{stop}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void httplib\+::\+Server\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a9365350e22a3baec09a711ee1ec8ecb4}\label{classhttplib_1_1Server_a9365350e22a3baec09a711ee1ec8ecb4}} 
+\index{httplib::Server@{httplib::Server}!wait\_until\_ready@{wait\_until\_ready}}
+\index{wait\_until\_ready@{wait\_until\_ready}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{wait\_until\_ready()}{wait\_until\_ready()}}
+{\footnotesize\ttfamily void httplib\+::\+Server\+::wait\+\_\+until\+\_\+ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classhttplib_1_1Server_a5a100e3e30db5c877c093c035b434a0e}\label{classhttplib_1_1Server_a5a100e3e30db5c877c093c035b434a0e}} 
+\index{httplib::Server@{httplib::Server}!idle\_interval\_sec\_@{idle\_interval\_sec\_}}
+\index{idle\_interval\_sec\_@{idle\_interval\_sec\_}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{idle\_interval\_sec\_}{idle\_interval\_sec\_}}
+{\footnotesize\ttfamily time\+\_\+t httplib\+::\+Server\+::idle\+\_\+interval\+\_\+sec\+\_\+ = \mbox{\hyperlink{httplib_8h_a4e0e9bf4fac8b733127daaca7ad6b20d}{CPPHTTPLIB\+\_\+\+IDLE\+\_\+\+INTERVAL\+\_\+\+SECOND}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a29c76072511d044af75f81140e7ae34e}\label{classhttplib_1_1Server_a29c76072511d044af75f81140e7ae34e}} 
+\index{httplib::Server@{httplib::Server}!idle\_interval\_usec\_@{idle\_interval\_usec\_}}
+\index{idle\_interval\_usec\_@{idle\_interval\_usec\_}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{idle\_interval\_usec\_}{idle\_interval\_usec\_}}
+{\footnotesize\ttfamily time\+\_\+t httplib\+::\+Server\+::idle\+\_\+interval\+\_\+usec\+\_\+ = \mbox{\hyperlink{httplib_8h_a6ff1203f6506a846bce93b853dbc5a9a}{CPPHTTPLIB\+\_\+\+IDLE\+\_\+\+INTERVAL\+\_\+\+USECOND}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a2a39446892282230d483cd137c56e4f7}\label{classhttplib_1_1Server_a2a39446892282230d483cd137c56e4f7}} 
+\index{httplib::Server@{httplib::Server}!keep\_alive\_max\_count\_@{keep\_alive\_max\_count\_}}
+\index{keep\_alive\_max\_count\_@{keep\_alive\_max\_count\_}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{keep\_alive\_max\_count\_}{keep\_alive\_max\_count\_}}
+{\footnotesize\ttfamily size\+\_\+t httplib\+::\+Server\+::keep\+\_\+alive\+\_\+max\+\_\+count\+\_\+ = \mbox{\hyperlink{httplib_8h_a56599ecd6d67e12d9c71138ea69fc179}{CPPHTTPLIB\+\_\+\+KEEPALIVE\+\_\+\+MAX\+\_\+\+COUNT}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a65cd6213eca9dedec862e9477436a625}\label{classhttplib_1_1Server_a65cd6213eca9dedec862e9477436a625}} 
+\index{httplib::Server@{httplib::Server}!keep\_alive\_timeout\_sec\_@{keep\_alive\_timeout\_sec\_}}
+\index{keep\_alive\_timeout\_sec\_@{keep\_alive\_timeout\_sec\_}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{keep\_alive\_timeout\_sec\_}{keep\_alive\_timeout\_sec\_}}
+{\footnotesize\ttfamily time\+\_\+t httplib\+::\+Server\+::keep\+\_\+alive\+\_\+timeout\+\_\+sec\+\_\+ = \mbox{\hyperlink{httplib_8h_a9290820a34ffe59a772df48b954fc4ac}{CPPHTTPLIB\+\_\+\+KEEPALIVE\+\_\+\+TIMEOUT\+\_\+\+SECOND}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ab02ba5727ab7e9c757f329d557e8d60f}\label{classhttplib_1_1Server_ab02ba5727ab7e9c757f329d557e8d60f}} 
+\index{httplib::Server@{httplib::Server}!new\_task\_queue@{new\_task\_queue}}
+\index{new\_task\_queue@{new\_task\_queue}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{new\_task\_queue}{new\_task\_queue}}
+{\footnotesize\ttfamily std\+::function$<$\mbox{\hyperlink{classhttplib_1_1TaskQueue}{Task\+Queue}} $\ast$(void)$>$ httplib\+::\+Server\+::new\+\_\+task\+\_\+queue}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_aef94224ccf466318570d0309faa6c721}\label{classhttplib_1_1Server_aef94224ccf466318570d0309faa6c721}} 
+\index{httplib::Server@{httplib::Server}!payload\_max\_length\_@{payload\_max\_length\_}}
+\index{payload\_max\_length\_@{payload\_max\_length\_}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{payload\_max\_length\_}{payload\_max\_length\_}}
+{\footnotesize\ttfamily size\+\_\+t httplib\+::\+Server\+::payload\+\_\+max\+\_\+length\+\_\+ = \mbox{\hyperlink{httplib_8h_a20a3df3819479bbd53093ce5e6ef86d6}{CPPHTTPLIB\+\_\+\+PAYLOAD\+\_\+\+MAX\+\_\+\+LENGTH}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_ac9f203c13fe12f2ecb04386df44f6081}\label{classhttplib_1_1Server_ac9f203c13fe12f2ecb04386df44f6081}} 
+\index{httplib::Server@{httplib::Server}!read\_timeout\_sec\_@{read\_timeout\_sec\_}}
+\index{read\_timeout\_sec\_@{read\_timeout\_sec\_}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{read\_timeout\_sec\_}{read\_timeout\_sec\_}}
+{\footnotesize\ttfamily time\+\_\+t httplib\+::\+Server\+::read\+\_\+timeout\+\_\+sec\+\_\+ = \mbox{\hyperlink{httplib_8h_a266bad4abcddf74aef65f2dc9f2cb699}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+SECOND}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a03a97129a6573eab65a00e5e190e2f7a}\label{classhttplib_1_1Server_a03a97129a6573eab65a00e5e190e2f7a}} 
+\index{httplib::Server@{httplib::Server}!read\_timeout\_usec\_@{read\_timeout\_usec\_}}
+\index{read\_timeout\_usec\_@{read\_timeout\_usec\_}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{read\_timeout\_usec\_}{read\_timeout\_usec\_}}
+{\footnotesize\ttfamily time\+\_\+t httplib\+::\+Server\+::read\+\_\+timeout\+\_\+usec\+\_\+ = \mbox{\hyperlink{httplib_8h_a45fca6d3f1535a5cb5dc0ef0f906df1a}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+READ\+\_\+\+TIMEOUT\+\_\+\+USECOND}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a8bc06c5e7e93632a22db8fd35f68b4a1}\label{classhttplib_1_1Server_a8bc06c5e7e93632a22db8fd35f68b4a1}} 
+\index{httplib::Server@{httplib::Server}!svr\_sock\_@{svr\_sock\_}}
+\index{svr\_sock\_@{svr\_sock\_}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{svr\_sock\_}{svr\_sock\_}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{httplib_8h_a84d69664998f9fc285147c6d1382a6fb}{socket\+\_\+t}}$>$ httplib\+::\+Server\+::svr\+\_\+sock\+\_\+ \{\mbox{\hyperlink{httplib_8h_a26769957ec1a2beaf223f33b66ee64ab}{INVALID\+\_\+\+SOCKET}}\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a30362cb23ea93927768bc2a1a93e61bb}\label{classhttplib_1_1Server_a30362cb23ea93927768bc2a1a93e61bb}} 
+\index{httplib::Server@{httplib::Server}!write\_timeout\_sec\_@{write\_timeout\_sec\_}}
+\index{write\_timeout\_sec\_@{write\_timeout\_sec\_}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{write\_timeout\_sec\_}{write\_timeout\_sec\_}}
+{\footnotesize\ttfamily time\+\_\+t httplib\+::\+Server\+::write\+\_\+timeout\+\_\+sec\+\_\+ = \mbox{\hyperlink{httplib_8h_a46b9166c2149a12d8d5529c029eff6a9}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+SECOND}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classhttplib_1_1Server_a5fabd1ab73b311873c2e6d555d8ed6f8}\label{classhttplib_1_1Server_a5fabd1ab73b311873c2e6d555d8ed6f8}} 
+\index{httplib::Server@{httplib::Server}!write\_timeout\_usec\_@{write\_timeout\_usec\_}}
+\index{write\_timeout\_usec\_@{write\_timeout\_usec\_}!httplib::Server@{httplib::Server}}
+\doxysubsubsection{\texorpdfstring{write\_timeout\_usec\_}{write\_timeout\_usec\_}}
+{\footnotesize\ttfamily time\+\_\+t httplib\+::\+Server\+::write\+\_\+timeout\+\_\+usec\+\_\+ = \mbox{\hyperlink{httplib_8h_aad47e5608ca40ac49c13aeaf690110b0}{CPPHTTPLIB\+\_\+\+SERVER\+\_\+\+WRITE\+\_\+\+TIMEOUT\+\_\+\+USECOND}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/\mbox{\hyperlink{httplib_8h}{httplib.\+h}}\end{DoxyCompactItemize}

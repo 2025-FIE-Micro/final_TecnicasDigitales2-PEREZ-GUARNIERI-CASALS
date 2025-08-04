@@ -1,0 +1,64 @@
+\hypertarget{classhttplib_1_1detail_1_1compressor}{}\doxysection{httplib\+::detail\+::compressor Class Reference}
+\label{classhttplib_1_1detail_1_1compressor}\index{httplib::detail::compressor@{httplib::detail::compressor}}
+
+
+{\ttfamily \#include $<$httplib.\+h$>$}
+
+
+
+Inheritance diagram for httplib\+::detail\+::compressor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classhttplib_1_1detail_1_1compressor__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ bool(const char $\ast$data, size\+\_\+t data\+\_\+len)$>$ \mbox{\hyperlink{classhttplib_1_1detail_1_1compressor_a9d57e1a4cb9351bbb21ef1ba3ea9730d}{Callback}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classhttplib_1_1detail_1_1compressor_acb36feb4435bea400c2875f841b7104c}{$\sim$compressor}} ()=default
+\item 
+virtual bool \mbox{\hyperlink{classhttplib_1_1detail_1_1compressor_a7cf1de9ae8f5d01316de7b666e66192d}{compress}} (const char $\ast$data, size\+\_\+t data\+\_\+length, bool last, \mbox{\hyperlink{classhttplib_1_1detail_1_1compressor_a9d57e1a4cb9351bbb21ef1ba3ea9730d}{Callback}} callback)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1compressor_a9d57e1a4cb9351bbb21ef1ba3ea9730d}\label{classhttplib_1_1detail_1_1compressor_a9d57e1a4cb9351bbb21ef1ba3ea9730d}} 
+\index{httplib::detail::compressor@{httplib::detail::compressor}!Callback@{Callback}}
+\index{Callback@{Callback}!httplib::detail::compressor@{httplib::detail::compressor}}
+\doxysubsubsection{\texorpdfstring{Callback}{Callback}}
+{\footnotesize\ttfamily typedef std\+::function$<$bool(const char $\ast$data, size\+\_\+t data\+\_\+len)$>$ \mbox{\hyperlink{classhttplib_1_1detail_1_1compressor_a9d57e1a4cb9351bbb21ef1ba3ea9730d}{httplib\+::detail\+::compressor\+::\+Callback}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1compressor_acb36feb4435bea400c2875f841b7104c}\label{classhttplib_1_1detail_1_1compressor_acb36feb4435bea400c2875f841b7104c}} 
+\index{httplib::detail::compressor@{httplib::detail::compressor}!````~compressor@{$\sim$compressor}}
+\index{````~compressor@{$\sim$compressor}!httplib::detail::compressor@{httplib::detail::compressor}}
+\doxysubsubsection{\texorpdfstring{$\sim$compressor()}{~compressor()}}
+{\footnotesize\ttfamily virtual httplib\+::detail\+::compressor\+::$\sim$compressor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhttplib_1_1detail_1_1compressor_a7cf1de9ae8f5d01316de7b666e66192d}\label{classhttplib_1_1detail_1_1compressor_a7cf1de9ae8f5d01316de7b666e66192d}} 
+\index{httplib::detail::compressor@{httplib::detail::compressor}!compress@{compress}}
+\index{compress@{compress}!httplib::detail::compressor@{httplib::detail::compressor}}
+\doxysubsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily virtual bool httplib\+::detail\+::compressor\+::compress (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+length,  }\item[{bool}]{last,  }\item[{\mbox{\hyperlink{classhttplib_1_1detail_1_1compressor_a9d57e1a4cb9351bbb21ef1ba3ea9730d}{Callback}}}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhttplib_1_1detail_1_1nocompressor_afcbdb0b02d68ae8659e98ce1ba9f8f9d}{httplib\+::detail\+::nocompressor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/perico/\+Descargas/\+MPU\+\_\+9250/serial\+\_\+api\+\_\+cpp/\mbox{\hyperlink{httplib_8h}{httplib.\+h}}\end{DoxyCompactItemize}
