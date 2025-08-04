@@ -15,7 +15,8 @@ Visualización en tiempo real de sensores inerciales MPU-9250 a través de un fl
 - 
 ---
 
-<img width="3208" height="868" alt="image" src="https://github.com/user-attachments/assets/e405f0ba-0438-42e6-b93e-e15f2542825b" />
+<img width="924" height="259" alt="image" src="https://github.com/user-attachments/assets/359f120f-014d-441d-b370-b6d1e0c59d56" />
+
 
 
 ## ⚙️ Flujo del sistema
@@ -145,10 +146,9 @@ Abrir [http://localhost:8080](http://localhost:8080)
 - Hernán Ariel Pérez  
 - Franco Guarnieri  
 - Mauricio Casals  
-- Año: 2025
 
 ---
 
 ## 📜 Licencia
 
-MIT — Usalo, modificalo y compartilo libremente.
+Usalo, modificalo y compartilo libremente.
