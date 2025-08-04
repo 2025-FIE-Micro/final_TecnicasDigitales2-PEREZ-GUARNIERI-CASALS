@@ -15,7 +15,8 @@ Visualización en tiempo real de sensores inerciales MPU-9250 a través de un fl
 - 
 ---
 
-<img width="1246" height="353" alt="image" src="https://github.com/user-attachments/assets/b278c9da-cabf-44e8-9b27-2626dd8f3230" />
+<img width="3208" height="868" alt="image" src="https://github.com/user-attachments/assets/e405f0ba-0438-42e6-b93e-e15f2542825b" />
+
 
 ## ⚙️ Flujo del sistema
 
