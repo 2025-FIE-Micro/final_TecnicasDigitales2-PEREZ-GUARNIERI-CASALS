@@ -1,70 +1,87 @@
 import { useRef, useState, Suspense } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useGLTF, Html } from '@react-three/drei';
-import { Euler, Vector3 } from 'three';
+import { Quaternion, Euler, Vector3 } from 'three';
 import { SensorData } from '@/hooks/useSensorData';
 
 interface TD2SensorObjectProps {
   sensorData: SensorData;
 }
 
+// Componente principal que representa el avión animado
 export const TD2SensorObject = ({ sensorData }: TD2SensorObjectProps) => {
-  const airplaneRef = useRef<any>(null);
-  const accumulatedRotation = useRef<Euler>(new Euler(0, 0, 0));
-  const [resetFlag, setResetFlag] = useState(false);
+  const airplaneRef = useRef<any>(null); // Referencia al modelo 3D cargado
+  const rotationQuat = useRef<Quaternion>(new Quaternion()); // Quaternion que acumula la rotación del sensor
+  const [resetFlag, setResetFlag] = useState(false); // Bandera para resetear orientación
 
-  const { scene } = useGLTF('/models/airplane.glb');
+  const { scene } = useGLTF('/models/airplane.glb'); // Cargar modelo 3D del avión
 
+  // useFrame se ejecuta en cada frame del renderizado
   useFrame((state, delta) => {
+    // Obtenemos los datos del sensor en cada frame
     const {
-      gyro_x = 0,
-      gyro_y = 0,
-      gyro_z = 0,
-      accel_x = 0,
-      accel_y = 0,
-      accel_z = 9.81,
+      gyro_x = 0, // Velocidad angular en eje X (°/s)
+      gyro_y = 0, // Velocidad angular en eje Y (°/s)
+      gyro_z = 0, // Velocidad angular en eje Z (°/s)
+      accel_x = 0, // Aceleración en eje X (m/s²)
+      accel_y = 0, // Aceleración en eje Y (m/s²)
+      accel_z = 9.81, // Aceleración en eje Z (m/s²). 9.81 es el valor en reposo por la gravedad.
     } = sensorData;
 
+    // Si se presionó el botón "Resetear orientación"
     if (resetFlag) {
-      accumulatedRotation.current.set(0, 0, 0);
-      setResetFlag(false);
+      rotationQuat.current.identity(); // Reseteamos el quaternion a sin rotación
+      setResetFlag(false); // Limpiamos el flag
       return;
     }
 
-    // 1. Rotación acumulativa
-    const gx = (gyro_x * Math.PI) / 180;
-    const gy = (gyro_y * Math.PI) / 180;
-    const gz = (gyro_z * Math.PI) / 180;
+    // 🔁 Paso 1: Convertimos giroscopio de °/s a radianes/s    
+    const gx = (gyro_x * Math.PI) / 180; // giro en X en radianes/s
+    const gy = (gyro_z * Math.PI) / 180; // giro en Y en radianes/s
+    const gz = (gyro_y * Math.PI) / 180; // giro en Z en radianes/s
 
-    accumulatedRotation.current.x += gx * delta;
-    accumulatedRotation.current.y += gy * delta;
-    accumulatedRotation.current.z += gz * delta;
+    // 🔁 Paso 2: Creamos una rotación incremental por frame usando un Euler
+    const deltaEuler = new Euler(gx * delta, gy * delta, gz * delta, 'XYZ');
 
-    // 2. Posición desde acelerómetro
-    const px = accel_x * 0.3;
-    const py = accel_y * 0.3;
-    const pz = (accel_z - 9.81) * 0.1;
+    // 🔁 Paso 3: Convertimos esa rotación a un quaternion incremental
+    const deltaQuat = new Quaternion().setFromEuler(deltaEuler);
 
-    // 3. Aplicar al avión
+    // 🔁 Paso 4: Acumulamos la rotación general multiplicando quaternions
+    rotationQuat.current.multiply(deltaQuat);
+
+    // 📦 Paso 5: Aplicamos rotación y posición al modelo 3D
     if (airplaneRef.current) {
-      airplaneRef.current.rotation.copy(accumulatedRotation.current);
-      airplaneRef.current.position.set(px, py + Math.sin(state.clock.elapsedTime * 2) * 0.02, pz);
+      // Rotación acumulada
+      airplaneRef.current.quaternion.copy(rotationQuat.current);
+
+      // Movimiento (posición) opcional basado en acelerómetro
+      // Esto se puede eliminar si no querés que se mueva en el espacio
+      const px = accel_x * 0.9;
+      const py = accel_y * 0.9;
+      const pz = accel_z * 0.9; 
+
+      // Setear posición del modelo
+      airplaneRef.current.position.set(
+        px,
+        py + Math.sin(state.clock.elapsedTime * 2) * 0.08, // flotación leve en Y
+        pz
+      );
     }
   });
 
   return (
     <group>
-      {/* Avión 3D */}
+      {/* 🌍 Carga y renderiza el avión 3D */}
       <Suspense fallback={<Html>Loading avión...</Html>}>
         <primitive
-          object={scene}
-          ref={airplaneRef}
-          scale={0.8}
-          rotation={[0, 0, 0]}
+          object={scene}            // Modelo importado (glTF)
+          ref={airplaneRef}         // Referencia para manipularlo
+          scale={0.8}               // Tamaño del avión
+          rotation={[0, 0, 0]}      // Rotación inicial (sin efecto aquí, ya que usamos quaternion)
         />
       </Suspense>
 
-      {/* Botón de reset */}
+      {/* 🛠️ Botón para resetear orientación del avión */}
       <Html position={[0, -3.5, 0]}>
         <button
           style={{

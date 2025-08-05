@@ -3,6 +3,7 @@ import { OrbitControls, Environment, Grid } from '@react-three/drei';
 import { TD2Cube } from './TD2Cube';
 import { SensorData } from '@/hooks/useSensorData';
 import { TD2SensorObject } from './TD2SensorObject';
+import { MagCompass } from './MagCompass';
 
 interface Scene3DProps {
   sensorData: SensorData;
@@ -58,6 +59,8 @@ export const Scene3D = ({ sensorData }: Scene3DProps) => {
         {/* Main TD2 Cube */}
         {/* <TD2Cube sensorData={sensorData} /> */}
         <TD2SensorObject sensorData={sensorData} />
+
+        {/* <MagCompass sensorData={sensorData} /> */}
 
         {/* Additional atmospheric elements */}
         <mesh position={[0, 0, 0]}>
